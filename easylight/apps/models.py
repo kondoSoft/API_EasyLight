@@ -1,17 +1,25 @@
 from django.db import models
-from pygments.lexers import get_all_lexers
-from pygments.styles import get_all_styles
-
-LEXERS = [item for item in get_all_lexers() if item[1]]
-LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
-STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
 
 class State(models.Model):
-    key_state = models.IntegerField(11)
-    name = models.CharField(max_length=35)
-    abbreviation = models.CharField(max_length=10)
-    language = models.CharField(choices=LANGUAGE_CHOICES, default='python', max_length=100)
-    style = models.CharField(choices=STYLE_CHOICES, default='friendly', max_length=100)
+    key_state = models.IntegerField(null=False, blank=False)
+    state = models.CharField(max_length=35, null=False, blank=False)
+    abbreviation = models.CharField(max_length=10, blank=False)
 
     class Meta:
         ordering = ('key_state',)
+
+class Municipality(models.Model):
+    key_state = models.ForeignKey(State)
+    key_mun = models.IntegerField(null=False, blank=False)
+    name_mun = models.CharField(max_length=70, blank=False, null=False)
+
+    class Meta:
+        ordering = ('key_state__key_state',)
+
+    def __str__(self):
+        state = []
+        for item in self.key_state.all():
+            state.append(item)
+            print(state)
+
+        return str(state)
