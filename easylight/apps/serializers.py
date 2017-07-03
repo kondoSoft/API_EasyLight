@@ -21,7 +21,7 @@ class StateSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('key_state','state', 'abbreviation')
 
 class MunicipalitySerializer(serializers.HyperlinkedModelSerializer):
-    state = serializers.HyperlinkedIdentityField(many=False, view_name='state-detail', read_only=True)
+    state = serializers.HyperlinkedIdentityField(many=False, view_name='state-detail', read_only=False)
 
     class Meta:
         model = Municipality

@@ -3,7 +3,6 @@ from rest_framework.generics import ListCreateAPIView
 from apps.serializers import UserSerializer, GroupSerializer, StateSerializer, MunicipalitySerializer
 from apps.models import State, Municipality
 from rest_framework.decorators import api_view
-from rest_framework.decorators import detail_route
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import viewsets, renderers
@@ -38,15 +37,8 @@ class StateViewSet(viewsets.ModelViewSet):
     queryset = State.objects.all()
     serializer_class = StateSerializer
 
-    @detail_route(renderer_classes=[renderers.StaticHTMLRenderer])
-    def highlight(self, request, *args, **kwargs):
-        state = self.get_object()
-        return Response(state.highlighted)
 
-    def perform_create(self, serializer):
-        serializer.save(owner=self.request.user)
-
-class MunicipalityList(ListCreateAPIView):
+class MunicipalityList(viewsets.ModelViewSet):
     """
     API Municipality
     """
