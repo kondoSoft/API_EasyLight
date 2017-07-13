@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import State, Municipality
+from .models import State, Municipality, TipsAndAdvertising, TableRate, Receipt, Contract
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 # Register your models here.
@@ -25,3 +25,7 @@ class MunicipalityAdmin(ImportExportModelAdmin):
 
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
+admin.site.register(TableRate)
+admin.site.register(Contract)
+admin.site.register(Receipt)
+admin.site.register(TipsAndAdvertising)

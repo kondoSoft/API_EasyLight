@@ -29,6 +29,7 @@ urlpatterns = format_suffix_patterns([
     # url(r'^', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', views.api_root),
+    url(r'^open/$', views.open_file),
     url(r'^groups/$', views.GroupsList.as_view(), name='group-list'),
     url(r'^states/$', state_list, name='state-list'),
     url(r'^states/(?P<pk>[0-9]+)/$', state_detail, name='state-detail'),
