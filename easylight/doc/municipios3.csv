@@ -1,0 +1,570 @@
+id,state,key_mun,name_mun
+1,20,142,San Francisco Huehuetlán
+2,20,143,San Francisco Ixhuatán
+3,20,144,San Francisco Jaltepetongo
+4,20,145,San Francisco Lachigoló
+5,20,146,San Francisco Logueche
+6,20,147,San Francisco Nuxaño
+7,20,148,San Francisco Ozolotepec
+8,20,149,San Francisco Sola
+9,20,150,San Francisco Telixtlahuaca
+10,20,151,San Francisco Teopan
+11,20,152,San Francisco Tlapancingo
+12,20,153,San Gabriel Mixtepec
+13,20,154,San Ildefonso Amatlán
+14,20,155,San Ildefonso Sola
+15,20,156,San Ildefonso Villa Alta
+16,20,157,San Jacinto Amilpas
+17,20,158,San Jacinto Tlacotepec
+18,20,159,San Jerónimo Coatlán
+19,20,160,San Jerónimo Silacayoapilla
+20,20,161,San Jerónimo Sosola
+21,20,162,San Jerónimo Taviche
+22,20,163,San Jerónimo Tecóatl
+23,20,164,San Jorge Nuchita
+24,20,165,San José Ayuquila
+25,20,166,San José Chiltepec
+26,20,167,San José del Peñasco
+27,20,168,San José Estancia Grande
+28,20,169,San José Independencia
+29,20,170,San José Lachiguiri
+30,20,171,San José Tenango
+31,20,172,San Juan Achiutla
+32,20,173,San Juan Atepec
+33,20,174,Ánimas Trujano
+34,20,175,San Juan Bautista Atatlahuca
+35,20,176,San Juan Bautista Coixtlahuaca
+36,20,177,San Juan Bautista Cuicatlán
+37,20,178,San Juan Bautista Guelache
+38,20,179,San Juan Bautista Jayacatlán
+39,20,180,San Juan Bautista Lo de Soto
+40,20,181,San Juan Bautista Suchitepec
+41,20,182,San Juan Bautista Tlacoatzintepec
+42,20,183,San Juan Bautista Tlachichilco
+43,20,184,San Juan Bautista Tuxtepec
+44,20,185,San Juan Cacahuatepec
+45,20,186,San Juan Cieneguilla
+46,20,187,San Juan Coatzóspam
+47,20,188,San Juan Colorado
+48,20,189,San Juan Comaltepec
+49,20,190,San Juan Cotzocón
+50,20,191,San Juan Chicomezúchil
+51,20,192,San Juan Chilateca
+52,20,193,San Juan del Estado
+53,20,194,San Juan del Río
+54,20,195,San Juan Diuxi
+55,20,196,San Juan Evangelista Analco
+56,20,197,San Juan Guelavía
+57,20,198,San Juan Guichicovi
+58,20,199,San Juan Ihualtepec
+59,20,200,San Juan Juquila Mixes
+60,20,201,San Juan Juquila Vijanos
+61,20,202,San Juan Lachao
+62,20,203,San Juan Lachigalla
+63,20,204,San Juan Lajarcia
+64,20,205,San Juan Lalana
+65,20,206,San Juan de los Cués
+66,20,207,San Juan Mazatlán
+67,20,208,San Juan Mixtepec -Dto. 08 -
+68,20,209,San Juan Mixtepec -Dto. 26 -
+69,20,210,San Juan Ñumí
+70,20,211,San Juan Ozolotepec
+71,20,212,San Juan Petlapa
+72,20,213,San Juan Quiahije
+73,20,214,San Juan Quiotepec
+74,20,215,San Juan Sayultepec
+75,20,216,San Juan Tabaá
+76,20,217,San Juan Tamazola
+77,20,218,San Juan Teita
+78,20,219,San Juan Teitipac
+79,20,220,San Juan Tepeuxila
+80,20,221,San Juan Teposcolula
+81,20,222,San Juan Yaeé
+82,20,223,San Juan Yatzona
+83,20,224,San Juan Yucuita
+84,20,225,San Lorenzo
+85,20,226,San Lorenzo Albarradas
+86,20,227,San Lorenzo Cacaotepec
+87,20,228,San Lorenzo Cuaunecuiltitla
+88,20,229,San Lorenzo Texmelúcan
+89,20,230,San Lorenzo Victoria
+90,20,231,San Lucas Camotlán
+91,20,232,San Lucas Ojitlán
+92,20,233,San Lucas Quiaviní
+93,20,234,San Lucas Zoquiápam
+94,20,235,San Luis Amatlán
+95,20,236,San Marcial Ozolotepec
+96,20,237,San Marcos Arteaga
+97,20,238,San Martín de los Cansecos
+98,20,239,San Martín Huamelúlpam
+99,20,240,San Martín Itunyoso
+100,20,241,San Martín Lachilá
+101,20,242,San Martín Peras
+102,20,243,San Martín Tilcajete
+103,20,244,San Martín Toxpalan
+104,20,245,San Martín Zacatepec
+105,20,246,San Mateo Cajonos
+106,20,247,Capulálpam de Méndez
+107,20,248,San Mateo del Mar
+108,20,249,San Mateo Yoloxochitlán
+109,20,250,San Mateo Etlatongo
+110,20,251,San Mateo Nejápam
+111,20,252,San Mateo Peñasco
+112,20,253,San Mateo Piñas
+113,20,254,San Mateo Río Hondo
+114,20,255,San Mateo Sindihui
+115,20,256,San Mateo Tlapiltepec
+116,20,257,San Melchor Betaza
+117,20,258,San Miguel Achiutla
+118,20,259,San Miguel Ahuehuetitlán
+119,20,260,San Miguel Aloápam
+120,20,261,San Miguel Amatitlán
+121,20,262,San Miguel Amatlán
+122,20,263,San Miguel Coatlán
+123,20,264,San Miguel Chicahua
+124,20,265,San Miguel Chimalapa
+125,20,266,San Miguel del Puerto
+126,20,267,San Miguel del Río
+127,20,268,San Miguel Ejutla
+128,20,269,San Miguel el Grande
+129,20,270,San Miguel Huautla
+130,20,271,San Miguel Mixtepec
+131,20,272,San Miguel Panixtlahuaca
+132,20,273,San Miguel Peras
+133,20,274,San Miguel Piedras
+134,20,275,San Miguel Quetzaltepec
+135,20,276,San Miguel Santa Flor
+136,20,277,Villa Sola de Vega
+137,20,278,San Miguel Soyaltepec
+138,20,279,San Miguel Suchixtepec
+139,20,280,Villa Talea de Castro
+140,20,281,San Miguel Tecomatlán
+141,20,282,San Miguel Tenango
+142,20,283,San Miguel Tequixtepec
+143,20,284,San Miguel Tilquiápam
+144,20,285,San Miguel Tlacamama
+145,20,286,San Miguel Tlacotepec
+146,20,287,San Miguel Tulancingo
+147,20,288,San Miguel Yotao
+148,20,289,San Nicolás
+149,20,290,San Nicolás Hidalgo
+150,20,291,San Pablo Coatlán
+151,20,292,San Pablo Cuatro Venados
+152,20,293,San Pablo Etla
+153,20,294,San Pablo Huitzo
+154,20,295,San Pablo Huixtepec
+155,20,296,San Pablo Macuiltianguis
+156,20,297,San Pablo Tijaltepec
+157,20,298,San Pablo Villa de Mitla
+158,20,299,San Pablo Yaganiza
+159,20,300,San Pedro Amuzgos
+160,20,301,San Pedro Apóstol
+161,20,302,San Pedro Atoyac
+162,20,303,San Pedro Cajonos
+163,20,304,San Pedro Coxcaltepec Cántaros
+164,20,305,San Pedro Comitancillo
+165,20,306,San Pedro el Alto
+166,20,307,San Pedro Huamelula
+167,20,308,San Pedro Huilotepec
+168,20,309,San Pedro Ixcatlán
+169,20,310,San Pedro Ixtlahuaca
+170,20,311,San Pedro Jaltepetongo
+171,20,312,San Pedro Jicayán
+172,20,313,San Pedro Jocotipac
+173,20,314,San Pedro Juchatengo
+174,20,315,San Pedro Mártir
+175,20,316,San Pedro Mártir Quiechapa
+176,20,317,San Pedro Mártir Yucuxaco
+177,20,318,San Pedro Mixtepec -Dto. 22 -
+178,20,319,San Pedro Mixtepec -Dto. 26 -
+179,20,320,San Pedro Molinos
+180,20,321,San Pedro Nopala
+181,20,322,San Pedro Ocopetatillo
+182,20,323,San Pedro Ocotepec
+183,20,324,San Pedro Pochutla
+184,20,325,San Pedro Quiatoni
+185,20,326,San Pedro Sochiápam
+186,20,327,San Pedro Tapanatepec
+187,20,328,San Pedro Taviche
+188,20,329,San Pedro Teozacoalco
+189,20,330,San Pedro Teutila
+190,20,331,San Pedro Tidaá
+191,20,332,San Pedro Topiltepec
+192,20,333,San Pedro Totolápam
+193,20,334,Villa de Tututepec de Melchor Ocampo
+194,20,335,San Pedro Yaneri
+195,20,336,San Pedro Yólox
+196,20,337,San Pedro y San Pablo Ayutla
+197,20,338,Villa de Etla
+198,20,339,San Pedro y San Pablo Teposcolula
+199,20,340,San Pedro y San Pablo Tequixtepec
+200,20,341,San Pedro Yucunama
+201,20,342,San Raymundo Jalpan
+202,20,343,San Sebastián Abasolo
+203,20,344,San Sebastián Coatlán
+204,20,345,San Sebastián Ixcapa
+205,20,346,San Sebastián Nicananduta
+206,20,347,San Sebastián Río Hondo
+207,20,348,San Sebastián Tecomaxtlahuaca
+208,20,349,San Sebastián Teitipac
+209,20,350,San Sebastián Tutla
+210,20,351,San Simón Almolongas
+211,20,352,San Simón Zahuatlán
+212,20,353,Santa Ana
+213,20,354,Santa Ana Ateixtlahuaca
+214,20,355,Santa Ana Cuauhtémoc
+215,20,356,Santa Ana del Valle
+216,20,357,Santa Ana Tavela
+217,20,358,Santa Ana Tlapacoyan
+218,20,359,Santa Ana Yareni
+219,20,360,Santa Ana Zegache
+220,20,361,Santa Catalina Quierí
+221,20,362,Santa Catarina Cuixtla
+222,20,363,Santa Catarina Ixtepeji
+223,20,364,Santa Catarina Juquila
+224,20,365,Santa Catarina Lachatao
+225,20,366,Santa Catarina Loxicha
+226,20,367,Santa Catarina Mechoacán
+227,20,368,Santa Catarina Minas
+228,20,369,Santa Catarina Quiané
+229,20,370,Santa Catarina Tayata
+230,20,371,Santa Catarina Ticuá
+231,20,372,Santa Catarina Yosonotú
+232,20,373,Santa Catarina Zapoquila
+233,20,374,Santa Cruz Acatepec
+234,20,375,Santa Cruz Amilpas
+235,20,376,Santa Cruz de Bravo
+236,20,377,Santa Cruz Itundujia
+237,20,378,Santa Cruz Mixtepec
+238,20,379,Santa Cruz Nundaco
+239,20,380,Santa Cruz Papalutla
+240,20,381,Santa Cruz Tacache de Mina
+241,20,382,Santa Cruz Tacahua
+242,20,383,Santa Cruz Tayata
+243,20,384,Santa Cruz Xitla
+244,20,385,Santa Cruz Xoxocotlán
+245,20,386,Santa Cruz Zenzontepec
+246,20,387,Santa Gertrudis
+247,20,388,Santa Inés del Monte
+248,20,389,Santa Inés Yatzeche
+249,20,390,Santa Lucía del Camino
+250,20,391,Santa Lucía Miahuatlán
+251,20,392,Santa Lucía Monteverde
+252,20,393,Santa Lucía Ocotlán
+253,20,394,Santa María Alotepec
+254,20,395,Santa María Apazco
+255,20,396,Santa María la Asunción
+256,20,397,Heroica Ciudad de Tlaxiaco
+257,20,398,Ayoquezco de Aldama
+258,20,399,Santa María Atzompa
+259,20,400,Santa María Camotlán
+260,20,401,Santa María Colotepec
+261,20,402,Santa María Cortijo
+262,20,403,Santa María Coyotepec
+263,20,404,Santa María Chachoápam
+264,20,405,Villa de Chilapa de Díaz
+265,20,406,Santa María Chilchotla
+266,20,407,Santa María Chimalapa
+267,20,408,Santa María del Rosario
+268,20,409,Santa María del Tule
+269,20,410,Santa María Ecatepec
+270,20,411,Santa María Guelacé
+271,20,412,Santa María Guienagati
+272,20,413,Santa María Huatulco
+273,20,414,Santa María Huazolotitlán
+274,20,415,Santa María Ipalapa
+275,20,416,Santa María Ixcatlán
+276,20,417,Santa María Jacatepec
+277,20,418,Santa María Jalapa del Marqués
+278,20,419,Santa María Jaltianguis
+279,20,420,Santa María Lachixío
+280,20,421,Santa María Mixtequilla
+281,20,422,Santa María Nativitas
+282,20,423,Santa María Nduayaco
+283,20,424,Santa María Ozolotepec
+284,20,425,Santa María Pápalo
+285,20,426,Santa María Peñoles
+286,20,427,Santa María Petapa
+287,20,428,Santa María Quiegolani
+288,20,429,Santa María Sola
+289,20,430,Santa María Tataltepec
+290,20,431,Santa María Tecomavaca
+291,20,432,Santa María Temaxcalapa
+292,20,433,Santa María Temaxcaltepec
+293,20,434,Santa María Teopoxco
+294,20,435,Santa María Tepantlali
+295,20,436,Santa María Texcatitlán
+296,20,437,Santa María Tlahuitoltepec
+297,20,438,Santa María Tlalixtac
+298,20,439,Santa María Tonameca
+299,20,440,Santa María Totolapilla
+300,20,441,Santa María Xadani
+301,20,442,Santa María Yalina
+302,20,443,Santa María Yavesía
+303,20,444,Santa María Yolotepec
+304,20,445,Santa María Yosoyúa
+305,20,446,Santa María Yucuhiti
+306,20,447,Santa María Zacatepec
+307,20,448,Santa María Zaniza
+308,20,449,Santa María Zoquitlán
+309,20,450,Santiago Amoltepec
+310,20,451,Santiago Apoala
+311,20,452,Santiago Apóstol
+312,20,453,Santiago Astata
+313,20,454,Santiago Atitlán
+314,20,455,Santiago Ayuquililla
+315,20,456,Santiago Cacaloxtepec
+316,20,457,Santiago Camotlán
+317,20,458,Santiago Comaltepec
+318,20,459,Santiago Chazumba
+319,20,460,Santiago Choápam
+320,20,461,Santiago del Río
+321,20,462,Santiago Huajolotitlán
+322,20,463,Santiago Huauclilla
+323,20,464,Santiago Ihuitlán Plumas
+324,20,465,Santiago Ixcuintepec
+325,20,466,Santiago Ixtayutla
+326,20,467,Santiago Jamiltepec
+327,20,468,Santiago Jocotepec
+328,20,469,Santiago Juxtlahuaca
+329,20,470,Santiago Lachiguiri
+330,20,471,Santiago Lalopa
+331,20,472,Santiago Laollaga
+332,20,473,Santiago Laxopa
+333,20,474,Santiago Llano Grande
+334,20,475,Santiago Matatlán
+335,20,476,Santiago Miltepec
+336,20,477,Santiago Minas
+337,20,478,Santiago Nacaltepec
+338,20,479,Santiago Nejapilla
+339,20,480,Santiago Nundiche
+340,20,481,Santiago Nuyoó
+341,20,482,Santiago Pinotepa Nacional
+342,20,483,Santiago Suchilquitongo
+343,20,484,Santiago Tamazola
+344,20,485,Santiago Tapextla
+345,20,486,Villa Tejúpam de la Unión
+346,20,487,Santiago Tenango
+347,20,488,Santiago Tepetlapa
+348,20,489,Santiago Tetepec
+349,20,490,Santiago Texcalcingo
+350,20,491,Santiago Textitlán
+351,20,492,Santiago Tilantongo
+352,20,493,Santiago Tillo
+353,20,494,Santiago Tlazoyaltepec
+354,20,495,Santiago Xanica
+355,20,496,Santiago Xiacuí
+356,20,497,Santiago Yaitepec
+357,20,498,Santiago Yaveo
+358,20,499,Santiago Yolomécatl
+359,20,500,Santiago Yosondúa
+360,20,501,Santiago Yucuyachi
+361,20,502,Santiago Zacatepec
+362,20,503,Santiago Zoochila
+363,20,504,Nuevo Zoquiápam
+364,20,505,Santo Domingo Ingenio
+365,20,506,Santo Domingo Albarradas
+366,20,507,Santo Domingo Armenta
+367,20,508,Santo Domingo Chihuitán
+368,20,509,Santo Domingo de Morelos
+369,20,510,Santo Domingo Ixcatlán
+370,20,511,Santo Domingo Nuxaá
+371,20,512,Santo Domingo Ozolotepec
+372,20,513,Santo Domingo Petapa
+373,20,514,Santo Domingo Roayaga
+374,20,515,Santo Domingo Tehuantepec
+375,20,516,Santo Domingo Teojomulco
+376,20,517,Santo Domingo Tepuxtepec
+377,20,518,Santo Domingo Tlatayápam
+378,20,519,Santo Domingo Tomaltepec
+379,20,520,Santo Domingo Tonalá
+380,20,521,Santo Domingo Tonaltepec
+381,20,522,Santo Domingo Xagacía
+382,20,523,Santo Domingo Yanhuitlán
+383,20,524,Santo Domingo Yodohino
+384,20,525,Santo Domingo Zanatepec
+385,20,526,Santos Reyes Nopala
+386,20,527,Santos Reyes Pápalo
+387,20,528,Santos Reyes Tepejillo
+388,20,529,Santos Reyes Yucuná
+389,20,530,Santo Tomás Jalieza
+390,20,531,Santo Tomás Mazaltepec
+391,20,532,Santo Tomás Ocotepec
+392,20,533,Santo Tomás Tamazulapan
+393,20,534,San Vicente Coatlán
+394,20,535,San Vicente Lachixío
+395,20,536,San Vicente Nuñú
+396,20,537,Silacayoápam
+397,20,538,Sitio de Xitlapehua
+398,20,539,Soledad Etla
+399,20,540,Villa de Tamazulápam del Progreso
+400,20,541,Tanetze de Zaragoza
+401,20,542,Taniche
+402,20,543,Tataltepec de Valdés
+403,20,544,Teococuilco de Marcos Pérez
+404,20,545,Teotitlán de Flores Magón
+405,20,546,Teotitlán del Valle
+406,20,547,Teotongo
+407,20,548,Tepelmeme Villa de Morelos
+408,20,549,Tezoatlán de Segura y Luna
+409,20,550,San Jerónimo Tlacochahuaya
+410,20,551,Tlacolula de Matamoros
+411,20,552,Tlacotepec Plumas
+412,20,553,Tlalixtac de Cabrera
+413,20,554,Totontepec Villa de Morelos
+414,20,555,Trinidad Zaachila
+415,20,556,La Trinidad Vista Hermosa
+416,20,557,Unión Hidalgo
+417,20,558,Valerio Trujano
+418,20,559,San Juan Bautista Valle Nacional
+419,20,560,Villa Díaz Ordaz
+420,20,561,Yaxe
+421,20,562,Magdalena Yodocono de Porfirio Díaz
+422,20,563,Yogana
+423,20,564,Yutanduchi de Guerrero
+424,20,565,Villa de Zaachila
+425,20,566,San Mateo Yucutindó
+426,20,567,Zapotitlán Lagunas
+427,20,568,Zapotitlán Palmas
+428,20,569,Santa Inés de Zaragoza
+429,20,570,Zimatlán de Álvarez
+430,21,1,Acajete
+431,21,2,Acateno
+432,21,3,Acatlán
+433,21,4,Acatzingo
+434,21,5,Acteopan
+435,21,6,Ahuacatlán
+436,21,7,Ahuatlán
+437,21,8,Ahuazotepec
+438,21,9,Ahuehuetitla
+439,21,10,Ajalpan
+440,21,11,Albino Zertuche
+441,21,12,Aljojuca
+442,21,13,Altepexi
+443,21,14,Amixtlán
+444,21,15,Amozoc
+445,21,16,Aquixtla
+446,21,17,Atempan
+447,21,18,Atexcal
+448,21,19,Atlixco
+449,21,20,Atoyatempan
+450,21,21,Atzala
+451,21,22,Atzitzihuacán
+452,21,23,Atzitzintla
+453,21,24,Axutla
+454,21,25,Ayotoxco de Guerrero
+455,21,26,Calpan
+456,21,27,Caltepec
+457,21,28,Camocuautla
+458,21,29,Caxhuacan
+459,21,30,Coatepec
+460,21,31,Coatzingo
+461,21,32,Cohetzala
+462,21,33,Cohuecan
+463,21,34,Coronango
+464,21,35,Coxcatlán
+465,21,36,Coyomeapan
+466,21,37,Coyotepec
+467,21,38,Cuapiaxtla de Madero
+468,21,39,Cuautempan
+469,21,40,Cuautinchán
+470,21,41,Cuautlancingo
+471,21,42,Cuayuca de Andrade
+472,21,43,Cuetzalan del Progreso
+473,21,44,Cuyoaco
+474,21,45,Chalchicomula de Sesma
+475,21,46,Chapulco
+476,21,47,Chiautla
+477,21,48,Chiautzingo
+478,21,49,Chiconcuautla
+479,21,50,Chichiquila
+480,21,51,Chietla
+481,21,52,Chigmecatitlán
+482,21,53,Chignahuapan
+483,21,54,Chignautla
+484,21,55,Chila
+485,21,56,Chila de la Sal
+486,21,57,Honey
+487,21,58,Chilchotla
+488,21,59,Chinantla
+489,21,60,Domingo Arenas
+490,21,61,Eloxochitlán
+491,21,62,Epatlán
+492,21,63,Esperanza
+493,21,64,Francisco Z. Mena
+494,21,65,General Felipe Ángeles
+495,21,66,Guadalupe
+496,21,67,Guadalupe Victoria
+497,21,68,Hermenegildo Galeana
+498,21,69,Huaquechula
+499,21,70,Huatlatlauca
+500,21,71,Huauchinango
+501,21,72,Huehuetla
+502,21,73,Huehuetlán el Chico
+503,21,74,Huejotzingo
+504,21,75,Hueyapan
+505,21,76,Hueytamalco
+506,21,77,Hueytlalpan
+507,21,78,Huitzilan de Serdán
+508,21,79,Huitziltepec
+509,21,80,Atlequizayan
+510,21,81,Ixcamilpa de Guerrero
+511,21,82,Ixcaquixtla
+512,21,83,Ixtacamaxtitlán
+513,21,84,Ixtepec
+514,21,85,Izúcar de Matamoros
+515,21,86,Jalpan
+516,21,87,Jolalpan
+517,21,88,Jonotla
+518,21,89,Jopala
+519,21,90,Juan C. Bonilla
+520,21,91,Juan Galindo
+521,21,92,Juan N. Méndez
+522,21,93,Lafragua
+523,21,94,Libres
+524,21,95,La Magdalena Tlatlauquitepec
+525,21,96,Mazapiltepec de Juárez
+526,21,97,Mixtla
+527,21,98,Molcaxac
+528,21,99,Cañada Morelos
+529,21,100,Naupan
+530,21,101,Nauzontla
+531,21,102,Nealtican
+532,21,103,Nicolás Bravo
+533,21,104,Nopalucan
+534,21,105,Ocotepec
+535,21,106,Ocoyucan
+536,21,107,Olintla
+537,21,108,Oriental
+538,21,109,Pahuatlán
+539,21,110,Palmar de Bravo
+540,21,111,Pantepec
+541,21,112,Petlalcingo
+542,21,113,Piaxtla
+543,21,114,Puebla
+544,21,115,Quecholac
+545,21,116,Quimixtlán
+546,21,117,Rafael Lara Grajales
+547,21,118,Los Reyes de Juárez
+548,21,119,San Andrés Cholula
+549,21,120,San Antonio Cañada
+550,21,121,San Diego la Mesa Tochimiltzingo
+551,21,122,San Felipe Teotlalcingo
+552,21,123,San Felipe Tepatlán
+553,21,124,San Gabriel Chilac
+554,21,125,San Gregorio Atzompa
+555,21,126,San Jerónimo Tecuanipan
+556,21,127,San Jerónimo Xayacatlán
+557,21,128,San José Chiapa
+558,21,129,San José Miahuatlán
+559,21,130,San Juan Atenco
+560,21,131,San Juan Atzompa
+561,21,132,San Martín Texmelucan
+562,21,133,San Martín Totoltepec
+563,21,134,San Matías Tlalancaleca
+564,21,135,San Miguel Ixitlán
+565,21,136,San Miguel Xoxtla
+566,21,137,San Nicolás Buenos Aires
+567,21,138,San Nicolás de los Ranchos
+568,21,139,San Pablo Anicano
+569,21,140,San Pedro Cholula

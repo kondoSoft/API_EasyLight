@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import State, Municipality, TipsAndAdvertising, TableRate, Receipt, Contract
+from .models import State, Municipality, TipsAndAdvertising, Receipt, Contract, Rate
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 # Register your models here.
@@ -8,8 +8,7 @@ from import_export import resources
 class StateResource(resources.ModelResource):
     class Meta:
         model = State
-        exclude = ('id',)
-        import_id_fields = ('key_state',)
+        # exclude = ('id',)
 
 class StateAdmin(ImportExportModelAdmin):
     resource_class = StateResource
@@ -17,15 +16,23 @@ class StateAdmin(ImportExportModelAdmin):
 class MunicipalityResource(resources.ModelResource):
     class Meta:
         model = Municipality
-        exclude = ('id',)
-        import_id_fields = ('key_mun',)
+        # exclude = ('id',)
+        # import_id_fields = ('key_mun',)
 
 class MunicipalityAdmin(ImportExportModelAdmin):
     resource_class = MunicipalityResource
 
+class RateResource(resources.ModelResource):
+    class Meta:
+        model = Rate
+
+class RateAdmin(ImportExportModelAdmin):
+    resource_class = RateResource
+
+
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
-admin.site.register(TableRate)
+admin.site.register(Rate, RateAdmin)
 admin.site.register(Contract)
 admin.site.register(Receipt)
 admin.site.register(TipsAndAdvertising)

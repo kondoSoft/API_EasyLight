@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
-from apps.models import State, Municipality,TipsAndAdvertising, TableRate, Contract, Receipt
+from apps.models import State, Municipality,TipsAndAdvertising, Contract, Receipt
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -18,7 +18,7 @@ class StateSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = State
-        fields = ('key_state','state', 'abbreviation')
+        fields = ('state', 'abbreviation')
 # Municipios
 class MunicipalitySerializer(serializers.HyperlinkedModelSerializer):
     state = serializers.HyperlinkedIdentityField(many=False, view_name='state-detail', read_only=False)
@@ -28,11 +28,6 @@ class MunicipalitySerializer(serializers.HyperlinkedModelSerializer):
         fields = ('state', 'key_mun', 'name_mun')
 
 # Tabla de Tarifas
-class TableRateSerializer(serializers.HyperlinkedModelSerializer):
-
-    class Meta:
-        model = TableRate
-        fields = ('name', 'precio',)
 
 # Datos de Contratos
 class ContractSerializer(serializers.ModelSerializer):

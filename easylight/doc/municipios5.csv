@@ -1,0 +1,182 @@
+id,state,key_mun,name_mun
+1,30,196,Yanga
+2,30,197,Yecuatla
+3,30,198,Zacualpan
+4,30,199,Zaragoza
+5,30,200,Zentla
+6,30,201,Zongolica
+7,30,202,Zontecomatlán de López y Fuentes
+8,30,203,Zozocolco de Hidalgo
+9,30,204,Agua Dulce
+10,30,205,El Higo
+11,30,206,Nanchital de Lázaro Cárdenas del Río
+12,30,207,Tres Valles
+13,30,208,Carlos A. Carrillo
+14,30,209,Tatahuicapan de Juárez
+15,30,210,Uxpanapa
+16,30,211,San Rafael
+17,30,212,Santiago Sochiapan
+18,31,1,Abalá
+19,31,2,Acanceh
+20,31,3,Akil
+21,31,4,Baca
+22,31,5,Bokobá
+23,31,6,Buctzotz
+24,31,7,Cacalchén
+25,31,8,Calotmul
+26,31,9,Cansahcab
+27,31,10,Cantamayec
+28,31,11,Celestún
+29,31,12,Cenotillo
+30,31,13,Conkal
+31,31,14,Cuncunul
+32,31,15,Cuzamá
+33,31,16,Chacsinkín
+34,31,17,Chankom
+35,31,18,Chapab
+36,31,19,Chemax
+37,31,20,Chicxulub Pueblo
+38,31,21,Chichimilá
+39,31,22,Chikindzonot
+40,31,23,Chocholá
+41,31,24,Chumayel
+42,31,25,Dzán
+43,31,26,Dzemul
+44,31,27,Dzidzantún
+45,31,28,Dzilam de Bravo
+46,31,29,Dzilam González
+47,31,30,Dzitás
+48,31,31,Dzoncauich
+49,31,32,Espita
+50,31,33,Halachó
+51,31,34,Hocabá
+52,31,35,Hoctún
+53,31,36,Homún
+54,31,37,Huhí
+55,31,38,Hunucmá
+56,31,39,Ixil
+57,31,40,Izamal
+58,31,41,Kanasín
+59,31,42,Kantunil
+60,31,43,Kaua
+61,31,44,Kinchil
+62,31,45,Kopomá
+63,31,46,Mama
+64,31,47,Maní
+65,31,48,Maxcanú
+66,31,49,Mayapán
+67,31,50,Mérida
+68,31,51,Mocochá
+69,31,52,Motul
+70,31,53,Muna
+71,31,54,Muxupip
+72,31,55,Opichén
+73,31,56,Oxkutzcab
+74,31,57,Panabá
+75,31,58,Peto
+76,31,59,Progreso
+77,31,60,Quintana Roo
+78,31,61,Río Lagartos
+79,31,62,Sacalum
+80,31,63,Samahil
+81,31,64,Sanahcat
+82,31,65,San Felipe
+83,31,66,Santa Elena
+84,31,67,Seyé
+85,31,68,Sinanché
+86,31,69,Sotuta
+87,31,70,Sucilá
+88,31,71,Sudzal
+89,31,72,Suma
+90,31,73,Tahdziú
+91,31,74,Tahmek
+92,31,75,Teabo
+93,31,76,Tecoh
+94,31,77,Tekal de Venegas
+95,31,78,Tekantó
+96,31,79,Tekax
+97,31,80,Tekit
+98,31,81,Tekom
+99,31,82,Telchac Pueblo
+100,31,83,Telchac Puerto
+101,31,84,Temax
+102,31,85,Temozón
+103,31,86,Tepakán
+104,31,87,Tetiz
+105,31,88,Teya
+106,31,89,Ticul
+107,31,90,Timucuy
+108,31,91,Tinum
+109,31,92,Tixcacalcupul
+110,31,93,Tixkokob
+111,31,94,Tixmehuac
+112,31,95,Tixpéhual
+113,31,96,Tizimín
+114,31,97,Tunkás
+115,31,98,Tzucacab
+116,31,99,Uayma
+117,31,100,Ucú
+118,31,101,Umán
+119,31,102,Valladolid
+120,31,103,Xocchel
+121,31,104,Yaxcabá
+122,31,105,Yaxkukul
+123,31,106,Yobaín
+124,32,1,Apozol
+125,32,2,Apulco
+126,32,3,Atolinga
+127,32,4,Benito Juárez
+128,32,5,Calera
+129,32,6,Cañitas de Felipe Pescador
+130,32,7,Concepción del Oro
+131,32,8,Cuauhtémoc
+132,32,9,Chalchihuites
+133,32,10,Fresnillo
+134,32,11,Trinidad García de la Cadena
+135,32,12,Genaro Codina
+136,32,13,General Enrique Estrada
+137,32,14,General Francisco R. Murguía
+138,32,15,El Plateado de Joaquín Amaro
+139,32,16,General Pánfilo Natera
+140,32,17,Guadalupe
+141,32,18,Huanusco
+142,32,19,Jalpa
+143,32,20,Jerez
+144,32,21,Jiménez del Teul
+145,32,22,Juan Aldama
+146,32,23,Juchipila
+147,32,24,Loreto
+148,32,25,Luis Moya
+149,32,26,Mazapil
+150,32,27,Melchor Ocampo
+151,32,28,Mezquital del Oro
+152,32,29,Miguel Auza
+153,32,30,Momax
+154,32,31,Monte Escobedo
+155,32,32,Morelos
+156,32,33,Moyahua de Estrada
+157,32,34,Nochistlán de Mejía
+158,32,35,Noria de Ángeles
+159,32,36,Ojocaliente
+160,32,37,Pánuco
+161,32,38,Pinos
+162,32,39,Río Grande
+163,32,40,Sain Alto
+164,32,41,El Salvador
+165,32,42,Sombrerete
+166,32,43,Susticacán
+167,32,44,Tabasco
+168,32,45,Tepechitlán
+169,32,46,Tepetongo
+170,32,47,Teúl de González Ortega
+171,32,48,Tlaltenango de Sánchez Román
+172,32,49,Valparaíso
+173,32,50,Vetagrande
+174,32,51,Villa de Cos
+175,32,52,Villa García
+176,32,53,Villa González Ortega
+177,32,54,Villa Hidalgo
+178,32,55,Villanueva
+179,32,56,Zacatecas
+180,32,57,Trancoso
+181,32,58,Santa María de la Paz

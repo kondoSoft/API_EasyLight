@@ -69,7 +69,6 @@ class TipsAndAdvertisingList(viewsets.ModelViewSet):
     queryset = TipsAndAdvertising.objects.all()
     serializer_class = TipsAndAdvertisingSerializer
 
-
 def open_file(request):
     book = xlrd.open_workbook("doc/Calculadora.xlsx")
 

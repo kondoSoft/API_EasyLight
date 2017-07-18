@@ -1,0 +1,49 @@
+id,name_rate,period_name,consumption_name,kilowatt,cost
+1,TARIFA 1A,Verano,Consumo Basico,100,0.697
+2,TARIFA 1A,Verano,Consumo Intermedio,50,0.822
+3,TARIFA 1A,Verano,Consumo Intermedio Alto,0,0.000
+4,TARIFA 1A,Verano,Consumo Excedente,0,2.802
+5,TARIFA 1B,Verano,Consumo Basico,125,0.697
+6,TARIFA 1B,Verano,Consumo Intermedio,100,0.822
+7,TARIFA 1B,Verano,Consumo Intermedio Alto,0,0.000
+8,TARIFA 1B,Verano,Consumo Excedente,0,2.802
+9,TARIFA 1C,Verano,Consumo Basico,150,0.697
+10,TARIFA 1C,Verano,Consumo Intermedio,150,0.822
+11,TARIFA 1C,Verano,Consumo Intermedio Alto,150,1.050
+12,TARIFA 1C,Verano,Consumo Excedente,0,2.802
+13,TARIFA 1D,Verano,Consumo Basico,175,0.697
+14,TARIFA 1D,Verano,Consumo Intermedio,225,0.822
+15,TARIFA 1D,Verano,Consumo Intermedio Alto,200,1.050
+16,TARIFA 1D,Verano,Consumo Excedente,0,2.802
+17,TARIFA 1E,Verano,Consumo Basico,300,0.583
+18,TARIFA 1E,Verano,Consumo Intermedio,450,0.726
+19,TARIFA 1E,Verano,Consumo Intermedio Alto,150,0.948
+20,TARIFA 1E,Verano,Consumo Excedente,0,2.802
+21,TARIFA 1F,Verano,Consumo Basico,300,0.583
+22,TARIFA 1F,Verano,Consumo Intermedio,900,0.726
+23,TARIFA 1F,Verano,Consumo Intermedio Alto,1300,1.768
+24,TARIFA 1F,Verano,Consumo Excedente,0,2.802
+25,TARIFA 1A,NoVerano,Consumo Basico,75,0.793
+26,TARIFA 1A,NoVerano,Consumo Intermedio,75,0.956
+27,TARIFA 1A,NoVerano,Consumo Intermedio Alto,0,0.000
+28,TARIFA 1A,NoVerano,Consumo Excedente,0,2.802
+29,TARIFA 1B,NoVerano,Consumo Basico,75,0.793
+30,TARIFA 1B,NoVerano,Consumo Intermedio,75,0.956
+31,TARIFA 1B,NoVerano,Consumo Intermedio Alto,0,0.000
+32,TARIFA 1B,NoVerano,Consumo Excedente,0,2.802
+33,TARIFA 1C,NoVerano,Consumo Basico,75,0.793
+34,TARIFA 1C,NoVerano,Consumo Intermedio,75,0.956
+35,TARIFA 1C,NoVerano,Consumo Intermedio Alto,0,0.000
+36,TARIFA 1C,NoVerano,Consumo Excedente,0,2.802
+37,TARIFA 1D,NoVerano,Consumo Basico,75,0.793
+38,TARIFA 1D,NoVerano,Consumo Intermedio,75,0.956
+39,TARIFA 1D,NoVerano,Consumo Intermedio Alto,0,0.000
+40,TARIFA 1D,NoVerano,Consumo Excedente,0,2.802
+41,TARIFA 1E,NoVerano,Consumo Basico,75,0.793
+42,TARIFA 1E,NoVerano,Consumo Intermedio,75,0.956
+43,TARIFA 1E,NoVerano,Consumo Intermedio Alto,0,0.000
+44,TARIFA 1E,NoVerano,Consumo Excedente,0,2.802
+45,TARIFA 1F,NoVerano,Consumo Basico,75,0.793
+46,TARIFA 1F,NoVerano,Consumo Intermedio,75,0.956
+47,TARIFA 1F,NoVerano,Consumo Intermedio Alto,0,0.000
+48,TARIFA 1F,NoVerano,Consumo Excedente,0,2.802

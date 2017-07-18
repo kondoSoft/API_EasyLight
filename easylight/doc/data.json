@@ -1,0 +1,99 @@
+
+
+{
+  "tarifa_1a" : {
+    "verano": {
+      "consumo_basico": {"kwh":100, "costo": 0.697 },
+      "consumo_intermedio": {"kwh":50, "costo": 0.822},
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000},
+      "consumo_excedente": {"kwh":0, "costo": 2.802}
+    },
+    "consumo_fuera_verano": {
+      "consumo_basico": {"kwh":75, "costo": 0.793  },
+      "consumo_intermedio": {"kwh":75, "costo": 0.956  },
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000},
+      "consumo_excedente": {"kwh":0, "costo": 2.802}
+    }
+  }
+}
+{
+  "tarifa_1b" : {
+    "verano" : {
+      "consumo_basico": {"kwh":125, "costo": 0.697 },
+      "consumo_intermedio": {"kwh":100, "costo": 0.822 },
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000},
+      "consumo_excedente":{"kwh":0, "costo": 2.802 }
+    },
+    "consumo_fuera_verano": {
+      "consumo_basico": {"kwh":75, "costo": 0.793 },
+      "consumo_intermedio": {"kwh":100, "costo": 0.956 },
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000 },
+      "consumo_excedente":{"kwh":0, "costo": 2.802 }
+    }
+  }
+}
+{
+  "tarifa_1c" : {
+    "verano" : {
+      "consumo_basico": {"kwh":150, "costo": 0.697  },
+      "consumo_intermedio": {"kwh":150, "costo": 0.822  },
+      "consumo_intermedio_alto": {"kwh":150, "costo": 1.050  },
+      "consumo_excedente": {"kwh":0, "costo": 2.802  }
+    },
+    "consumo_fuera_verano": {
+      "consumo_basico": {"kwh":75, "costo": 0.793   },
+      "consumo_intermedio": {"kwh":125, "costo": 0.956   },
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000  },
+      "consumo_excedente": {"kwh":0, "costo": 2.802  }
+    }
+  }
+}
+{
+  "tarifa_1d" : {
+    "verano" : {
+      "consumo_basico": {"kwh":175, "costo": 0.697   },
+      "consumo_intermedio": {"kwh":225, "costo": 0.822   },
+      "consumo_intermedio_alto": {"kwh":200, "costo": 1.050   },
+      "consumo_excedente": {"kwh":0, "costo": 2.802  }
+    },
+    "consumo_fuera_verano": {
+      "consumo_basico": {"kwh":75, "costo": 0.793  },
+      "consumo_intermedio": {"kwh":125, "costo": 0.956  },
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000  },
+      "consumo_excedente":{"kwh":0, "costo": 2.802  }
+    }
+  }
+}
+{
+  "tarifa_1e" : {
+    "verano" : {
+      "consumo_basico": {"kwh":300, "costo": 0.583   },
+      "consumo_intermedio":{"kwh":450, "costo": 0.726   },
+      "consumo_intermedio_alto": {"kwh":150, "costo": 0.948   },
+      "consumo_excedente": {"kwh":0, "costo": 2.802  }
+    },
+    "consumo_fuera_verano": {
+      "consumo_basico": {"kwh":75, "costo": 0.793  },
+      "consumo_intermedio": {"kwh":125, "costo": 0.956   },
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000  },
+      "consumo_excedente": {"kwh":0, "costo": 2.802  }
+    }
+  }
+}
+{
+  "tarifa_1f" : {
+    "verano" : {
+      "consumo_basico": {"kwh":300, "costo": 0.583   },
+      "consumo_intermedio": {"kwh":900, "costo": 0.726   },
+      "consumo_intermedio_alto": {"kwh":1300, "costo": 1.768   },
+      "consumo_excedente":0{"kwh":0, "costo": 2.802  }
+    },
+    "consumo_fuera_verano": {
+      "consumo_basico": {"kwh":75, "costo": 0.793   },
+      "consumo_intermedio":{"kwh":125, "costo": 0.956   },
+      "consumo_intermedio_alto": {"kwh":0, "costo": 0.000  },
+      "consumo_excedente": {"kwh":0, "costo": 2.802  }
+    }
+  }
+}
+}

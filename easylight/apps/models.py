@@ -1,32 +1,91 @@
 from django.db import models
+from jsonfield import JSONField
+from django.core.validators import MinValueValidator
+
+class Rate(models.Model):
+    VERANO = 'Verano'
+    NOVERANO = 'NoVerano'
+    CONSUMOBASICO = 'Consumo Basico'
+    CONSUMOINTERMEDIO = 'Consumo Intermedio'
+    CONSUMOINTERMEDIOALTO = 'Consumo Intermedio Alto'
+    CONSUMOEXCEDENTE = 'Consumo Excedente'
+    TARIFA1 = 'TARIFA 1'
+    TARIFA1A = 'TARIFA 1A'
+    TARIFA1B = 'TARIFA 1B'
+    TARIFA1C = 'TARIFA 1C'
+    TARIFA1D = 'TARIFA 1D'
+    TARIFA1E = 'TARIFA 1E'
+    TARIFA1F = 'TARIFA 1F'
+
+    CHOICES_RATE = (
+        (TARIFA1, 'TARIFA 1'),
+        (TARIFA1A, 'TARIFA 1A'),
+        (TARIFA1B, 'TARIFA 1B'),
+        (TARIFA1C, 'TARIFA 1C'),
+        (TARIFA1D, 'TARIFA 1D'),
+        (TARIFA1E, 'TARIFA 1E'),
+        (TARIFA1F, 'TARIFA 1F'),
+    )
+
+    CHOICES_SUMMER = (
+        (VERANO, 'Verano'),
+        (NOVERANO, 'Fuera de Verano'),
+    )
+    CHOICES_CONSUMPTION = (
+        (CONSUMOBASICO, 'Consumo Básico'),
+        (CONSUMOINTERMEDIO, 'Consumo Intermedio'),
+        (CONSUMOINTERMEDIOALTO, 'Consumo Intermedio Alto'),
+        (CONSUMOEXCEDENTE, 'Consumo Excedente'),
+    )
+
+    name_rate = models.CharField(max_length=15, choices=CHOICES_RATE)
+    period_name = models.CharField(max_length=20, choices=CHOICES_SUMMER)
+    consumption_name = models.CharField(max_length=30, choices=CHOICES_CONSUMPTION)
+    kilowatt = models.PositiveSmallIntegerField(null=True, blank=False)
+    cost = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=3)
 
 
-class TableRate(models.Model):
-    name = models.CharField(max_length=20, blank=False)
-    precio = models.IntegerField(blank=False)
 
     def __str__(self):
-        return str(self.name)
+        return "%s %s %s %s %s" %(self.name_rate, self.period_name, self.consumption_name, self.kilowatt, self.cost)
 
 class State(models.Model):
-    key_state = models.CharField(max_length=100, primary_key=True)
     state = models.CharField(max_length=35, null=False, blank=False)
     abbreviation = models.CharField(max_length=10, blank=False)
 
     class Meta:
-        ordering = ('key_state',)
+        ordering = ('id',)
 
     def __str__(self):
         return str(self.state)
 
 class Municipality(models.Model):
-    key_state = models.ForeignKey(State, null=True, blank=True)
-    rate = models.ForeignKey(TableRate, null=True, blank=False)
+    TARIFA1 = 'TARIFA 1'
+    TARIFA1A = 'TARIFA 1A'
+    TARIFA1B = 'TARIFA 1B'
+    TARIFA1C = 'TARIFA 1C'
+    TARIFA1D = 'TARIFA 1D'
+    TARIFA1E = 'TARIFA 1E'
+    TARIFA1F = 'TARIFA 1F'
+
+    CHOICES_RATE = (
+        (TARIFA1, 'TARIFA 1'),
+        (TARIFA1A, 'TARIFA 1A'),
+        (TARIFA1B, 'TARIFA 1B'),
+        (TARIFA1C, 'TARIFA 1C'),
+        (TARIFA1D, 'TARIFA 1D'),
+        (TARIFA1E, 'TARIFA 1E'),
+        (TARIFA1F, 'TARIFA 1F'),
+    )
+
+    state = models.ForeignKey(State, null=False, blank=False)
+    # rate = models.CharField(max_length=20, choices=CHOICES_RATE)
+    # rate = models.ForeignKey(Rate__name_rate, null=True, blank=False)
     key_mun = models.IntegerField(null=False, blank=False)
     name_mun = models.CharField(max_length=120, blank=False, null=False)
 
     class Meta:
-        ordering = ('key_state__key_state',)
+        ordering = ('name_mun',)
 
     def __str__(self):
         return str(self.name_mun)
@@ -43,17 +102,20 @@ class Receipt(models.Model):
 
 class Contract(models.Model):
 
-    TARIFA1 = 'tarifa1'
-    TARIFA1A = 'tarifa1a'
-    TARIFA1B = 'tarifa1b'
-    TARIFA1C = 'tarifa1c'
-    TARIFA1D = 'tarifa1d'
-    TARIFA1E = 'tarifa1e'
-    TARIFA1F = 'tarifa1f'
-    PERIODO1 = 'ene_jun'
-    PERIODO2 = 'jun_dic'
-    MENSUAL = 'mensual'
-    BIMESTRAL = 'bimestral'
+
+    PERIODO1 = 'Verano'
+    PERIODO2 = 'Verano'
+    PERIODO3 = 'Verano'
+    PERIODO4 = 'Verano'
+    MENSUAL = 'Mensual'
+    BIMESTRAL = 'Bimestral'
+    TARIFA1 = 'TARIFA 1'
+    TARIFA1A = 'TARIFA 1A'
+    TARIFA1B = 'TARIFA 1B'
+    TARIFA1C = 'TARIFA 1C'
+    TARIFA1D = 'TARIFA 1D'
+    TARIFA1E = 'TARIFA 1E'
+    TARIFA1F = 'TARIFA 1F'
 
     CHOICES_RATE = (
         (TARIFA1, 'TARIFA 1'),
@@ -69,15 +131,18 @@ class Contract(models.Model):
         (BIMESTRAL, 'Bimestral'),
     )
     CHOICES_PERIOD = (
-        (PERIODO1, 'Enero - Junio'),
-        (PERIODO2, 'Junio - Diciembre'),
+        (PERIODO1, 'Febrero - Julio'),
+        (PERIODO2, 'Marzo - Agosto'),
+        (PERIODO3, 'Abril - Septiembre'),
+        (PERIODO4, 'Mayo - Octubre'),
     )
 
     name_contract = models.CharField(max_length=20, blank=False)
     number_contract = models.IntegerField(blank=False)
-    state = models.ForeignKey(State, null=True)
+    state = models.ForeignKey(State, null=False, blank=False)
     municipality = models.ForeignKey(Municipality, null=False)
-    rate = models.CharField(max_length=10, choices=CHOICES_RATE )
+    rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )
+    # rate = models.ForeignKey(Rate, null=False)
     period_summer = models.CharField(max_length=20, choices=CHOICES_PERIOD)
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
     receipt = models.ForeignKey(Receipt, null=False, blank=True)
@@ -97,6 +162,8 @@ class TipsAndAdvertising(models.Model):
 
     name_tip_advertising = models.CharField(max_length=20, blank=False)
     type_data = models.CharField(max_length=20, choices=CHOICES_TIPS)
+    description = models.TextField(blank=False)
+    image = models.ImageField()
 
     def _str_(self):
-        return str(self.name_tip_advertising)
+        return '%s %s %s' %(self.name_tip_advertising, self.type_data, self.description)

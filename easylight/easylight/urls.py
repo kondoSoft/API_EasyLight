@@ -36,4 +36,5 @@ urlpatterns = format_suffix_patterns([
     url(r'^municipality/$', municipality_list, name='municipality-list'),
     url(r'^municipality/(?P<pk>[0-9]+)/$', municipality_detail, name='municipality-detail'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+
 ])
