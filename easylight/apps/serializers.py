@@ -18,14 +18,16 @@ class StateSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = State
-        fields = ('state', 'abbreviation')
+        fields = ('id','state', 'abbreviation')
 # Municipios
-class MunicipalitySerializer(serializers.HyperlinkedModelSerializer):
-    state = serializers.HyperlinkedIdentityField(many=False, view_name='state-detail', read_only=False)
+class MunicipalitySerializer(serializers.ModelSerializer):
+    state = StateSerializer(many=False, read_only=True)
 
     class Meta:
         model = Municipality
-        fields = ('state', 'key_mun', 'name_mun')
+        fields = ('key_mun','name_mun','state')
+
+
 
 # Tabla de Tarifas
 

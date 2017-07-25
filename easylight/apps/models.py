@@ -44,7 +44,8 @@ class Rate(models.Model):
     kilowatt = models.PositiveSmallIntegerField(null=True, blank=False)
     cost = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=3)
 
-
+    class Meta:
+        verbose_name = "Tarifa"
 
     def __str__(self):
         return "%s %s %s %s %s" %(self.name_rate, self.period_name, self.consumption_name, self.kilowatt, self.cost)
@@ -54,6 +55,7 @@ class State(models.Model):
     abbreviation = models.CharField(max_length=10, blank=False)
 
     class Meta:
+        verbose_name = "Estado"
         ordering = ('id',)
 
     def __str__(self):
@@ -78,14 +80,16 @@ class Municipality(models.Model):
         (TARIFA1F, 'TARIFA 1F'),
     )
 
-    state = models.ForeignKey(State, null=False, blank=False)
+    state = models.ForeignKey(State, related_name='states', null=False, blank=False)
     # rate = models.CharField(max_length=20, choices=CHOICES_RATE)
     # rate = models.ForeignKey(Rate__name_rate, null=True, blank=False)
     key_mun = models.IntegerField(null=False, blank=False)
     name_mun = models.CharField(max_length=120, blank=False, null=False)
 
     class Meta:
-        ordering = ('name_mun',)
+        # unique_together = ('state',)
+        verbose_name = "Municipio"
+        ordering = ('state',)
 
     def __str__(self):
         return str(self.name_mun)
@@ -95,13 +99,15 @@ class Receipt(models.Model):
     amount_payable = models.IntegerField(null=False)
     current_reading = models.IntegerField(null=False)
     previous_reading = models.IntegerField(null=False)
-    current_data = models.IntegerField(null=True)
+    current_data = models.IntegerField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = "Recibo"
 
     def __str__(self):
         return str(self.payday_limit)
 
 class Contract(models.Model):
-
 
     PERIODO1 = 'Verano'
     PERIODO2 = 'Verano'
@@ -147,6 +153,9 @@ class Contract(models.Model):
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
     receipt = models.ForeignKey(Receipt, null=False, blank=True)
 
+    class Meta:
+        verbose_name = "Contrato"
+
     def __str__(self):
         return str(self.number_contract)
 
@@ -164,6 +173,9 @@ class TipsAndAdvertising(models.Model):
     type_data = models.CharField(max_length=20, choices=CHOICES_TIPS)
     description = models.TextField(blank=False)
     image = models.ImageField()
+
+    class Meta:
+        verbose_name = "Tip"
 
     def _str_(self):
         return '%s %s %s' %(self.name_tip_advertising, self.type_data, self.description)

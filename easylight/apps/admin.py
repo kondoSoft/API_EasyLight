@@ -21,18 +21,32 @@ class MunicipalityResource(resources.ModelResource):
 
 class MunicipalityAdmin(ImportExportModelAdmin):
     resource_class = MunicipalityResource
+    list_display = ['get_state', 'get_mun']
+    list_filter = ['state']
+    search_fields = ['state__state', 'name_mun']
+    list_per_page = 25
+
+    def get_mun(self, obj):
+        return obj.name_mun
+    get_mun.short_description = ("Municipio")
+
+    def get_state(self, obj):
+        return obj.state
+    get_state.short_description = ("Estado")
 
 class RateResource(resources.ModelResource):
     class Meta:
         model = Rate
 
-class RateAdmin(ImportExportModelAdmin):
+class RateImportExport(ImportExportModelAdmin):
     resource_class = RateResource
+    list_display = ('name_rate', 'period_name', 'consumption_name', 'kilowatt', 'cost')
 
 
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
-admin.site.register(Rate, RateAdmin)
+admin.site.register(Rate, RateImportExport)
+# admin.site.register(RateImportExport)
 admin.site.register(Contract)
 admin.site.register(Receipt)
 admin.site.register(TipsAndAdvertising)

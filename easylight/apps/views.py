@@ -9,6 +9,8 @@ from rest_framework import viewsets, renderers
 import xlrd
 from xlrd import open_workbook, cellname
 from django.http import HttpResponse
+from rest_framework.permissions import AllowAny
+from .pagination import ListStateSetPagination, ListMunicipalitySetPagination
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -37,6 +39,8 @@ class StateViewSet(viewsets.ModelViewSet):
     """
     API Estados
     """
+    permission_classes = (AllowAny,)
+    pagination_class = ListStateSetPagination
     queryset = State.objects.all()
     serializer_class = StateSerializer
 
@@ -47,6 +51,15 @@ class MunicipalityList(viewsets.ModelViewSet):
     """
     queryset = Municipality.objects.all()
     serializer_class = MunicipalitySerializer
+    permission_classes = (AllowAny,)
+    pagination_class = ListMunicipalitySetPagination
+
+    def get_queryset(self):
+        states = self.request.GET.get('state_id')
+        if states :
+            self.queryset = self.queryset.filter(state_id = states)
+
+        return self.queryset
 
 class ContractList(viewsets.ModelViewSet):
     """
@@ -68,6 +81,7 @@ class TipsAndAdvertisingList(viewsets.ModelViewSet):
     """
     queryset = TipsAndAdvertising.objects.all()
     serializer_class = TipsAndAdvertisingSerializer
+
 
 def open_file(request):
     book = xlrd.open_workbook("doc/Calculadora.xlsx")
