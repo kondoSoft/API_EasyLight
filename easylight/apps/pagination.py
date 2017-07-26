@@ -7,3 +7,7 @@ class ListStateSetPagination(PageNumberPagination):
 class ListMunicipalitySetPagination(PageNumberPagination):
     page_size = 600
     page_size_query_param = 'page_size'
+
+class ListRatePagination(PageNumberPagination):
+    page_size = 56
+    page_size_query_param = 'page_size'

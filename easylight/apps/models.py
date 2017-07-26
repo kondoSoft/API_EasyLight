@@ -46,6 +46,7 @@ class Rate(models.Model):
 
     class Meta:
         verbose_name = "Tarifa"
+        ordering = ('id',)
 
     def __str__(self):
         return "%s %s %s %s %s" %(self.name_rate, self.period_name, self.consumption_name, self.kilowatt, self.cost)

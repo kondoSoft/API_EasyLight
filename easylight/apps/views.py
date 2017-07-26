@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer
-from apps.models import State, Municipality, Contract, Receipt, TipsAndAdvertising
+from apps.serializers import UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, RateNameSerializer
+from apps.models import State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -10,7 +10,7 @@ import xlrd
 from xlrd import open_workbook, cellname
 from django.http import HttpResponse
 from rest_framework.permissions import AllowAny
-from .pagination import ListStateSetPagination, ListMunicipalitySetPagination
+from .pagination import ListStateSetPagination, ListMunicipalitySetPagination, ListRatePagination
 
 @api_view(['GET'])
 def api_root(request, format=None):
@@ -82,21 +82,42 @@ class TipsAndAdvertisingList(viewsets.ModelViewSet):
     queryset = TipsAndAdvertising.objects.all()
     serializer_class = TipsAndAdvertisingSerializer
 
+class RateList(viewsets.ModelViewSet):
+    """
+    API Tarifas
+    """
 
-def open_file(request):
-    book = xlrd.open_workbook("doc/Calculadora.xlsx")
 
-    worksheet = book.sheet_by_index(6)
+    queryset = Rate.objects.all()
+    serializer_class = RateSerializer
+    permission_classes = (AllowAny,)
+    pagination_class = ListRatePagination
 
-    states = []
-    rows = []
-    for col in range(1, worksheet.ncols):
-        states.append(worksheet.cell_value(0, col))
+class RateListUnique(viewsets.ModelViewSet):
+    """
+    API Lista de tarifas con nombres unicos
+    """
+    queryset = Rate.objects.order_by('name_rate').distinct('name_rate')
+    serializer_class = RateNameSerializer
+    permission_classes = (AllowAny,)
+    print (queryset)
 
-        for row in range(0, worksheet.nrows):
-            if worksheet.cell_value(row, col) != '':
-                rows.append(worksheet.cell_value(row, col))
+    # pagination_class = ListRatePagination
 
-    print (rows)
-
-    return HttpResponse(worksheet)
+# def open_file(request):
+#     book = xlrd.open_workbook("doc/Calculadora.xlsx")
+#
+#     worksheet = book.sheet_by_index(6)
+#
+#     states = []
+#     rows = []
+#     for col in range(1, worksheet.ncols):
+#         states.append(worksheet.cell_value(0, col))
+#
+#         for row in range(0, worksheet.nrows):
+#             if worksheet.cell_value(row, col) != '':
+#                 rows.append(worksheet.cell_value(row, col))
+#
+#     print (rows)
+#
+#     return HttpResponse(worksheet)
