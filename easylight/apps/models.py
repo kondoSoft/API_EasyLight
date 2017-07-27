@@ -90,7 +90,7 @@ class Municipality(models.Model):
     class Meta:
         # unique_together = ('state',)
         verbose_name = "Municipio"
-        ordering = ('state',)
+        ordering = ('name_mun',)
 
     def __str__(self):
         return str(self.name_mun)

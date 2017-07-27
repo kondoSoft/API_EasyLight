@@ -100,7 +100,6 @@ class RateListUnique(viewsets.ModelViewSet):
     queryset = Rate.objects.order_by('name_rate').distinct('name_rate')
     serializer_class = RateNameSerializer
     permission_classes = (AllowAny,)
-    print (queryset)
 
     # pagination_class = ListRatePagination
 
