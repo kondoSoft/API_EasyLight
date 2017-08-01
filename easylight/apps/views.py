@@ -67,6 +67,11 @@ class ContractList(viewsets.ModelViewSet):
     """
     queryset = Contract.objects.all()
     serializer_class = ContractSerializer
+    permission_classes = (AllowAny,)
+
+    # def perform_create(self, serializer):
+    #     print(self.request)
+    #     serializer.save(name_contract = self.request.name_contract)
 
 class ReceiptList(viewsets.ModelViewSet):
     """

@@ -25,7 +25,7 @@ class MunicipalitySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Municipality
-        fields = ('key_mun','name_mun','state')
+        fields = ('id','key_mun','name_mun','state')
 
 # Tabla de Tarifas
 class RateSerializer(serializers.ModelSerializer):
@@ -44,7 +44,7 @@ class ContractSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Contract
-        fields = ('name_contract', 'number_contract', 'state', 'municipality', 'rate', 'period_summer', 'type_payment', 'receipt')
+        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate', 'period_summer', 'type_payment', 'receipt')
 # Datos de Recibos de Luz
 class ReceiptSerializer(serializers.ModelSerializer):
 

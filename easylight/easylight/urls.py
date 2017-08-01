@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import StateViewSet, MunicipalityList, RateList, RateListUnique
+from apps.views import StateViewSet, MunicipalityList, RateList, RateListUnique, ContractList
 from rest_framework import renderers
 from apps import views
 from django.contrib import admin
@@ -10,6 +10,16 @@ state_list = StateViewSet.as_view({
     'post': 'create'
 })
 state_detail = StateViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+contract_list = ContractList.as_view({
+    'get': 'list',
+    'post': 'create'
+})
+contract_detail = ContractList.as_view({
     'get': 'retrieve',
     'put': 'update',
     'patch': 'partial_update',
@@ -46,6 +56,7 @@ urlpatterns = format_suffix_patterns([
     url(r'^municipality/(?P<pk>[0-9]+)/$', municipality_detail, name='municipality-detail'),
     url(r'^rate/$', rate_list, name='rate-list'),
     url(r'^rate_unique/$', rate_unique_list, name='rate-unique-list'),
+    url(r'^contract/$', contract_list, name='contract-list'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 
 ])

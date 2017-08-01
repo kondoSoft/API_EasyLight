@@ -149,10 +149,9 @@ class Contract(models.Model):
     state = models.ForeignKey(State, null=False, blank=False)
     municipality = models.ForeignKey(Municipality, null=False)
     rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )
-    # rate = models.ForeignKey(Rate, null=False)
-    period_summer = models.CharField(max_length=20, choices=CHOICES_PERIOD)
+    period_summer = models.CharField(max_length=20, choices=CHOICES_PERIOD, null=True, blank=True)
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
-    receipt = models.ForeignKey(Receipt, null=False, blank=True)
+    receipt = models.ForeignKey(Receipt, null=True, blank=True)
 
     class Meta:
         verbose_name = "Contrato"
