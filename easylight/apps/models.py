@@ -151,7 +151,7 @@ class Contract(models.Model):
     rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )
     period_summer = models.CharField(max_length=20, choices=CHOICES_PERIOD, null=True, blank=True)
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
-    receipt = models.ForeignKey(Receipt, null=True, blank=True)
+    receipt = models.ManyToManyField(Receipt, null=True, blank=True)
 
     class Meta:
         verbose_name = "Contrato"

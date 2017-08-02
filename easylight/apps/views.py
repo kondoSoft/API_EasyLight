@@ -79,6 +79,11 @@ class ReceiptList(viewsets.ModelViewSet):
     """
     queryset = Receipt.objects.all()
     serializer_class = ReceiptSerializer
+    permission_classes = (AllowAny,)
+
+    # def perform_create(self, serializer):
+    #     print(self.request)
+    #     serializer.save(name_contract = self.request.name_contract)
 
 class TipsAndAdvertisingList(viewsets.ModelViewSet):
     """
