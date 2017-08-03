@@ -69,10 +69,6 @@ class ContractList(viewsets.ModelViewSet):
     serializer_class = ContractSerializer
     permission_classes = (AllowAny,)
 
-    # def perform_create(self, serializer):
-    #     print(self.request)
-    #     serializer.save(name_contract = self.request.name_contract)
-
 class ReceiptList(viewsets.ModelViewSet):
     """
     API Contratos
@@ -81,9 +77,6 @@ class ReceiptList(viewsets.ModelViewSet):
     serializer_class = ReceiptSerializer
     permission_classes = (AllowAny,)
 
-    # def perform_create(self, serializer):
-    #     print(self.request)
-    #     serializer.save(name_contract = self.request.name_contract)
 
 class TipsAndAdvertisingList(viewsets.ModelViewSet):
     """

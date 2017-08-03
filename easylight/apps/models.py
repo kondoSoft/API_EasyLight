@@ -101,6 +101,7 @@ class Receipt(models.Model):
     current_reading = models.IntegerField(null=False)
     previous_reading = models.IntegerField(null=False)
     current_data = models.IntegerField(null=True, blank=True)
+    contract = models.ForeignKey('Contract', related_name='contract', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Recibo"
@@ -151,7 +152,7 @@ class Contract(models.Model):
     rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )
     period_summer = models.CharField(max_length=20, choices=CHOICES_PERIOD, null=True, blank=True)
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
-    receipt = models.ManyToManyField(Receipt, null=True, blank=True)
+    # receipt = models.ManyToManyField(Receipt, null=True, blank=True)
 
     class Meta:
         verbose_name = "Contrato"
