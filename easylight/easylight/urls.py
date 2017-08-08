@@ -1,10 +1,35 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import StateViewSet, MunicipalityList, RateList, RateListUnique, ContractList, ReceiptList
+from apps.views import GroupsList,UserViewSet, StateViewSet, MunicipalityList, RateList, RateListUnique, ContractList, ReceiptList
 from rest_framework import renderers
+from django.conf.urls.static import static
 from apps import views
 from django.contrib import admin
+from easylight import settings
+from rest_framework.authtoken import views as rest_framework_views
 
+
+user_list =UserViewSet.as_view({
+    'get': 'list',
+    'post': 'create'
+})
+user_detail = UserViewSet.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
+
+group_list = GroupsList.as_view({
+    'get': 'list',
+    'post': 'create'
+})
+group_detail = GroupsList.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+})
 state_list = StateViewSet.as_view({
     'get': 'list',
     'post': 'create'
@@ -55,11 +80,14 @@ rate_unique_list = RateListUnique.as_view({
 })
 
 urlpatterns = format_suffix_patterns([
-    # url(r'^', include(router.urls)),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.api_root),
-    # url(r'^open/$', views.open_file),
-    url(r'^groups/$', views.GroupsList.as_view(), name='group-list'),
+    # Session Login
+    url(r'^login/$', views.get_auth_token, name='login'),
+    # url(r'^logout/$', views.logout_user, name='logout'),
+    # url(r'^auth/$', views.login_form, name='login_form'),
+    url(r'^get_auth_token/$', rest_framework_views.obtain_auth_token, name='get_auth_token'),
+    url(r'^groups/$', group_list, name='group-list'),
+    url(r'^group/(?P<pk>[0-9]+)/$', group_detail, name='group-detail'),
     url(r'^states/$', state_list, name='state-list'),
     url(r'^states/(?P<pk>[0-9]+)/$', state_detail, name='state-detail'),
     url(r'^municipality/$', municipality_list, name='municipality-list'),
@@ -72,4 +100,4 @@ urlpatterns = format_suffix_patterns([
     url(r'^receipt/(?P<pk>[0-9]+)/$', receipt_detail, name='receipt-detail'),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 
-])
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))

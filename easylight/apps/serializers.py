@@ -2,17 +2,26 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apps.models import State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate
 import json
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+
+class UserSerializer(serializers.ModelSerializer):
+    contracts = serializers.PrimaryKeyRelatedField(many=True, queryset=Contract.objects.all())
+
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('url', 'username', 'email', 'groups', 'contracts')
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    highlight = serializers.HyperlinkedIdentityField(view_name='group-highlight', format='html')
+class LoginSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ('email', 'password')
+
+class GroupSerializer(serializers.ModelSerializer):
+    # highlight = serializers.HyperlinkedIdentityField(view_name='group-highlight', format='html')
 
     class Meta:
         model = Group
-        fields = ('url','highlight', 'name')
+        fields = ('id', 'url', 'name')
 # Estados
 class StateSerializer(serializers.ModelSerializer):
 
@@ -36,6 +45,7 @@ class RateSerializer(serializers.ModelSerializer):
 
 class RateNameSerializer(serializers.ModelSerializer):
 
+
     class Meta:
         model = Rate
         fields = ('name_rate',)
@@ -57,7 +67,9 @@ class ReceiptSerializer(serializers.ModelSerializer):
 # Datos de Contratos
 class ContractSerializer(serializers.ModelSerializer):
     receipt = serializers.SerializerMethodField()
-    
+    image = serializers.ImageField()
+    owner = serializers.ReadOnlyField(source='owner.id')
+
     def get_receipt(self, obj):
         listReceipt = []
         receipts = Receipt.objects.all().filter(contract=obj.pk)
@@ -68,7 +80,7 @@ class ContractSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Contract
-        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate', 'period_summer', 'type_payment', 'receipt')
+        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate', 'period_summer', 'type_payment', 'receipt', 'image','owner')
 
 # TipsAndAdvertising
 
