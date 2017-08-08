@@ -1,7 +1,16 @@
 from django.db import models
-from jsonfield import JSONField
+from django.conf import settings
 from django.core.validators import MinValueValidator
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
 
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
+        
 class Rate(models.Model):
     VERANO = 'Verano'
     NOVERANO = 'NoVerano'
@@ -101,9 +110,11 @@ class Receipt(models.Model):
     current_reading = models.IntegerField(null=False)
     previous_reading = models.IntegerField(null=False)
     current_data = models.IntegerField(null=True, blank=True)
+    contract = models.ForeignKey('Contract', related_name='contract', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Recibo"
+        ordering = ('id',)
 
     def __str__(self):
         return str(self.payday_limit)
@@ -151,10 +162,13 @@ class Contract(models.Model):
     rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )
     period_summer = models.CharField(max_length=20, choices=CHOICES_PERIOD, null=True, blank=True)
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
-    receipt = models.ManyToManyField(Receipt, null=True, blank=True)
+    image = models.ImageField(upload_to='media/', blank=True)
+    owner = models.ForeignKey('auth.User', related_name='contracts', on_delete=models.CASCADE)
+    # receipt = models.ManyToManyField(Receipt, null=True, blank=True)
 
     class Meta:
         verbose_name = "Contrato"
+        ordering = ('id',)
 
     def __str__(self):
         return str(self.number_contract)
@@ -172,7 +186,7 @@ class TipsAndAdvertising(models.Model):
     name_tip_advertising = models.CharField(max_length=20, blank=False)
     type_data = models.CharField(max_length=20, choices=CHOICES_TIPS)
     description = models.TextField(blank=False)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='media/', blank=True)
 
     class Meta:
         verbose_name = "Tip"

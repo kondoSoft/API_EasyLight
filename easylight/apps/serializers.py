@@ -1,18 +1,27 @@
 from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apps.models import State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate
+import json
 
-class UserSerializer(serializers.HyperlinkedModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
+    contracts = serializers.PrimaryKeyRelatedField(many=True, queryset=Contract.objects.all())
+
     class Meta:
         model = User
-        fields = ('url', 'username', 'email', 'groups')
+        fields = ('url', 'username', 'email', 'groups', 'contracts')
 
-class GroupSerializer(serializers.HyperlinkedModelSerializer):
-    highlight = serializers.HyperlinkedIdentityField(view_name='group-highlight', format='html')
+class LoginSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = User
+        fields = ('email', 'password')
+
+class GroupSerializer(serializers.ModelSerializer):
+    # highlight = serializers.HyperlinkedIdentityField(view_name='group-highlight', format='html')
 
     class Meta:
         model = Group
-        fields = ('url','highlight', 'name')
+        fields = ('id', 'url', 'name')
 # Estados
 class StateSerializer(serializers.ModelSerializer):
 
@@ -36,35 +45,19 @@ class RateSerializer(serializers.ModelSerializer):
 
 class RateNameSerializer(serializers.ModelSerializer):
 
+
     class Meta:
         model = Rate
         fields = ('name_rate',)
 
 
 class ContractsSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = Contract
 # Datos de Recibos de Luz
 class ReceiptSerializer(serializers.ModelSerializer):
     payday_limit = serializers.DateField(format="%d-%B-%Y", required=True, read_only=False)
-    contract = serializers.SerializerMethodField()
-    # contract = serializers.PrimaryKeyRelatedField(many=False, source=Contract, read_only=True)
-    # contract = ContractsSerializer(many=False, read_only=False)
-
-    def get_contract(self, obj):
-        listContract = []
-        contract = Contract.objects.filter(receipt=obj.pk)
-        for contract in contract:
-            listContract.append((contract.id, contract.name_contract, contract.number_contract))
-        return listContract
-
-    # def create(self, validation_data):
-    #     # print(self.contract)
-    #     # contract_id = Contract.objects.get(id=self.id)
-    #     receipt = Receipt.objects.create(**validation_data)
-    # #     # contract_id.objects.create(receipt=receipt)
-    #     receipt.save()
-    #     return receipt
 
     class Meta:
         model = Receipt
@@ -73,10 +66,21 @@ class ReceiptSerializer(serializers.ModelSerializer):
 
 # Datos de Contratos
 class ContractSerializer(serializers.ModelSerializer):
-    receipt = ReceiptSerializer(many=True, read_only=True)
+    receipt = serializers.SerializerMethodField()
+    image = serializers.ImageField()
+    owner = serializers.ReadOnlyField(source='owner.id')
+
+    def get_receipt(self, obj):
+        listReceipt = []
+        receipts = Receipt.objects.all().filter(contract=obj.pk)
+        for receipt in receipts:
+            bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading,'previous_reading': receipt.previous_reading, 'current_data': receipt.current_data}
+            listReceipt.append(bill)
+        return listReceipt
+
     class Meta:
         model = Contract
-        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate', 'period_summer', 'type_payment', 'receipt')
+        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate', 'period_summer', 'type_payment', 'receipt', 'image','owner')
 
 # TipsAndAdvertising
 

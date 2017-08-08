@@ -2,8 +2,10 @@ from django.contrib import admin
 from .models import State, Municipality, TipsAndAdvertising, Receipt, Contract, Rate
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
+from rest_framework.authtoken.admin import TokenAdmin
 # Register your models here.
 
+TokenAdmin.raw_id_fields = ('user',)
 
 class StateResource(resources.ModelResource):
     class Meta:

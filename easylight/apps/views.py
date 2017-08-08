@@ -1,34 +1,41 @@
 from django.contrib.auth.models import User, Group
+from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, RateNameSerializer
+from apps.serializers import LoginSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, RateNameSerializer
 from apps.models import State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
-from rest_framework.decorators import api_view
+from rest_framework.decorators import detail_route
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import viewsets, renderers
 import xlrd
 from xlrd import open_workbook, cellname
 from django.http import HttpResponse
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
+from apps.permissions import IsOwnerOrDeny
 from .pagination import ListStateSetPagination, ListMunicipalitySetPagination, ListRatePagination
+from rest_framework.authtoken.models import Token
 
-@api_view(['GET'])
-def api_root(request, format=None):
-    return Response({
-        'groups': reverse('group-list', request=request, format=format),
-        'state': reverse('state-list', request=request, format=format),
-        'municipality': reverse('municipality-list', request=request, format=format),
-    })
+def get_auth_token(self, request):
+    username = request.POST.get('username')
+    password = request.POST.get('password')
+    user = authenticate(username=username, password=password)
 
-class UserViewSet(ListCreateAPIView):
+    if user is not None:
+        # the password verified for the user
+        if user.is_active:
+            token, created = Token.objects.get_or_create(user=user)
+            request.session['auth'] = token.key
+            return request
+    return HttpResponse
+
+class UserViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
 
-
-class GroupsList(ListCreateAPIView):
+class GroupsList(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
     """
@@ -67,11 +74,16 @@ class ContractList(viewsets.ModelViewSet):
     """
     queryset = Contract.objects.all()
     serializer_class = ContractSerializer
-    permission_classes = (AllowAny,)
+    permission_classes = (IsAuthenticated,)
 
-    # def perform_create(self, serializer):
-    #     print(self.request)
-    #     serializer.save(name_contract = self.request.name_contract)
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
+
+    def get_queryset(self):
+        id_owner = self.request.user
+        self.queryset = self.queryset.filter(owner = id_owner)
+
+        return self.queryset
 
 class ReceiptList(viewsets.ModelViewSet):
     """
@@ -81,9 +93,6 @@ class ReceiptList(viewsets.ModelViewSet):
     serializer_class = ReceiptSerializer
     permission_classes = (AllowAny,)
 
-    # def perform_create(self, serializer):
-    #     print(self.request)
-    #     serializer.save(name_contract = self.request.name_contract)
 
 class TipsAndAdvertisingList(viewsets.ModelViewSet):
     """
