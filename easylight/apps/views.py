@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
 from apps.serializers import LoginSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, RateNameSerializer
 from apps.models import State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
-from rest_framework.decorators import detail_route
+from rest_framework.decorators import detail_route, api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import viewsets, renderers
@@ -15,18 +15,7 @@ from apps.permissions import IsOwnerOrDeny
 from .pagination import ListStateSetPagination, ListMunicipalitySetPagination, ListRatePagination
 from rest_framework.authtoken.models import Token
 
-def get_auth_token(self, request):
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    user = authenticate(username=username, password=password)
 
-    if user is not None:
-        # the password verified for the user
-        if user.is_active:
-            token, created = Token.objects.get_or_create(user=user)
-            request.session['auth'] = token.key
-            return request
-    return HttpResponse
 
 class UserViewSet(viewsets.ModelViewSet):
     """
