@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import State, Municipality, TipsAndAdvertising, Receipt, Contract, Rate
+from .models import State, Profile, Municipality, TipsAndAdvertising, Receipt, Contract, Rate
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 from rest_framework.authtoken.admin import TokenAdmin
@@ -48,7 +48,7 @@ class RateImportExport(ImportExportModelAdmin):
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
 admin.site.register(Rate, RateImportExport)
-# admin.site.register(RateImportExport)
+admin.site.register(Profile)
 admin.site.register(Contract)
 admin.site.register(Receipt)
 admin.site.register(TipsAndAdvertising)

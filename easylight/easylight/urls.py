@@ -82,7 +82,8 @@ rate_unique_list = RateListUnique.as_view({
 urlpatterns = format_suffix_patterns([
     url(r'^admin/', include(admin.site.urls)),
     # Session Login
-    url(r'^get_auth_token/$', rest_framework_views.obtain_auth_token, name='get_auth_token'),
+    url(r'^rest-auth/', include('rest_auth.urls')),
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^groups/$', group_list, name='group-list'),
     url(r'^group/(?P<pk>[0-9]+)/$', group_detail, name='group-detail'),
     url(r'^states/$', state_list, name='state-list'),
