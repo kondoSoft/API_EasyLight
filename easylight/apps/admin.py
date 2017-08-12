@@ -48,7 +48,7 @@ class RateImportExport(ImportExportModelAdmin):
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
 admin.site.register(Rate, RateImportExport)
-# admin.site.register(RateImportExport)
+# admin.site.register(Profile)
 admin.site.register(Contract)
 admin.site.register(Receipt)
 admin.site.register(TipsAndAdvertising)

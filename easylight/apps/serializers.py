@@ -2,6 +2,7 @@ from django.contrib.auth.models import User, Group
 from rest_framework import serializers
 from apps.models import State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate
 import json
+from rest_auth.registration.serializers import RegisterSerializer
 
 class UserSerializer(serializers.ModelSerializer):
     contracts = serializers.PrimaryKeyRelatedField(many=True, queryset=Contract.objects.all())
@@ -10,11 +11,10 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('url', 'username', 'email', 'groups', 'contracts')
 
-class LoginSerializer(serializers.ModelSerializer):
+class RegistrationSerializer(RegisterSerializer):
+    first_name = serializers.CharField(required=True)
+    last_name = serializers.CharField(required=True)
 
-    class Meta:
-        model = User
-        fields = ('email', 'password')
 
 class GroupSerializer(serializers.ModelSerializer):
     # highlight = serializers.HyperlinkedIdentityField(view_name='group-highlight', format='html')
