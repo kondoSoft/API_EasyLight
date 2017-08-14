@@ -1,6 +1,10 @@
 from django.contrib.auth.models import User, Group
+from allauth.account import app_settings as allauth_settings
+from allauth.account.adapter import get_adapter
+from allauth.account.utils import setup_user_email
+from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
-from apps.models import State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate
+from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate
 import json
 from rest_auth.registration.serializers import RegisterSerializer
 
@@ -12,9 +16,59 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('url', 'username', 'email', 'groups', 'contracts')
 
 class RegistrationSerializer(RegisterSerializer):
+    email = serializers.EmailField(required=allauth_settings.EMAIL_REQUIRED)
     first_name = serializers.CharField(required=True)
     last_name = serializers.CharField(required=True)
+    password1 = serializers.CharField(required=True, write_only=True)
+    password2 = serializers.CharField(required=True, write_only=True)
+    birth_date = serializers.CharField()
+    phone = serializers.IntegerField()
+    zip_code = serializers.IntegerField()
+    avatar = serializers.ImageField()
 
+    def validate_password1(self, password):
+        return get_adapter().clean_password(password)
+
+    def validate(self, data):
+        if data['password1'] != data['password2']:
+            raise serializers.ValidationError(_("Los dos campos de contraseña no coinciden."))
+        return data
+
+
+    def get_cleaned_data(self):
+        return {
+            'email': self.validated_data.get('email', ''),
+            'first_name': self.validated_data.get('first_name', ''),
+            'last_name': self.validated_data.get('last_name', ''),
+            'password1': self.validated_data.get('password1', ''),
+            'password2': self.validated_data.get('password2', ''),
+            'birth_date': self.validated_data.get('birth_date', ''),
+            'phone': self.validated_data.get('phone', ''),
+            'zip_code': self.validated_data.get('zip_code', ''),
+            'avatar': self.validated_data.get('avatar', ''),
+        }
+
+    def save(self, request):
+        phone= request.POST.get('phone')
+        birth_date = request.POST.get('birth_date')
+        zip_code = request.POST.get('zip_code')
+        avatar = request.POST.get('avatar')
+        print(request.POST)
+        print(request.POST.get(avatar))
+        adapter = get_adapter()
+        user = adapter.new_user(request)
+        self.cleaned_data = self.get_cleaned_data()
+        adapter.save_user(request, user, self)
+        setup_user_email(request, user, [])
+        user.save()
+        profile = Profile()
+        profile.phone = phone
+        profile.birth_date = birth_date
+        profile.zip_code = zip_code
+        profile.user = user
+        profile.avatar = avatar
+        profile.save()
+        return user
 
 class GroupSerializer(serializers.ModelSerializer):
     # highlight = serializers.HyperlinkedIdentityField(view_name='group-highlight', format='html')

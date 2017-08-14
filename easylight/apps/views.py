@@ -2,7 +2,7 @@ from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
 from apps.serializers import UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, RateNameSerializer
-from apps.models import State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
+from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
 from rest_framework.decorators import detail_route, api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -23,6 +23,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
+
 
 class GroupsList(viewsets.ModelViewSet):
     """
