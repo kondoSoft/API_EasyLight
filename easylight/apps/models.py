@@ -3,15 +3,19 @@ from django.contrib.auth.models import User
 from django.conf import settings
 from django.core.validators import MinValueValidator
 from django.conf import settings
-from django.db.models.signals import post_save
+from django.db.models.signals import post_save, pre_delete
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, primary_key = True, on_delete=models.CASCADE)
     phone = models.IntegerField(null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     zip_code = models.IntegerField(null=True, blank=True)
+    avatar = models.ImageField(upload_to='media/', blank=True)
+
+    def __str__(self):
+        return str(self.user.username)
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
