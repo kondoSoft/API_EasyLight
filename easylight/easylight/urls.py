@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList,UserViewSet, StateViewSet, MunicipalityList, RateList, RateListUnique, ContractList, ReceiptList
+from apps.views import GroupsList,UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -70,11 +70,13 @@ municipality_detail = MunicipalityList.as_view({
     'patch': 'partial_update',
     'delete': 'destroy'
 })
+#Vista de tarifa general
 rate_list = RateList.as_view({
     'get': 'list',
     'post': 'create'
 })
-rate_unique_list = RateListUnique.as_view({
+#Vista de tarifa por municipio
+mun_rate_list = Mun_RateList.as_view({
     'get': 'list',
     # 'post': 'create'
 })
@@ -86,16 +88,22 @@ urlpatterns = format_suffix_patterns([
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^groups/$', group_list, name='group-list'),
     url(r'^group/(?P<pk>[0-9]+)/$', group_detail, name='group-detail'),
+    # Estados
     url(r'^states/$', state_list, name='state-list'),
     url(r'^states/(?P<pk>[0-9]+)/$', state_detail, name='state-detail'),
+    # Municipios
     url(r'^municipality/$', municipality_list, name='municipality-list'),
     url(r'^municipality/(?P<pk>[0-9]+)/$', municipality_detail, name='municipality-detail'),
+    # Tarifas
     url(r'^rate/$', rate_list, name='rate-list'),
-    url(r'^rate_unique/$', rate_unique_list, name='rate-unique-list'),
+    url(r'^rate_unique/$', mun_rate_list, name='mun-rate-list'),
+    #Contratos
     url(r'^contract/$', contract_list, name='contract-list'),
     url(r'^contract/(?P<pk>[0-9]+)/$', contract_detail, name='contract-detail'),
+    #recibos
     url(r'^receipt/$', receipt_list, name='receipt-list'),
     url(r'^receipt/(?P<pk>[0-9]+)/$', receipt_detail, name='receipt-detail'),
+    # Autenticacion API
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))

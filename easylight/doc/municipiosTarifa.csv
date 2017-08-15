@@ -1,0 +1,2458 @@
+id,state,key_mun,name_mun,rate
+1,1,1,Aguascalientes,TARIFA 1
+2,1,2,Asientos,TARIFA 1
+3,1,3,Calvillo,TARIFA 1
+4,1,4,Cosío,TARIFA 1
+5,1,5,Jesús María,TARIFA 1
+6,1,6,Pabellón de Arteaga,TARIFA 1
+7,1,7,Rincón de Romos,TARIFA 1
+8,1,8,San José de Gracia,TARIFA 1
+9,1,9,Tepezalá,TARIFA 1
+10,1,10,El Llano,TARIFA 1
+11,1,11,San Francisco de los Romo,TARIFA 1
+12,2,1,Ensenada,TARIFA 1
+13,2,2,Mexicali,TARIFA 1F
+14,2,3,Tecate,TARIFA 1A
+15,2,4,Tijuana,TARIFA 1
+16,2,5,Playas de Rosarito,TARIFA 1
+17,3,1,Comondú,TARIFA 1B
+18,3,2,Mulegé,TARIFA 1D
+19,3,3,La Paz,TARFIA 1E
+20,3,4,Los Cabos,TARIFA 1C
+21,3,5,Loreto,TARIFA 1E
+22,4,1,Calkiní,TARIFA 1C
+23,4,2,Campeche,TARIFA 1C
+24,4,3,Carmen,TARIFA 1C
+25,4,4,Champotón,TARIFA 1C
+26,4,5,Hecelchakán,TARIFA 1C
+27,4,6,Hopelchén,TARIFA 1C
+28,4,7,Palizada,TARIFA 1C
+29,4,8,Tenabo,TARIFA 1C
+30,4,9,Escárcega,TARIFA 1C
+31,4,10,Calakmul,TARIFA 1C
+32,4,11,Candelaria,TARIFA 1C
+33,5,1,Abasolo,TARIFA 1D
+34,5,2,Acuña,TARIFA 1E
+35,5,3,Allende,TARIFA 1C
+36,5,4,Arteaga,TARIFA 1
+37,5,5,Candela,TARIFA 1C
+38,5,6,Castaños,TARIFA 1C
+39,5,7,Cuatro Ciénegas,TARIFA 1B
+40,5,8,Escobedo,TARIFA 1D
+41,5,9,Francisco I. Madero,TARIFA 1C
+42,5,10,Frontera,TARIFA 1D
+43,5,11,General Cepeda,TARIFA 1A
+44,5,12,Guerrero,TARIFA 1E
+45,5,13,Hidalgo,TARIFA 1E
+46,5,14,Jiménez,TARIFA 1E
+47,5,15,Juárez,TARIFA 1C
+48,5,16,Lamadrid,TARIFA 1B
+49,5,17,Matamoros,TARIFA 1C
+50,5,18,Monclova,TARIFA 1D
+51,5,19,Morelos,TARIFA 1C
+52,5,20,Múzquiz,TARIFA 1E
+53,5,21,Nadadores,TARIFA 1C
+54,5,22,Nava,TARIFA 1E
+55,5,23,Ocampo,TARIFA 1B
+56,5,24,Parras,TARIFA 1A
+57,5,25,Piedras Negras,TARIFA 1E
+58,5,26,Progreso,TARIFA 1C
+59,5,27,Ramos Arizpe,TARIFA 1A
+60,5,28,Sabinas,TARIFA 1E
+61,5,29,Sacramento,TARIFA 1B
+62,5,30,Saltillo,TARIFA 1
+63,5,31,San Buenaventura,TARIFA 1C
+64,5,32,San Juan de Sabinas,TARIFA 1E
+65,5,33,San Pedro,TARIFA 1C
+66,5,34,Sierra Mojada,TARIFA 1B
+67,5,35,Torreón,TARIFA 1C
+68,5,36,Viesca,TARIFA 1D
+69,5,37,Villa Unión,TARIFA 1C
+70,5,38,Zaragoza,TARIFA 1E
+71,6,1,Armería,TARIFA 1B
+72,6,2,Colima,TARIFA 1B
+73,6,3,Comala,TARIFA 1A
+74,6,4,Coquimatlán,TARIFA 1B
+75,6,5,Cuauhtémoc,TARIFA 1A
+76,6,6,Ixtlahuacán,TARIFA 1B
+77,6,7,Manzanillo,TARIFA 1B
+78,6,8,Minatitlán,TARIFA 1A
+79,6,9,Tecomán,TARIFA 1B
+80,6,10,Villa de Álvarez,TARIFA 1B
+81,7,1,Acacoyagua,TARIFA 1B
+82,7,2,Acala,TARIFA 1A
+83,7,3,Acapetahua,TARIFA 1C
+84,7,4,Altamirano,TARIFA 1A
+85,7,5,Amatán,TARIFA 1B
+86,7,6,Amatenango de la Frontera,TARIFA 1
+87,7,7,Amatenango del Valle,TARIFA 1
+88,7,8,Angel Albino Corzo,TARIFA 1
+89,7,9,Arriaga,TARIFA 1C
+90,7,10,Bejucal de Ocampo,TARIFA 1
+91,7,11,Bella Vista,TARIFA 1
+92,7,12,Berriozábal,TARIFA 1
+93,7,13,Bochil,TARIFA 1
+94,7,14,El Bosque,TARIFA 1
+95,7,15,Cacahoatán,TARIFA 1
+96,7,16,Catazajá,TARIFA 1B
+97,7,17,Cintalapa,TARIFA 1A
+98,7,18,Coapilla,TARIFA 1
+99,7,19,Comitán de Domínguez,TARIFA 1
+100,7,20,La Concordia,TARIFA 1
+101,7,21,Copainalá,TARIFA 1B
+102,7,22,Chalchihuitán,TARIFA 1
+103,7,23,Chamula,TARIFA 1
+104,7,24,Chanal,TARIFA 1
+105,7,25,Chapultenango,TARIFA 1B
+106,7,26,Chenalhó,TARIFA 1
+107,7,27,Chiapa de Corzo,TARIFA 1A
+108,7,28,Chiapilla,TARIFA 1A
+109,7,29,Chicoasén,TARIFA 1B
+110,7,30,Chicomuselo,TARIFA 1A
+111,7,31,Chilón,TARIFA 1B
+112,7,32,Escuintla,TARIFA 1B
+113,7,33,Francisco León,TARIFA 1B
+114,7,34,Frontera Comalapa,TARIFA 1A
+115,7,35,Frontera Hidalgo,TARIFA 1B
+116,7,36,La Grandeza,TARIFA 1A
+117,7,37,Huehuetán,TARIFA 1C
+118,7,38,Huixtán,TARIFA 1
+119,7,39,Huitiupán,TARIFA 1
+120,7,40,Huixtla,TARIFA 1C
+121,7,41,La Independencia,TARIFA 1
+122,7,42,Ixhuatán,TARIFA 1
+123,7,43,Ixtacomitán,TARIFA 1B
+124,7,44,Ixtapa,TARIFA 1
+125,7,45,Ixtapangajoya,TARIFA 1B
+126,7,46,Jiquipilas,TARIFA 1A
+127,7,47,Jitotol,TARIFA 1A
+128,7,48,Juárez,TARIFA 1B
+129,7,49,Larráinzar,TARIFA 1
+130,7,50,La Libertad,TARIFA 1B
+131,7,51,Mapastepec,TARIFA 1C
+132,7,52,Las Margaritas,TARIFA 1
+133,7,53,Mazapa de Madero,TARIFA 1
+134,7,54,Mazatán,TARIFA 1C
+135,7,55,Metapa,TARIFA 1B
+136,7,56,Mitontic,TARIFA 1
+137,7,57,Motozintla,TARIFA 1
+138,7,58,Nicolás Ruíz,TARIFA 1A
+139,7,59,Ocosingo,TARIFA 1B
+140,7,60,Ocotepec,TARIFA 1B
+141,7,61,Ocozocoautla de Espinosa,TARIFA 1
+142,7,62,Ostuacán,TARIFA 1B
+143,7,63,Osumacinta,TARIFA 1B
+144,7,64,Oxchuc,TARIFA 1
+145,7,65,Palenque,TARIFA 1B
+146,7,66,Pantelhó,TARIFA 1
+147,7,67,Pantepec,TARIFA 1B
+148,7,68,Pichucalco,TARIFA 1B
+149,7,69,Pijijiapan,TARIFA 1C
+150,7,70,El Porvenir,TARIFA 1
+151,7,71,Villa Comaltitlán,TARIFA 1
+152,7,72,Pueblo Nuevo Solistahuacán,TARIFA 1
+153,7,73,Rayón,TARIFA 1B
+154,7,74,Reforma,TARIFA 1B
+155,7,75,Las Rosas,TARIFA 1
+156,7,76,Sabanilla,TARIFA 1B
+157,7,77,Salto de Agua,TARIFA 1B
+158,7,78,San Cristóbal de las Casas,TARIFA 1
+159,7,79,San Fernando,TARIFA 1B
+160,7,80,Siltepec,TARIFA 1
+161,7,81,Simojovel,TARIFA 1
+162,7,82,Sitalá,TARIFA 1A
+163,7,83,Socoltenango,TARIFA 1A
+164,7,84,Solosuchiapa,TARIFA 1B
+165,7,85,Soyaló,TARIFA 1
+166,7,86,Suchiapa,TARIFA 1B
+167,7,87,Suchiate,TARIFA 1C
+168,7,88,Sunuapa,TARIFA 1B
+169,7,89,Tapachula,TARIFA 1A
+170,7,90,Tapalapa,TARIFA 1A
+171,7,91,Tapilula,TARIFA 1B
+172,7,92,Tecpatán,TARIFA 1
+173,7,93,Tenejapa,TARIFA 1
+174,7,94,Teopisca,TARIFA 1
+175,7,95,Tila,TARIFA 1A
+176,7,96,Tonalá,TARIFA 1C
+177,7,97,Totolapa,TARIFA 1A
+178,7,98,La Trinitaria,TARIFA 1A
+179,7,99,Tumbalá,TARIFA 1A
+180,7,100,Tuxtla Gutiérrez,TARIFA 1B
+181,7,101,Tuxtla Chico,TARIFA 1B
+182,7,102,Tuzantán,TARIFA 1A
+183,7,103,Tzimol,TARIFA 1
+184,7,104,Unión Juárez,TARIFA 1
+185,7,105,Venustiano Carranza,TARIFA 1
+186,7,106,Villa Corzo,TARIFA 1A
+187,7,107,Villaflores,TARIFA 1A
+188,7,108,Yajalón,TARIFA 1A
+189,7,109,San Lucas,TARIFA 1A
+190,7,110,Zinacantán,TARIFA 1
+191,7,111,San Juan Cancuc,TARIFA 1
+192,7,112,Aldama,TARIFA 1
+193,7,113,Benemérito de las Américas,TARIFA 1B
+194,7,114,Maravilla Tenejapa,TARIFA 1
+195,7,115,Marqués de Comillas,TARIFA 1B
+196,7,116,Montecristo de Guerrero,TARIFA 1A
+197,7,117,San Andrés Duraznal,TARIFA 1
+198,7,118,Santiago el Pinar,TARIFA 1
+199,8,1,Ahumada,TARIFA 1B
+200,8,2,Aldama,TARIFA 1B
+201,8,3,Allende,TARIFA 1A
+202,8,4,Aquiles Serdán,TARIFA 1A
+203,8,5,Ascensión,TARIFA 1A
+204,8,6,Bachíniva,TARIFA 1
+205,8,7,Balleza,TARIFA 1
+206,8,8,Batopilas,TARIFA 1D
+207,8,9,Bocoyna,TARIFA 1
+208,8,10,Buenaventura,TARIFA 1A
+209,8,11,Camargo,TARIFA 1B
+210,8,12,Carichí,TARIFA 1
+211,8,13,Casas Grandes,TARIFA 1A
+212,8,14,Coronado,TARIFA 1A
+213,8,15,Coyame del Sotol,TARIFA 1B
+214,8,16,La Cruz,TARIFA 1A
+215,8,17,Cuauhtémoc,TARIFA 1
+216,8,18,Cusihuiriachi,TARIFA 1
+217,8,19,Chihuahua,TARIFA 1B
+218,8,20,Chínipas,TARIFA 1C
+219,8,21,Delicias,TARIFA 1B
+220,8,22,Dr. Belisario Domínguez,TARIFA 1A
+221,8,23,Galeana,TARIFA 1A
+222,8,24,Santa Isabel,TARIFA 1A
+223,8,25,Gómez Farías,TARIFA 1A
+224,8,26,Gran Morelos,TARIFA 1A
+225,8,27,Guachochi,TARIFA 1
+226,8,28,Guadalupe,TARIFA 1B
+227,8,29,Guadalupe y Calvo,TARIFA 1
+228,8,30,Guazapares,TARIFA 1C
+229,8,31,Guerrero,TARIFA 1
+230,8,32,Hidalgo del Parral,TARIFA 1A
+231,8,33,Huejotitán,TARIFA 1A
+232,8,34,Ignacio Zaragoza,TARIFA 1
+233,8,35,Janos,TARIFA 1A
+234,8,36,Jiménez,TARIFA 1A
+235,8,37,Juárez,TARIFA 1C
+236,8,38,Julimes,TARIFA 1B
+237,8,39,López,TARIFA 1A
+238,8,40,Madera,TARIFA 1
+239,8,41,Maguarichi,TARIFA 1
+240,8,42,Manuel Benavides,TARIFA 1D
+241,8,43,Matachí,TARIFA 1
+242,8,44,Matamoros,TARIFA 1
+243,8,45,Meoqui,TARIFA 1B
+244,8,46,Morelos,TARIFA 1
+245,8,47,Moris,TARIFA 1A
+246,8,48,Namiquipa,TARIFA 1A
+247,8,49,Nonoava,TARIFA 1A
+248,8,50,Nuevo Casas Grandes,TARIFA 1A
+249,8,51,Ocampo,TARIFA 1A
+250,8,52,Ojinaga,TARIFA 1D
+251,8,53,Praxedis G. Guerrero,TARIFA 1B
+252,8,54,Riva Palacio,TARIFA 1A
+253,8,55,Rosales,TARIFA 1B
+254,8,56,Rosario,TARIFA 1A
+255,8,57,San Francisco de Borja,TARIFA 1A
+256,8,58,San Francisco de Conchos,TARIFA 1A
+257,8,59,San Francisco del Oro,TARIFA 1
+258,8,60,Santa Bárbara,TARIFA 1
+259,8,61,Satevó,TARIFA 1A
+260,8,62,Saucillo,TARIFA 1B
+261,8,63,Temósachic,TARIFA 1
+262,8,64,El Tule,TARIFA 1
+263,8,65,Urique,TARIFA 1C
+264,8,66,Uruachi,TARIFA 1C
+265,8,67,Valle de Zaragoza,TARIFA 1A
+266,9,1,Canatlán,TARIFA 1
+267,9,2,Canelas,TARIFA 1
+268,9,3,Coneto de Comonfort,TARIFA 1
+269,9,4,Cuencamé,TARIFA 1
+270,9,5,Durango,TARIFA 1
+271,9,6,General Simón Bolívar,TARIFA 1B
+272,9,7,Gómez Palacio,TARIFA 1C
+273,9,8,Guadalupe Victoria,TARIFA 1
+274,9,9,Guanaceví,TARIFA 1
+275,9,10,Hidalgo,TARIFA 1B
+276,9,11,Indé,TARIFA 1A
+277,9,12,Lerdo,TARIFA 1C
+278,9,13,Mapimí,TARIFA 1B
+279,9,14,Mezquital,TARIFA 1
+280,9,15,Nazas,TARIFA 1B
+281,9,16,Nombre de Dios,TARIFA 1
+282,9,17,Ocampo,TARIFA 1A
+283,9,18,El Oro,TARIFA 1A
+284,9,19,Otáez,TARIFA 1
+285,9,20,Pánuco de Coronado,TARIFA 1
+286,9,21,Peñón Blanco,TARIFA 1
+287,9,22,Poanas,TARIFA 1
+288,9,23,Pueblo Nuevo,TARIFA 1
+289,9,24,Rodeo,TARIFA 1B
+290,9,25,San Bernardo,TARIFA 1
+291,9,26,San Dimas,TARIFA 1
+292,9,27,San Juan de Guadalupe,TARIFA 1B
+293,9,28,San Juan del Río,TARIFA 1A
+294,9,29,San Luis del Cordero,TARIFA 1B
+295,9,30,San Pedro del Gallo,TARIFA 1B
+296,9,31,Santa Clara,TARIFA 1B
+297,9,32,Santiago Papasquiaro,TARIFA 1
+298,9,33,Súchil,TARIFA 1
+299,9,34,Tamazula,TARIFA 1
+300,9,35,Tepehuanes,TARIFA 1
+301,9,36,Tlahualilo,TARIFA 1B
+302,9,37,Topia,TARIFA 1
+303,9,38,Vicente Guerrero,TARIFA 1
+304,9,39,Nuevo Ideal,TARIFA 1
+305,10,1,Azcapotzalco,TARIFA 1
+306,10,2,Coyoacán,TARIFA 1
+307,10,3,Cuajimalpa de Morelos,TARIFA 1
+308,10,4,Gustavo A. Madero,TARIFA 1
+309,10,5,Iztacalco,TARIFA 1
+310,10,6,Iztapalapa,TARIFA 1
+311,10,7,La Magdalena Contreras,TARIFA 1
+312,10,8,Milpa Alta,TARIFA 1
+313,10,9,Álvaro Obregón,TARIFA 1
+314,10,10,Tláhuac,TARIFA 1
+315,10,11,Tlalpan,TARIFA 1
+316,10,12,Xochimilco,TARIFA 1
+317,10,13,Benito Juárez,TARIFA 1
+318,10,14,Cuauhtémoc,TARIFA 1
+319,10,15,Miguel Hidalgo,TARIFA 1
+320,10,16,Venustiano Carranza,TARIFA 1
+321,11,1,Abasolo,TARIFA 1
+322,11,2,Acámbaro,TARIFA 1
+323,11,3,San Miguel de Allende,TARIFA 1
+324,11,4,Apaseo el Alto,TARIFA 1
+325,11,5,Apaseo el Grande,TARIFA 1
+326,11,6,Atarjea,TARIFA 1
+327,11,7,Celaya,TARIFA 1
+328,11,8,Manuel Doblado,TARIFA 1
+329,11,9,Comonfort,TARIFA 1
+330,11,10,Coroneo,TARIFA 1
+331,11,11,Cortazar,TARIFA 1
+332,11,12,Cuerámaro,TARIFA 1
+333,11,13,Doctor Mora,TARIFA 1
+334,11,14,Dolores Hidalgo Cuna de la Independencia Nacional,TARIFA 1
+335,11,15,Guanajuato,TARIFA 1
+336,11,16,Huanímaro,TARIFA 1
+337,11,17,Irapuato,TARIFA 1
+338,11,18,Jaral del Progreso,TARIFA 1
+339,11,19,Jerécuaro,TARIFA 1
+340,11,20,León,TARIFA 1
+341,11,21,Moroleón,TARIFA 1
+342,11,22,Ocampo,TARIFA 1
+343,11,23,Pénjamo,TARIFA 1
+344,11,24,Pueblo Nuevo,TARIFA 1
+345,11,25,Purísima del Rincón,TARIFA 1
+346,11,26,Romita,TARIFA 1
+347,11,27,Salamanca,TARIFA 1
+348,11,28,Salvatierra,TARIFA 1
+349,11,29,San Diego de la Unión,TARIFA 1
+350,11,30,San Felipe,TARIFA 1
+351,11,31,San Francisco del Rincón,TARIFA 1
+352,11,32,San José Iturbide,TARIFA 1
+353,11,33,San Luis de la Paz,TARIFA 1
+354,11,34,Santa Catarina,TARIFA 1
+355,11,35,Santa Cruz de Juventino Rosas,TARIFA 1
+356,11,36,Santiago Maravatío,TARIFA 1
+357,11,37,Silao,TARIFA 1
+358,11,38,Tarandacuao,TARIFA 1
+359,11,39,Tarimoro,TARIFA 1
+360,11,40,Tierra Blanca,TARIFA 1
+361,11,41,Uriangato,TARIFA 1
+362,11,42,Valle de Santiago,TARIFA 1
+363,11,43,Victoria,TARIFA 1
+364,11,44,Villagrán,TARIFA 1
+365,11,45,Xichú,TARIFA 1
+366,11,46,Yuriria,TARIFA 1
+367,12,1,Acapulco de Juárez,TARIFA 1B
+368,12,2,Ahuacuotzingo,TARIFA 1
+369,12,3,Ajuchitlán del Progreso,TARIFA 1E
+370,12,4,Alcozauca de Guerrero,TARIFA 1B
+371,12,5,Alpoyeca,TARIFA 1B
+372,12,6,Apaxtla,TARIFA 1A
+373,12,7,Arcelia,TARIFA 1D
+374,12,8,Atenango del Río,TARIFA 1C
+375,12,9,Atlamajalcingo del Monte,TARIFA 1B
+376,12,10,Atlixtac,TARIFA 1
+377,12,11,Atoyac de Álvarez,TARIFA 1B
+378,12,12,Ayutla de los Libres,TARIFA 1C
+379,12,13,Azoyú,TARIFA 1B
+380,12,14,Benito Juárez,TARIFA 1B
+381,12,15,Buenavista de Cuéllar,TARIFA 1A
+382,12,16,Coahuayutla de José María Izazaga,TARIFA 1B
+383,12,17,Cocula,TARIFA 1B
+384,12,18,Copala,TARIFA 1B
+385,12,19,Copalillo,TARIFA 1B
+386,12,20,Copanatoyac,TARIFA 1B
+387,12,21,Coyuca de Benítez,TARIFA 1B
+388,12,22,Coyuca de Catalán,TARIFA 1E
+389,12,23,Cuajinicuilapa,TARIFA 1B
+390,12,24,Cualác,TARIFA 1B
+391,12,25,Cuautepec,TARIFA 1B
+392,12,26,Cuetzala del Progreso,TARIFA 1A
+393,12,27,Cutzamala de Pinzón,TARIFA 1E
+394,12,28,Chilapa de Álvarez,TARIFA 1
+395,12,29,Chilpancingo de los Bravo,TARIFA 1
+396,12,30,Florencio Villarreal,TARIFA 1B
+397,12,31,General Canuto A. Neri,TARIFA 1A
+398,12,32,General Heliodoro Castillo,TARIFA 1A
+399,12,33,Huamuxtitlán,TARIFA 1C
+400,12,34,Huitzuco de los Figueroa,TARIFA 1B
+401,12,35,Iguala de la Independencia,TARIFA 1B
+402,12,36,Igualapa,TARIFA 1B
+403,12,37,Ixcateopan de Cuauhtémoc,TARIFA 1
+404,12,38,Zihuatanejo de Azueta,TARIFA 1B
+405,12,39,Juan R. Escudero,TARIFA 1C
+406,12,40,Leonardo Bravo,TARIFA 1A
+407,12,41,Malinaltepec,TARIFA 1B
+408,12,42,Mártir de Cuilapan,TARIFA 1B
+409,12,43,Metlatónoc,TARIFA 1B
+410,12,44,Mochitlán,TARIFA 1A
+411,12,45,Olinalá,TARIFA 1B
+412,12,46,Ometepec,TARIFA 1B
+413,12,47,Pedro Ascencio Alquisiras,TARIFA 1D
+414,12,48,Petatlán,TARIFA 1B
+415,12,49,Pilcaya,TARIFA 1A
+416,12,50,Pungarabato,TARIFA 1F
+417,12,51,Quechultenango,TARIFA 1A
+418,12,52,San Luis Acatlán,TARIFA 1B
+419,12,53,San Marcos,TARIFA 1C
+420,12,54,San Miguel Totolapan,TARIFA 1D
+421,12,55,Taxco de Alarcón,TARIFA 1
+422,12,56,Tecoanapa,TARIFA 1C
+423,12,57,Técpan de Galeana,TARIFA 1B
+424,12,58,Teloloapan,TARIFA 1A
+425,12,59,Tepecoacuilco de Trujano,TARIFA 1B
+426,12,60,Tetipac,TARIFA 1
+427,12,61,Tixtla de Guerrero,TARIFA 1A
+428,12,62,Tlacoachistlahuaca,TARIFA 1B
+429,12,63,Tlacoapa,TARIFA 1B
+430,12,64,Tlalchapa,TARIFA 1D
+431,12,65,Tlalixtaquilla de Maldonado,TARIFA 1B
+432,12,66,Tlapa de Comonfort,TARIFA 1B
+433,12,67,Tlapehuala,TARIFA 1D
+434,12,68,La Unión de Isidoro Montes de Oca,TARIFA 1B
+435,12,69,Xalpatláhuac,TARIFA 1B
+436,12,70,Xochihuehuetlán,TARIFA 1A
+437,12,71,Xochistlahuaca,TARIFA 1B
+438,12,72,Zapotitlán Tablas,TARIFA 1B
+439,12,73,Zirándaro,TARIFA 1D
+440,12,74,Zitlala,TARIFA 1
+441,12,75,Eduardo Neri,TARIFA 1A
+442,12,76,Acatepec,TARIFA 1B
+443,12,77,Marquelia,TARIFA 1B
+444,12,78,Cochoapa el Grande,TARIFA 1B
+445,12,79,José Joaquín de Herrera,TARIFA 1
+446,12,80,Juchitán,TARIFA 1B
+447,12,81,Iliatenco,TARIFA 1B
+448,13,1,Acatlán,TARIFA 1
+449,13,2,Acaxochitlán,TARIFA 1
+450,13,3,Actopan,TARIFA 1
+451,13,4,Agua Blanca de Iturbide,TARIFA 1
+452,13,5,Ajacuba,TARIFA 1
+453,13,6,Alfajayucan,TARIFA 1
+454,13,7,Almoloya,TARIFA 1
+455,13,8,Apan,TARIFA 1
+456,13,9,El Arenal,TARIFA 1
+457,13,10,Atitalaquia,TARIFA 1
+458,13,11,Atlapexco,TARIFA 1B
+459,13,12,Atotonilco el Grande,TARIFA 1
+460,13,13,Atotonilco de Tula,TARIFA 1
+461,13,14,Calnali,TARIFA 1
+462,13,15,Cardonal,TARIFA 1
+463,13,16,Cuautepec de Hinojosa,TARIFA 1
+464,13,17,Chapantongo,TARIFA 1
+465,13,18,Chapulhuacán,TARIFA 1
+466,13,19,Chilcuautla,TARIFA 1
+467,13,20,Eloxochitlán,TARIFA 1
+468,13,21,Emiliano Zapata,TARIFA 1
+469,13,22,Epazoyucan,TARIFA 1
+470,13,23,Francisco I. Madero,TARIFA 1
+471,13,24,Huasca de Ocampo,TARIFA 1
+472,13,25,Huautla,TARIFA 1B
+473,13,26,Huazalingo,TARIFA 1B
+474,13,27,Huehuetla,TARIFA 1A
+475,13,28,Huejutla de Reyes,TARIFA 1B
+476,13,29,Huichapan,TARIFA 1
+477,13,30,Ixmiquilpan,TARIFA 1
+478,13,31,Jacala de Ledezma,TARIFA 1
+479,13,32,Jaltocán,TARIFA 1B
+480,13,33,Juárez Hidalgo,TARIFA 1
+481,13,34,Lolotla,TARIFA 1B
+482,13,35,Metepec,TARIFA 1
+483,13,36,San Agustín Metzquititlán,TARIFA 1
+484,13,37,Metztitlán,TARIFA 1A
+485,13,38,Mineral del Chico,TARIFA 1
+486,13,39,Mineral del Monte,TARIFA 1
+487,13,40,La Misión,TARIFA 1
+488,13,41,Mixquiahuala de Juárez,TARIFA 1
+489,13,42,Molango de Escamilla,TARIFA 1
+490,13,43,Nicolás Flores,TARIFA 1
+491,13,44,Nopala de Villagrán,TARIFA 1
+492,13,45,Omitlán de Juárez,TARIFA 1
+493,13,46,San Felipe Orizatlán,TARIFA 1B
+494,13,47,Pacula,TARIFA 1
+495,13,48,Pachuca de Soto,TARIFA 1
+496,13,49,Pisaflores,TARIFA 1B
+497,13,50,Progreso de Obregón,TARIFA 1
+498,13,51,Mineral de la Reforma,TARIFA 1
+499,13,52,San Agustín Tlaxiaca,TARIFA 1
+500,13,53,San Bartolo Tutotepec,TARIFA 1
+501,13,54,San Salvador,TARIFA 1
+502,13,55,Santiago de Anaya,TARIFA 1
+503,13,56,Santiago Tulantepec de Lugo Guerrero,TARIFA 1
+504,13,57,Singuilucan,TARIFA 1
+505,13,58,Tasquillo,TARIFA 1
+506,13,59,Tecozautla,TARIFA 1
+507,13,60,Tenango de Doria,TARIFA 1
+508,13,61,Tepeapulco,TARIFA 1
+509,13,62,Tepehuacán de Guerrero,TARIFA 1B
+510,13,63,Tepeji del Río de Ocampo,TARIFA 1
+511,13,64,Tepetitlán,TARIFA 1
+512,13,65,Tetepango,TARIFA 1
+513,13,66,Villa de Tezontepec,TARIFA 1
+514,13,67,Tezontepec de Aldama,TARIFA 1
+515,13,68,Tianguistengo,TARIFA 1
+516,13,69,Tizayuca,TARIFA 1
+517,13,70,Tlahuelilpan,TARIFA 1
+518,13,71,Tlahuiltepa,TARIFA 1
+519,13,72,Tlanalapa,TARIFA 1
+520,13,73,Tlanchinol,TARIFA 1B
+521,13,74,Tlaxcoapan,TARIFA 1
+522,13,75,Tolcayuca,TARIFA 1
+523,13,76,Tula de Allende,TARIFA 1
+524,13,77,Tulancingo de Bravo,TARIFA 1
+525,13,78,Xochiatipan,TARIFA 1B
+526,13,79,Xochicoatlán,TARIFA 1
+527,13,80,Yahualica,TARIFA 1B
+528,13,81,Zacualtipán de Ángeles,TARIFA 1
+529,13,82,Zapotlán de Juárez,TARIFA 1
+530,13,83,Zempoala,TARIFA 1
+531,13,84,Zimapán,TARIFA 1
+532,14,1,Acatic,TARIFA 1
+533,14,2,Acatlán de Juárez,TARIFA 1
+534,14,3,Ahualulco de Mercado,TARIFA 1
+535,14,4,Amacueca,TARIFA 1
+536,14,5,Amatitán,TARIFA 1A
+537,14,6,Ameca,TARIFA 1
+538,14,7,San Juanito de Escobedo,TARIFA 1
+539,14,8,Arandas,TARIFA 1
+540,14,9,El Arenal,TARIFA 1
+541,14,10,Atemajac de Brizuela,TARIFA 1
+542,14,11,Atengo,TARIFA 1
+543,14,12,Atenguillo,TARIFA 1
+544,14,13,Atotonilco el Alto,TARIFA 1
+545,14,14,Atoyac,TARIFA 1
+546,14,15,Autlán de Navarro,TARIFA 1A
+547,14,16,Ayotlán,TARIFA 1
+548,14,17,Ayutla,TARIFA 1
+549,14,18,La Barca,TARIFA 1
+550,14,19,Bolaños,TARIFA 1
+551,14,20,Cabo Corrientes,TARIFA 1
+552,14,21,Casimiro Castillo,TARIFA 1A
+553,14,22,Cihuatlán,TARIFA 1B
+554,14,23,Zapotlán el Grande,TARIFA 1
+555,14,24,Cocula,TARIFA 1
+556,14,25,Colotlán,TARIFA 1
+557,14,26,Concepción de Buenos Aires,TARIFA 1
+558,14,27,Cuautitlán de García Barragán,TARIFA 1A
+559,14,28,Cuautla,TARIFA 1
+560,14,29,Cuquío,TARIFA 1
+561,14,30,Chapala,TARIFA 1
+562,14,31,Chimaltitán,TARIFA 1
+563,14,32,Chiquilistlán,TARIFA 1
+564,14,33,Degollado,TARIFA 1
+565,14,34,Ejutla,TARIFA 1A
+566,14,35,Encarnación de Díaz,TARIFA 1
+567,14,36,Etzatlán,TARIFA 1
+568,14,37,El Grullo,TARIFA 1A
+569,14,38,Guachinango,TARIFA 1
+570,14,39,Guadalajara,TARIFA 1
+571,14,40,Hostotipaquillo,TARIFA 1A
+572,14,41,Huejúcar,TARIFA 1
+573,14,42,Huejuquilla el Alto,TARIFA 1
+574,14,43,La Huerta,TARIFA 1A
+575,14,44,Ixtlahuacán de los Membrillos,TARIFA 1
+576,14,45,Ixtlahuacán del Río,TARIFA 1
+577,14,46,Jalostotitlán,TARIFA 1
+578,14,47,Jamay,TARIFA 1
+579,14,48,Jesús María,TARIFA 1
+580,14,49,Jilotlán de los Dolores,TARIFA 1B
+581,14,50,Jocotepec,TARIFA 1
+582,14,51,Juanacatlán,TARIFA 1
+583,14,52,Juchitlán,TARIFA 1
+584,14,53,Lagos de Moreno,TARIFA 1
+585,14,54,El Limón,TARIFA 1A
+586,14,55,Magdalena,TARIFA 1
+587,14,56,Santa María del Oro,TARIFA 1
+588,14,57,La Manzanilla de la Paz,TARIFA 1
+589,14,58,Mascota,TARIFA 1A
+590,14,59,Mazamitla,TARIFA 1
+591,14,60,Mexticacán,TARIFA 1
+592,14,61,Mezquitic,TARIFA 1
+593,14,62,Mixtlán,TARIFA 1
+594,14,63,Ocotlán,TARIFA 1
+595,14,64,Ojuelos de Jalisco,TARIFA 1
+596,14,65,Pihuamo,TARIFA 1
+597,14,66,Poncitlán,TARIFA 1
+598,14,67,Puerto Vallarta,TARIFA 1B
+599,14,68,Villa Purificación,TARIFA 1A
+600,14,69,Quitupan,TARIFA 1
+601,14,70,El Salto,TARIFA 1
+602,14,71,San Cristóbal de la Barranca,TARIFA 1
+603,14,72,San Diego de Alejandría,TARIFA 1
+604,14,73,San Juan de los Lagos,TARIFA 1
+605,14,74,San Julián,TARIFA 1
+606,14,75,San Marcos,TARIFA 1
+607,14,76,San Martín de Bolaños,TARIFA 1
+608,14,77,San Martín Hidalgo,TARIFA 1
+609,14,78,San Miguel el Alto,TARIFA 1
+610,14,79,Gómez Farías,TARIFA 1
+611,14,80,San Sebastián del Oeste,TARIFA 1B
+612,14,81,Santa María de los Ángeles,TARIFA 1
+613,14,82,Sayula,TARIFA 1
+614,14,83,Tala,TARIFA 1
+615,14,84,Talpa de Allende,TARIFA 1A
+616,14,85,Tamazula de Gordiano,TARIFA 1
+617,14,86,Tapalpa,TARIFA 1
+618,14,87,Tecalitlán,TARIFA 1
+619,14,88,Tecolotlán,TARIFA 1
+620,14,89,Techaluta de Montenegro,TARIFA 1
+621,14,90,Tenamaxtlán,TARIFA 1A
+622,14,91,Teocaltiche,TARIFA 1
+623,14,92,Teocuitatlán de Corona,TARIFA 1
+624,14,93,Tepatitlán de Morelos,TARIFA 1
+625,14,94,Tequila,TARIFA 1
+626,14,95,Teuchitlán,TARIFA 1
+627,14,96,Tizapán el Alto,TARIFA 1
+628,14,97,Tlajomulco de Zúñiga,TARIFA 1
+629,14,98,Tlaquepaque,TARIFA 1
+630,14,99,Tolimán,TARIFA 1
+631,14,100,Tomatlán,TARIFA 1B
+632,14,101,Tonalá,TARIFA 1
+633,14,102,Tonaya,TARIFA 1A
+634,14,103,Tonila,TARIFA 1
+635,14,104,Totatiche,TARIFA 1
+636,14,105,Tototlán,TARIFA 1
+637,14,106,Tuxcacuesco,TARIFA 1
+638,14,107,Tuxcueca,TARIFA 1
+639,14,108,Tuxpan,TARIFA 1
+640,14,109,Unión de San Antonio,TARIFA 1
+641,14,110,Unión de Tula,TARIFA 1A
+642,14,111,Valle de Guadalupe,TARIFA 1
+643,14,112,Valle de Juárez,TARIFA 1
+644,14,113,San Gabriel,TARIFA 1
+645,14,114,Villa Corona,TARIFA 1
+646,14,115,Villa Guerrero,TARIFA 1
+647,14,116,Villa Hidalgo,TARIFA 1
+648,14,117,Cañadas de Obregón,TARIFA 1
+649,14,118,Yahualica de González Gallo,TARIFA 1
+650,14,119,Zacoalco de Torres,TARIFA 1
+651,14,120,Zapopan,TARIFA 1
+652,14,121,Zapotiltic,TARIFA 1
+653,14,122,Zapotitlán de Vadillo,TARIFA 1
+654,14,123,Zapotlán del Rey,TARIFA 1
+655,14,124,Zapotlanejo,TARIFA 1
+656,14,125,San Ignacio Cerro Gordo,TARIFA 1A
+657,15,1,Acambay,TARIFA 1
+658,15,2,Acolman,TARIFA 1
+659,15,3,Aculco,TARIFA 1
+660,15,4,Almoloya de Alquisiras,TARIFA 1
+661,15,5,Almoloya de Juárez,TARIFA 1
+662,15,6,Almoloya del Río,TARIFA 1
+663,15,7,Amanalco,TARIFA 1
+664,15,8,Amatepec,TARIFA 1
+665,15,9,Amecameca,TARIFA 1
+666,15,10,Apaxco,TARIFA 1
+667,15,11,Atenco,TARIFA 1
+668,15,12,Atizapán,TARIFA 1
+669,15,13,Atizapán de Zaragoza,TARIFA 1
+670,15,14,Atlacomulco,TARIFA 1
+671,15,15,Atlautla,TARIFA 1
+672,15,16,Axapusco,TARIFA 1
+673,15,17,Ayapango,TARIFA 1
+674,15,18,Calimaya,TARIFA 1
+675,15,19,Capulhuac,TARIFA 1
+676,15,20,Coacalco de Berriozábal,TARIFA 1
+677,15,21,Coatepec Harinas,TARIFA 1
+678,15,22,Cocotitlán,TARIFA 1
+679,15,23,Coyotepec,TARIFA 1
+680,15,24,Cuautitlán,TARIFA 1
+681,15,25,Chalco,TARIFA 1
+682,15,26,Chapa de Mota,TARIFA 1
+683,15,27,Chapultepec,TARIFA 1
+684,15,28,Chiautla,TARIFA 1
+685,15,29,Chicoloapan,TARIFA 1
+686,15,30,Chiconcuac,TARIFA 1
+687,15,31,Chimalhuacán,TARIFA 1
+688,15,32,Donato Guerra,TARIFA 1
+689,15,33,Ecatepec de Morelos,TARIFA 1
+690,15,34,Ecatzingo,TARIFA 1
+691,15,35,Huehuetoca,TARIFA 1
+692,15,36,Hueypoxtla,TARIFA 1
+693,15,37,Huixquilucan,TARIFA 1
+694,15,38,Isidro Fabela,TARIFA 1
+695,15,39,Ixtapaluca,TARIFA 1
+696,15,40,Ixtapan de la Sal,TARIFA 1
+697,15,41,Ixtapan del Oro,TARIFA 1
+698,15,42,Ixtlahuaca,TARIFA 1
+699,15,43,Xalatlaco,TARIFA 1
+700,15,44,Jaltenco,TARIFA 1
+701,15,45,Jilotepec,TARIFA 1
+702,15,46,Jilotzingo,TARIFA 1
+703,15,47,Jiquipilco,TARIFA 1
+704,15,48,Jocotitlán,TARIFA 1
+705,15,49,Joquicingo,TARIFA 1
+706,15,50,Juchitepec,TARIFA 1
+707,15,51,Lerma,TARIFA 1
+708,15,52,Malinalco,TARIFA 1
+709,15,53,Melchor Ocampo,TARIFA 1
+710,15,54,Metepec,TARIFA 1
+711,15,55,Mexicaltzingo,TARIFA 1
+712,15,56,Morelos,TARIFA 1
+713,15,57,Naucalpan de Juárez,TARIFA 1
+714,15,58,Nezahualcóyotl,TARIFA 1
+715,15,59,Nextlalpan,TARIFA 1
+716,15,60,Nicolás Romero,TARIFA 1
+717,15,61,Nopaltepec,TARIFA 1
+718,15,62,Ocoyoacac,TARIFA 1
+719,15,63,Ocuilan,TARIFA 1
+720,15,64,El Oro,TARIFA 1
+721,15,65,Otumba,TARIFA 1
+722,15,66,Otzoloapan,TARIFA 1
+723,15,67,Otzolotepec,TARIFA 1
+724,15,68,Ozumba,TARIFA 1
+725,15,69,Papalotla,TARIFA 1
+726,15,70,La Paz,TARIFA 1
+727,15,71,Polotitlán,TARIFA 1
+728,15,72,Rayón,TARIFA 1
+729,15,73,San Antonio la Isla,TARIFA 1
+730,15,74,San Felipe del Progreso,TARIFA 1
+731,15,75,San Martín de las Pirámides,TARIFA 1
+732,15,76,San Mateo Atenco,TARIFA 1
+733,15,77,San Simón de Guerrero,TARIFA 1
+734,15,78,Santo Tomás,TARIFA 1
+735,15,79,Soyaniquilpan de Juárez,TARIFA 1
+736,15,80,Sultepec,TARIFA 1
+737,15,81,Tecámac,TARIFA 1
+738,15,82,Tejupilco,TARIFA 1
+739,15,83,Temamatla,TARIFA 1
+740,15,84,Temascalapa,TARIFA 1
+741,15,85,Temascalcingo,TARIFA 1
+742,15,86,Temascaltepec,TARIFA 1
+743,15,87,Temoaya,TARIFA 1
+744,15,88,Tenancingo,TARIFA 1
+745,15,89,Tenango del Aire,TARIFA 1
+746,15,90,Tenango del Valle,TARIFA 1
+747,15,91,Teoloyucan,TARIFA 1
+748,15,92,Teotihuacán,TARIFA 1
+749,15,93,Tepetlaoxtoc,TARIFA 1
+750,15,94,Tepetlixpa,TARIFA 1
+751,15,95,Tepotzotlán,TARIFA 1
+752,15,96,Tequixquiac,TARIFA 1
+753,15,97,Texcaltitlán,TARIFA 1
+754,15,98,Texcalyacac,TARIFA 1
+755,15,99,Texcoco,TARIFA 1
+756,15,100,Tezoyuca,TARIFA 1
+757,15,101,Tianguistenco,TARIFA 1
+758,15,102,Timilpan,TARIFA 1
+759,15,103,Tlalmanalco,TARIFA 1
+760,15,104,Tlalnepantla de Baz,TARIFA 1
+761,15,105,Tlatlaya,TARIFA 1
+762,15,106,Toluca,TARIFA 1
+763,15,107,Tonatico,TARIFA 1
+764,15,108,Tultepec,TARIFA 1
+765,15,109,Tultitlán,TARIFA 1
+766,15,110,Valle de Bravo,TARIFA 1
+767,15,111,Villa de Allende,TARIFA 1
+768,15,112,Villa del Carbón,TARIFA 1
+769,15,113,Villa Guerrero,TARIFA 1
+770,15,114,Villa Victoria,TARIFA 1
+771,15,115,Xonacatlán,TARIFA 1
+772,15,116,Zacazonapan,TARIFA 1
+773,15,117,Zacualpan,TARIFA 1
+774,15,118,Zinacantepec,TARIFA 1
+775,15,119,Zumpahuacán,TARIFA 1
+776,15,120,Zumpango,TARIFA 1
+777,15,121,Cuautitlán Izcalli,TARIFA 1
+778,15,122,Valle de Chalco Solidaridad,TARIFA 1
+779,15,123,Luvianos,TARIFA 1
+780,15,124,San José del Rincón,TARIFA 1
+781,15,125,Tonanitla,TARIFA 1
+782,16,1,Acuitzio,TARIFA 1
+783,16,2,Aguililla,TARIFA 1
+784,16,3,Álvaro Obregón,TARIFA 1
+785,16,4,Angamacutiro,TARIFA 1
+786,16,5,Angangueo,TARIFA 1
+787,16,6,Apatzingán,TARIFA 1D
+788,16,7,Aporo,TARIFA 1
+789,16,8,Aquila,TARIFA 1A
+790,16,9,Ario,TARIFA 1
+791,16,10,Arteaga,TARIFA 1
+792,16,11,Briseñas,TARIFA 1
+793,16,12,Buenavista,TARIFA 1C
+794,16,13,Carácuaro,TARIFA 1A
+795,16,14,Coahuayana,TARIFA 1B
+796,16,15,Coalcomán de Vázquez Pallares,TARIFA 1
+797,16,16,Coeneo,TARIFA 1
+798,16,17,Contepec,TARIFA 1
+799,16,18,Copándaro,TARIFA 1
+800,16,19,Cotija,TARIFA 1A
+801,16,20,Cuitzeo,TARIFA 1
+802,16,21,Charapan,TARIFA 1
+803,16,22,Charo,TARIFA 1
+804,16,23,Chavinda,TARIFA 1
+805,16,24,Cherán,TARIFA 1
+806,16,25,Chilchota,TARIFA 1
+807,16,26,Chinicuila,TARIFA 1A
+808,16,27,Chucándiro,TARIFA 1
+809,16,28,Churintzio,TARIFA 1
+810,16,29,Churumuco,TARIFA 1C
+811,16,30,Ecuandureo,TARIFA 1
+812,16,31,Epitacio Huerta,TARIFA 1
+813,16,32,Erongarícuaro,TARIFA 1
+814,16,33,Gabriel Zamora,TARIFA 1C
+815,16,34,Hidalgo,TARIFA 1
+816,16,35,La Huacana,TARIFA 1D
+817,16,36,Huandacareo,TARIFA 1
+818,16,37,Huaniqueo,TARIFA 1
+819,16,38,Huetamo,TARIFA 1C
+820,16,39,Huiramba,TARIFA 1
+821,16,40,Indaparapeo,TARIFA 1
+822,16,41,Irimbo,TARIFA 1
+823,16,42,Ixtlán,TARIFA 1
+824,16,43,Jacona,TARIFA 1
+825,16,44,Jiménez,TARIFA 1
+826,16,45,Jiquilpan,TARIFA 1
+827,16,46,Juárez,TARIFA 1
+828,16,47,Jungapeo,TARIFA 1
+829,16,48,Lagunillas,TARIFA 1
+830,16,49,Madero,TARIFA 1
+831,16,50,Maravatío,TARIFA 1
+832,16,51,Marcos Castellanos,TARIFA 1
+833,16,52,Lázaro Cárdenas,TARIFA 1B
+834,16,53,Morelia,TARIFA 1
+835,16,54,Morelos,TARIFA 1
+836,16,55,Múgica,TARIFA 1D
+837,16,56,Nahuatzen,TARIFA 1
+838,16,57,Nocupétaro,TARIFA 1A
+839,16,58,Nuevo Parangaricutiro,TARIFA 1
+840,16,59,Nuevo Urecho,TARIFA 1A
+841,16,60,Numarán,TARIFA 1
+842,16,61,Ocampo,TARIFA 1
+843,16,62,Pajacuarán,TARIFA 1
+844,16,63,Panindícuaro,TARIFA 1
+845,16,64,Parácuaro,TARIFA 1
+846,16,65,Paracho,TARIFA 1
+847,16,66,Pátzcuaro,TARIFA 1
+848,16,67,Penjamillo,TARIFA 1D
+849,16,68,Peribán,TARIFA 1
+850,16,69,La Piedad,TARIFA 1
+851,16,70,Purépero,TARIFA 1
+852,16,71,Puruándiro,TARIFA 1
+853,16,72,Queréndaro,TARIFA 1
+854,16,73,Quiroga,TARIFA 1
+855,16,74,Cojumatlán de Régules,TARIFA 1
+856,16,75,Los Reyes,TARIFA 1
+857,16,76,Sahuayo,TARIFA 1
+858,16,77,San Lucas,TARIFA 1
+859,16,78,Santa Ana Maya,TARIFA 1
+860,16,79,Salvador Escalante,TARIFA 1C
+861,16,80,Senguio,TARIFA 1
+862,16,81,Susupuato,TARIFA 1
+863,16,82,Tacámbaro,TARIFA 1
+864,16,83,Tancítaro,TARIFA 1
+865,16,84,Tangamandapio,TARIFA 1
+866,16,85,Tangancícuaro,TARIFA 1
+867,16,86,Tanhuato,TARIFA 1
+868,16,87,Taretan,TARIFA 1
+869,16,88,Tarímbaro,TARIFA 1
+870,16,89,Tepalcatepec,TARIFA 1C
+871,16,90,Tingambato,TARIFA 1
+872,16,91,Tingüindín,TARIFA 1
+873,16,92,Tiquicheo de Nicolás Romero,TARIFA 1D
+874,16,93,Tlalpujahua,TARIFA 1
+875,16,94,Tlazazalca,TARIFA 1
+876,16,95,Tocumbo,TARIFA 1
+877,16,96,Tumbiscatío,TARIFA 1B
+878,16,97,Turicato,TARIFA 1A
+879,16,98,Tuxpan,TARIFA 1
+880,16,99,Tuzantla,TARIFA 1A
+881,16,100,Tzintzuntzan,TARIFA 1
+882,16,101,Tzitzio,TARIFA 1
+883,16,102,Uruapan,TARIFA 1
+884,16,103,Venustiano Carranza,TARIFA 1
+885,16,104,Villamar,TARIFA 1
+886,16,105,Vista Hermosa,TARIFA 1
+887,16,106,Yurécuaro,TARIFA 1
+888,16,107,Zacapu,TARIFA 1
+889,16,108,Zamora,TARIFA 1
+890,16,109,Zináparo,TARIFA 1
+891,16,110,Zinapécuaro,TARIFA 1
+892,16,111,Ziracuaretiro,TARIFA 1
+893,16,112,Zitácuaro,TARIFA 1
+894,16,113,José Sixto Verduzco,TARIFA 1
+895,17,1,Amacuzac,TARIFA 1A
+896,17,2,Atlatlahucan,TARIFA 1A
+897,17,3,Axochiapan,TARIFA 1A
+898,17,4,Ayala,TARIFA 1A
+899,17,5,Coatlán del Río,TARIFA 1A
+900,17,6,Cuautla,TARIFA 1A
+901,17,7,Cuernavaca,TARIFA 1
+902,17,8,Emiliano Zapata,TARIFA 1A
+903,17,9,Huitzilac,TARIFA 1A
+904,17,10,Jantetelco,TARIFA 1A
+905,17,11,Jiutepec,TARIFA 1A
+906,17,12,Jojutla,TARIFA 1A
+907,17,13,Jonacatepec,TARIFA 1A
+908,17,14,Mazatepec,TARIFA 1A
+909,17,15,Miacatlán,TARIFA 1A
+910,17,16,Ocuituco,TARIFA 1A
+911,17,17,Puente de Ixtla,TARIFA 1A
+912,17,18,Temixco,TARIFA 1A
+913,17,19,Tepalcingo,TARIFA 1A
+914,17,20,Tepoztlán,TARIFA 1A
+915,17,21,Tetecala,TARIFA 1A
+916,17,22,Tetela del Volcán,TARIFA 1A
+917,17,23,Tlalnepantla,TARIFA 1A
+918,17,24,Tlaltizapán de Zapata,TARIFA 1A
+919,17,25,Tlaquiltenango,TARIFA 1A
+920,17,26,Tlayacapan,TARIFA 1A
+921,17,27,Totolapan,TARIFA 1A
+922,17,28,Xochitepec,TARIFA 1A
+923,17,29,Yautepec,TARIFA 1A
+924,17,30,Yecapixtla,TARIFA 1A
+925,17,31,Zacatepec,TARIFA 1A
+926,17,32,Zacualpan,TARIFA 1A
+927,17,33,Temoac,TARIFA 1A
+928,18,1,Acaponeta,TARIFA 1B
+929,18,2,Ahuacatlán,TARIFA 1A
+930,18,3,Amatlán de Cañas,TARIFA 1B
+931,18,4,Compostela,TARIFA 1B
+932,18,5,Huajicori,TARIFA 1B
+933,18,6,Ixtlán del Río,TARIFA 1A
+934,18,7,Jala,TARIFA 1A
+935,18,8,Xalisco,TARIFA 1A
+936,18,9,Del Nayar,TARIFA 1
+937,18,10,Rosamorada,TARIFA 1B
+938,18,11,Ruíz,TARIFA 1B
+939,18,12,San Blas,TARIFA 1B
+940,18,13,San Pedro Lagunillas,TARIFA 1
+941,18,14,Santa María del Oro,TARIFA 1A
+942,18,15,Santiago Ixcuintla,TARIFA 1B
+943,18,16,Tecuala,TARIFA 1B
+944,18,17,Tepic,TARIFA 1A
+945,18,18,Tuxpan,TARIFA 1B
+946,18,19,La Yesca,TARIFA 1
+947,18,20,Bahía de Banderas,TARIFA 1B
+948,19,1,Abasolo,TARIFA 1C
+949,19,2,Agualeguas,TARIFA 1C
+950,19,3,Los Aldamas,TARIFA 1E
+951,19,4,Allende,TARIFA 1B
+952,19,5,Anáhuac,TARIFA 1E
+953,19,6,Apodaca,TARIFA 1C
+954,19,7,Aramberri,TARIFA 1
+955,19,8,Bustamante,TARIFA 1B
+956,19,9,Cadereyta Jiménez,TARIFA 1C
+957,19,10,Carmen,TARIFA 1C
+958,19,11,Cerralvo,TARIFA 1B
+959,19,12,Ciénega de Flores,TARIFA 1C
+960,19,13,China,TARIFA 1D
+961,19,14,Dr. Arroyo,TARIFA 1
+962,19,15,Dr. Coss,TARIFA 1E
+963,19,16,Dr. González,TARIFA 1B
+964,19,17,Galeana,TARIFA 1
+965,19,18,García,TARIFA 1C
+966,19,19,San Pedro Garza García,TARIFA 1C
+967,19,20,Gral. Bravo,TARIFA 1D
+968,19,21,Gral. Escobedo,TARIFA 1C
+969,19,22,Gral. Terán,TARIFA 1C
+970,19,23,Gral. Treviño,TARIFA 1C
+971,19,24,Gral. Zaragoza,TARIFA 1
+972,19,25,Gral. Zuazua,TARIFA 1C
+973,19,26,Guadalupe,TARIFA 1C
+974,19,27,Los Herreras,TARIFA 1D
+975,19,28,Higueras,TARIFA 1B
+976,19,29,Hualahuises,TARIFA 1C
+977,19,30,Iturbide,TARIFA 1
+978,19,31,Juárez,TARIFA 1C
+979,19,32,Lampazos de Naranjo,TARIFA 1D
+980,19,33,Linares,TARIFA 1C
+981,19,34,Marín,TARIFA 1B
+982,19,35,Melchor Ocampo,TARIFA 1B
+983,19,36,Mier y Noriega,TARIFA 1
+984,19,37,Mina,TARIFA 1B
+985,19,38,Montemorelos,TARIFA 1C
+986,19,39,Monterrey,TARIFA 1C
+987,19,40,Parás,TARIFA 1D
+988,19,41,Pesquería,TARIFA 1C
+989,19,42,Los Ramones,TARIFA 1E
+990,19,43,Rayones,TARIFA 1B
+991,19,44,Sabinas Hidalgo,TARIFA 1C
+992,19,45,Salinas Victoria,TARIFA 1C
+993,19,46,San Nicolás de los Garza,TARIFA 1C
+994,19,47,Hidalgo,TARIFA 1C
+995,19,48,Santa Catarina,TARIFA 1C
+996,19,49,Santiago,TARIFA 1B
+997,19,50,Vallecillo,TARIFA 1D
+998,19,51,Villaldama,TARIFA 1B
+999,20,1,Abejones,TARIFA 1
+1000,20,2,Acatlán de Pérez Figueroa,TARIFA 1B
+1001,20,3,Asunción Cacalotepec,TARIFA 1
+1002,20,4,Asunción Cuyotepeji,TARIFA 1
+1003,20,5,Asunción Ixtaltepec,TARIFA 1B
+1004,20,6,Asunción Nochixtlán,TARIFA 1
+1005,20,7,Asunción Ocotlán,TARIFA 1
+1006,20,8,Asunción Tlacolulita,TARIFA 1C
+1007,20,9,Ayotzintepec,TARIFA 1B
+1008,20,10,El Barrio de la Soledad,TARIFA 1B
+1009,20,11,Calihualá,TARIFA 1
+1010,20,12,Candelaria Loxicha,TARIFA 1B
+1011,20,13,Ciénega de Zimatlán,TARIFA 1
+1012,20,14,Ciudad Ixtepec,TARIFA 1C
+1013,20,15,Coatecas Altas,TARIFA 1
+1014,20,16,Coicoyán de las Flores,TARIFA 1
+1015,20,17,La Compañía,TARIFA 1
+1016,20,18,Concepción Buenavista,TARIFA 1
+1017,20,19,Concepción Pápalo,TARIFA 1
+1018,20,20,Constancia del Rosario,TARIFA 1
+1019,20,21,Cosolapa,TARIFA 1B
+1020,20,22,Cosoltepec,TARIFA 1
+1021,20,23,Cuilápam de Guerrero,TARIFA 1
+1022,20,24,Cuyamecalco Villa de Zaragoza,TARIFA 1
+1023,20,25,Chahuites,TARIFA 1C
+1024,20,26,Chalcatongo de Hidalgo,TARIFA 1
+1025,20,27,Chiquihuitlán de Benito Juárez,TARIFA 1
+1026,20,28,Heroica Ciudad de Ejutla de Crespo,TARIFA 1
+1027,20,29,Eloxochitlán de Flores Magón,TARIFA 1
+1028,20,30,El Espinal,TARIFA 1C
+1029,20,31,Tamazulápam del Espíritu Santo,TARIFA 1
+1030,20,32,Fresnillo de Trujano,TARIFA 1
+1031,20,33,Guadalupe Etla,TARIFA 1
+1032,20,34,Guadalupe de Ramírez,TARIFA 1
+1033,20,35,Guelatao de Juárez,TARIFA 1
+1034,20,36,Guevea de Humboldt,TARIFA 1C
+1035,20,37,Mesones Hidalgo,TARIFA 1B
+1036,20,38,Villa Hidalgo,TARIFA 1
+1037,20,39,Heroica Ciudad de Huajuapan de León,TARIFA 1
+1038,20,40,Huautepec,TARIFA 1
+1039,20,41,Huautla de Jiménez,TARIFA 1
+1040,20,42,Ixtlán de Juárez,TARIFA 1
+1041,20,43,Heroica Ciudad de Juchitán de Zaragoza,TARIFA 1
+1042,20,44,Loma Bonita,TARIFA 1B
+1043,20,45,Magdalena Apasco,TARIFA 1B
+1044,20,46,Magdalena Jaltepec,TARIFA 1
+1045,20,47,Santa Magdalena Jicotlán,TARIFA 1
+1046,20,48,Magdalena Mixtepec,TARIFA 1
+1047,20,49,Magdalena Ocotlán,TARIFA 1
+1048,20,50,Magdalena Peñasco,TARIFA 1
+1049,20,51,Magdalena Teitipac,TARIFA 1
+1050,20,52,Magdalena Tequisistlán,TARIFA 1C
+1051,20,53,Magdalena Tlacotepec,TARIFA 1C
+1052,20,54,Magdalena Zahuatlán,TARIFA 1
+1053,20,55,Mariscala de Juárez,TARIFA 1
+1054,20,56,Mártires de Tacubaya,TARIFA 1
+1055,20,57,Matías Romero Avendaño,TARIFA 1B
+1056,20,58,Mazatlán Villa de Flores,TARIFA 1B
+1057,20,59,Miahuatlán de Porfirio Díaz,TARIFA 1
+1058,20,60,Mixistlán de la Reforma,TARIFA 1B
+1059,20,61,Monjas,TARIFA 1
+1060,20,62,Natividad,TARIFA 1
+1061,20,63,Nazareno Etla,TARIFA 1
+1062,20,64,Nejapa de Madero,TARIFA 1
+1063,20,65,Ixpantepec Nieves,TARIFA 1
+1064,20,66,Santiago Niltepec,TARIFA 1C
+1065,20,67,Oaxaca de Juárez,TARIFA 1
+1066,20,68,Ocotlán de Morelos,TARIFA 1
+1067,20,69,La Pe,TARIFA 1
+1068,20,70,Pinotepa de Don Luis,TARIFA 1B
+1069,20,71,Pluma Hidalgo,TARIFA 1
+1070,20,72,San José del Progreso,TARIFA 1
+1071,20,73,Putla Villa de Guerrero,TARIFA 1
+1072,20,74,Santa Catarina Quioquitani,TARIFA 1
+1073,20,75,Reforma de Pineda,TARIFA 1C
+1074,20,76,La Reforma,TARIFA 1A
+1075,20,77,Reyes Etla,TARIFA 1
+1076,20,78,Rojas de Cuauhtémoc,TARIFA 1
+1077,20,79,Salina Cruz,TARIFA 1C
+1078,20,80,San Agustín Amatengo,TARIFA 1
+1079,20,81,San Agustín Atenango,TARIFA 1
+1080,20,82,San Agustín Chayuco,TARIFA 1
+1081,20,83,San Agustín de las Juntas,TARIFA 1
+1082,20,84,San Agustín Etla,TARIFA 1
+1083,20,85,San Agustín Loxicha,TARIFA 1
+1084,20,86,San Agustín Tlacotepec,TARIFA 1
+1085,20,87,San Agustín Yatareni,TARIFA 1
+1086,20,88,San Andrés Cabecera Nueva,TARIFA 1
+1087,20,89,San Andrés Dinicuiti,TARIFA 1
+1088,20,90,San Andrés Huaxpaltepec,TARIFA 1B
+1089,20,91,San Andrés Huayápam,TARIFA 1
+1090,20,92,San Andrés Ixtlahuaca,TARIFA 1
+1091,20,93,San Andrés Lagunas,TARIFA 1
+1092,20,94,San Andrés Nuxiño,TARIFA 1
+1093,20,95,San Andrés Paxtlán,TARIFA 1
+1094,20,96,San Andrés Sinaxtla,TARIFA 1
+1095,20,97,San Andrés Solaga,TARIFA 1
+1096,20,98,San Andrés Teotilálpam,TARIFA 1
+1097,20,99,San Andrés Tepetlapa,TARIFA 1
+1098,20,100,San Andrés Yaá,TARIFA 1
+1099,20,101,San Andrés Zabache,TARIFA 1
+1100,20,102,San Andrés Zautla,TARIFA 1
+1101,20,103,San Antonino Castillo Velasco,TARIFA 1
+1102,20,104,San Antonino el Alto,TARIFA 1
+1103,20,105,San Antonino Monte Verde,TARIFA 1
+1104,20,106,San Antonio Acutla,TARIFA 1
+1105,20,107,San Antonio de la Cal,TARIFA 1
+1106,20,108,San Antonio Huitepec,TARIFA 1
+1107,20,109,San Antonio Nanahuatípam,TARIFA 1A
+1108,20,110,San Antonio Sinicahua,TARIFA 1
+1109,20,111,San Antonio Tepetlapa,TARIFA 1B
+1110,20,112,San Baltazar Chichicápam,TARIFA 1
+1111,20,113,San Baltazar Loxicha,TARIFA 1
+1112,20,114,San Baltazar Yatzachi el Bajo,TARIFA 1
+1113,20,115,San Bartolo Coyotepec,TARIFA 1
+1114,20,116,San Bartolomé Ayautla,TARIFA 1A
+1115,20,117,San Bartolomé Loxicha,TARIFA 1
+1116,20,118,San Bartolomé Quialana,TARIFA 1
+1117,20,119,San Bartolomé Yucuañe,TARIFA 1
+1118,20,120,San Bartolomé Zoogocho,TARIFA 1
+1119,20,121,San Bartolo Soyaltepec,TARIFA 1
+1120,20,122,San Bartolo Yautepec,TARIFA 1C
+1121,20,123,San Bernardo Mixtepec,TARIFA 1
+1122,20,124,San Blas Atempa,TARIFA 1C
+1123,20,125,San Carlos Yautepec,TARIFA 1C
+1124,20,126,San Cristóbal Amatlán,TARIFA 1
+1125,20,127,San Cristóbal Amoltepec,TARIFA 1
+1126,20,128,San Cristóbal Lachirioag,TARIFA 1
+1127,20,129,San Cristóbal Suchixtlahuaca,TARIFA 1
+1128,20,130,San Dionisio del Mar,TARIFA 1C
+1129,20,131,San Dionisio Ocotepec,TARIFA 1
+1130,20,132,San Dionisio Ocotlán,TARIFA 1
+1131,20,133,San Esteban Atatlahuca,TARIFA 1
+1132,20,134,San Felipe Jalapa de Díaz,TARIFA 1A
+1133,20,135,San Felipe Tejalápam,TARIFA 1
+1134,20,136,San Felipe Usila,TARIFA 1B
+1135,20,137,San Francisco Cahuacuá,TARIFA 1
+1136,20,138,San Francisco Cajonos,TARIFA 1
+1137,20,139,San Francisco Chapulapa,TARIFA 1
+1138,20,140,San Francisco Chindúa,TARIFA 1
+1139,20,141,San Francisco del Mar,TARIFA 1C
+1140,20,142,San Francisco Huehuetlán,TARIFA 1
+1141,20,143,San Francisco Ixhuatán,TARIFA 1C
+1142,20,144,San Francisco Jaltepetongo,TARIFA 1
+1143,20,145,San Francisco Lachigoló,TARIFA 1
+1144,20,146,San Francisco Logueche,TARIFA 1
+1145,20,147,San Francisco Nuxaño,TARIFA 1
+1146,20,148,San Francisco Ozolotepec,TARIFA 1
+1147,20,149,San Francisco Sola,TARIFA 1
+1148,20,150,San Francisco Telixtlahuaca,TARIFA 1
+1149,20,151,San Francisco Teopan,TARIFA 1
+1150,20,152,San Francisco Tlapancingo,TARIFA 1
+1151,20,153,San Gabriel Mixtepec,TARIFA 1A
+1152,20,154,San Ildefonso Amatlán,TARIFA 1
+1153,20,155,San Ildefonso Sola,TARIFA 1
+1154,20,156,San Ildefonso Villa Alta,TARIFA 1
+1155,20,157,San Jacinto Amilpas,TARIFA 1
+1156,20,158,San Jacinto Tlacotepec,TARIFA 1
+1157,20,159,San Jerónimo Coatlán,TARIFA 1
+1158,20,160,San Jerónimo Silacayoapilla,TARIFA 1
+1159,20,161,San Jerónimo Sosola,TARIFA 1
+1160,20,162,San Jerónimo Taviche,TARIFA 1
+1161,20,163,San Jerónimo Tecóatl,TARIFA 1
+1162,20,164,San Jorge Nuchita,TARIFA 1
+1163,20,165,San José Ayuquila,TARIFA 1
+1164,20,166,San José Chiltepec,TARIFA 1A
+1165,20,167,San José del Peñasco,TARIFA 1
+1166,20,168,San José Estancia Grande,TARIFA 1B
+1167,20,169,San José Independencia,TARIFA 1
+1168,20,170,San José Lachiguiri,TARIFA 1
+1169,20,171,San José Tenango,TARIFA 1A
+1170,20,172,San Juan Achiutla,TARIFA 1
+1171,20,173,San Juan Atepec,TARIFA 1
+1172,20,174,Ánimas Trujano,TARIFA 1
+1173,20,175,San Juan Bautista Atatlahuca,TARIFA 1
+1174,20,176,San Juan Bautista Coixtlahuaca,TARIFA 1
+1175,20,177,San Juan Bautista Cuicatlán,TARIFA 1A
+1176,20,178,San Juan Bautista Guelache,TARIFA 1
+1177,20,179,San Juan Bautista Jayacatlán,TARIFA 1
+1178,20,180,San Juan Bautista Lo de Soto,TARIFA 1B
+1179,20,181,San Juan Bautista Suchitepec,TARIFA 1
+1180,20,182,San Juan Bautista Tlacoatzintepec,TARIFA 1A
+1181,20,183,San Juan Bautista Tlachichilco,TARIFA 1
+1182,20,184,San Juan Bautista Tuxtepec,TARIFA 1B
+1183,20,185,San Juan Cacahuatepec,TARIFA 1B
+1184,20,186,San Juan Cieneguilla,TARIFA 1
+1185,20,187,San Juan Coatzóspam,TARIFA 1A
+1186,20,188,San Juan Colorado,TARIFA 1
+1187,20,189,San Juan Comaltepec,TARIFA 1A
+1188,20,190,San Juan Cotzocón,TARIFA 1A
+1189,20,191,San Juan Chicomezúchil,TARIFA 1
+1190,20,192,San Juan Chilateca,TARIFA 1
+1191,20,193,San Juan del Estado,TARIFA 1
+1192,20,194,San Juan del Río,TARIFA 1
+1193,20,195,San Juan Diuxi,TARIFA 1
+1194,20,196,San Juan Evangelista Analco,TARIFA 1
+1195,20,197,San Juan Guelavía,TARIFA 1
+1196,20,198,San Juan Guichicovi,TARIFA 1B
+1197,20,199,San Juan Ihualtepec,TARIFA 1
+1198,20,200,San Juan Juquila Mixes,TARIFA 1
+1199,20,201,San Juan Juquila Vijanos,TARIFA 1
+1200,20,202,San Juan Lachao,TARIFA 1
+1201,20,203,San Juan Lachigalla,TARIFA 1
+1202,20,204,San Juan Lajarcia,TARIFA 1C
+1203,20,205,San Juan Lalana,TARIFA 1B
+1204,20,206,San Juan de los Cués,TARIFA 1A
+1205,20,207,San Juan Mazatlán,TARIFA 1C
+1206,20,208,San Juan Mixtepec -Dto. 08 -,TARIFA 1
+1207,20,209,San Juan Mixtepec -Dto. 26 -,TARIFA 1
+1208,20,210,San Juan Ñumí,TARIFA 1
+1209,20,211,San Juan Ozolotepec,TARIFA 1
+1210,20,212,San Juan Petlapa,TARIFA 1A
+1211,20,213,San Juan Quiahije,TARIFA 1
+1212,20,214,San Juan Quiotepec,TARIFA 1
+1213,20,215,San Juan Sayultepec,TARIFA 1
+1214,20,216,San Juan Tabaá,TARIFA 1
+1215,20,217,San Juan Tamazola,TARIFA 1
+1216,20,218,San Juan Teita,TARIFA 1
+1217,20,219,San Juan Teitipac,TARIFA 1
+1218,20,220,San Juan Tepeuxila,
+1219,20,221,San Juan Teposcolula,
+1220,20,222,San Juan Yaeé,
+1221,20,223,San Juan Yatzona,
+1222,20,224,San Juan Yucuita,
+1223,20,225,San Lorenzo,
+1224,20,226,San Lorenzo Albarradas,
+1225,20,227,San Lorenzo Cacaotepec,
+1226,20,228,San Lorenzo Cuaunecuiltitla,
+1227,20,229,San Lorenzo Texmelúcan,
+1228,20,230,San Lorenzo Victoria,
+1229,20,231,San Lucas Camotlán,
+1230,20,232,San Lucas Ojitlán,
+1231,20,233,San Lucas Quiaviní,
+1232,20,234,San Lucas Zoquiápam,
+1233,20,235,San Luis Amatlán,
+1234,20,236,San Marcial Ozolotepec,
+1235,20,237,San Marcos Arteaga,
+1236,20,238,San Martín de los Cansecos,
+1237,20,239,San Martín Huamelúlpam,
+1238,20,240,San Martín Itunyoso,
+1239,20,241,San Martín Lachilá,
+1240,20,242,San Martín Peras,
+1241,20,243,San Martín Tilcajete,
+1242,20,244,San Martín Toxpalan,
+1243,20,245,San Martín Zacatepec,
+1244,20,246,San Mateo Cajonos,
+1245,20,247,Capulálpam de Méndez,
+1246,20,248,San Mateo del Mar,
+1247,20,249,San Mateo Yoloxochitlán,
+1248,20,250,San Mateo Etlatongo,
+1249,20,251,San Mateo Nejápam,
+1250,20,252,San Mateo Peñasco,
+1251,20,253,San Mateo Piñas,
+1252,20,254,San Mateo Río Hondo,
+1253,20,255,San Mateo Sindihui,
+1254,20,256,San Mateo Tlapiltepec,
+1255,20,257,San Melchor Betaza,
+1256,20,258,San Miguel Achiutla,
+1257,20,259,San Miguel Ahuehuetitlán,
+1258,20,260,San Miguel Aloápam,
+1259,20,261,San Miguel Amatitlán,
+1260,20,262,San Miguel Amatlán,
+1261,20,263,San Miguel Coatlán,
+1262,20,264,San Miguel Chicahua,
+1263,20,265,San Miguel Chimalapa,
+1264,20,266,San Miguel del Puerto,
+1265,20,267,San Miguel del Río,
+1266,20,268,San Miguel Ejutla,
+1267,20,269,San Miguel el Grande,
+1268,20,270,San Miguel Huautla,
+1269,20,271,San Miguel Mixtepec,
+1270,20,272,San Miguel Panixtlahuaca,
+1271,20,273,San Miguel Peras,
+1272,20,274,San Miguel Piedras,
+1273,20,275,San Miguel Quetzaltepec,
+1274,20,276,San Miguel Santa Flor,
+1275,20,277,Villa Sola de Vega,
+1276,20,278,San Miguel Soyaltepec,
+1277,20,279,San Miguel Suchixtepec,
+1278,20,280,Villa Talea de Castro,
+1279,20,281,San Miguel Tecomatlán,
+1280,20,282,San Miguel Tenango,
+1281,20,283,San Miguel Tequixtepec,
+1282,20,284,San Miguel Tilquiápam,
+1283,20,285,San Miguel Tlacamama,
+1284,20,286,San Miguel Tlacotepec,
+1285,20,287,San Miguel Tulancingo,
+1286,20,288,San Miguel Yotao,
+1287,20,289,San Nicolás,
+1288,20,290,San Nicolás Hidalgo,
+1289,20,291,San Pablo Coatlán,
+1290,20,292,San Pablo Cuatro Venados,
+1291,20,293,San Pablo Etla,
+1292,20,294,San Pablo Huitzo,
+1293,20,295,San Pablo Huixtepec,
+1294,20,296,San Pablo Macuiltianguis,
+1295,20,297,San Pablo Tijaltepec,
+1296,20,298,San Pablo Villa de Mitla,
+1297,20,299,San Pablo Yaganiza,
+1298,20,300,San Pedro Amuzgos,
+1299,20,301,San Pedro Apóstol,
+1300,20,302,San Pedro Atoyac,
+1301,20,303,San Pedro Cajonos,
+1302,20,304,San Pedro Coxcaltepec Cántaros,
+1303,20,305,San Pedro Comitancillo,
+1304,20,306,San Pedro el Alto,
+1305,20,307,San Pedro Huamelula,
+1306,20,308,San Pedro Huilotepec,
+1307,20,309,San Pedro Ixcatlán,
+1308,20,310,San Pedro Ixtlahuaca,
+1309,20,311,San Pedro Jaltepetongo,
+1310,20,312,San Pedro Jicayán,
+1311,20,313,San Pedro Jocotipac,
+1312,20,314,San Pedro Juchatengo,
+1313,20,315,San Pedro Mártir,
+1314,20,316,San Pedro Mártir Quiechapa,
+1315,20,317,San Pedro Mártir Yucuxaco,
+1316,20,318,San Pedro Mixtepec -Dto. 22 -,
+1317,20,319,San Pedro Mixtepec -Dto. 26 -,
+1318,20,320,San Pedro Molinos,
+1319,20,321,San Pedro Nopala,
+1320,20,322,San Pedro Ocopetatillo,
+1321,20,323,San Pedro Ocotepec,
+1322,20,324,San Pedro Pochutla,
+1323,20,325,San Pedro Quiatoni,
+1324,20,326,San Pedro Sochiápam,
+1325,20,327,San Pedro Tapanatepec,
+1326,20,328,San Pedro Taviche,
+1327,20,329,San Pedro Teozacoalco,
+1328,20,330,San Pedro Teutila,
+1329,20,331,San Pedro Tidaá,
+1330,20,332,San Pedro Topiltepec,
+1331,20,333,San Pedro Totolápam,
+1332,20,334,Villa de Tututepec de Melchor Ocampo,
+1333,20,335,San Pedro Yaneri,
+1334,20,336,San Pedro Yólox,
+1335,20,337,San Pedro y San Pablo Ayutla,
+1336,20,338,Villa de Etla,
+1337,20,339,San Pedro y San Pablo Teposcolula,
+1338,20,340,San Pedro y San Pablo Tequixtepec,
+1339,20,341,San Pedro Yucunama,
+1340,20,342,San Raymundo Jalpan,
+1341,20,343,San Sebastián Abasolo,
+1342,20,344,San Sebastián Coatlán,
+1343,20,345,San Sebastián Ixcapa,
+1344,20,346,San Sebastián Nicananduta,
+1345,20,347,San Sebastián Río Hondo,
+1346,20,348,San Sebastián Tecomaxtlahuaca,
+1347,20,349,San Sebastián Teitipac,
+1348,20,350,San Sebastián Tutla,
+1349,20,351,San Simón Almolongas,
+1350,20,352,San Simón Zahuatlán,
+1351,20,353,Santa Ana,
+1352,20,354,Santa Ana Ateixtlahuaca,
+1353,20,355,Santa Ana Cuauhtémoc,
+1354,20,356,Santa Ana del Valle,
+1355,20,357,Santa Ana Tavela,
+1356,20,358,Santa Ana Tlapacoyan,
+1357,20,359,Santa Ana Yareni,
+1358,20,360,Santa Ana Zegache,
+1359,20,361,Santa Catalina Quierí,
+1360,20,362,Santa Catarina Cuixtla,
+1361,20,363,Santa Catarina Ixtepeji,
+1362,20,364,Santa Catarina Juquila,
+1363,20,365,Santa Catarina Lachatao,
+1364,20,366,Santa Catarina Loxicha,
+1365,20,367,Santa Catarina Mechoacán,
+1366,20,368,Santa Catarina Minas,
+1367,20,369,Santa Catarina Quiané,
+1368,20,370,Santa Catarina Tayata,
+1369,20,371,Santa Catarina Ticuá,
+1370,20,372,Santa Catarina Yosonotú,
+1371,20,373,Santa Catarina Zapoquila,
+1372,20,374,Santa Cruz Acatepec,
+1373,20,375,Santa Cruz Amilpas,
+1374,20,376,Santa Cruz de Bravo,
+1375,20,377,Santa Cruz Itundujia,
+1376,20,378,Santa Cruz Mixtepec,
+1377,20,379,Santa Cruz Nundaco,
+1378,20,380,Santa Cruz Papalutla,
+1379,20,381,Santa Cruz Tacache de Mina,
+1380,20,382,Santa Cruz Tacahua,
+1381,20,383,Santa Cruz Tayata,
+1382,20,384,Santa Cruz Xitla,
+1383,20,385,Santa Cruz Xoxocotlán,
+1384,20,386,Santa Cruz Zenzontepec,
+1385,20,387,Santa Gertrudis,
+1386,20,388,Santa Inés del Monte,
+1387,20,389,Santa Inés Yatzeche,
+1388,20,390,Santa Lucía del Camino,
+1389,20,391,Santa Lucía Miahuatlán,
+1390,20,392,Santa Lucía Monteverde,
+1391,20,393,Santa Lucía Ocotlán,
+1392,20,394,Santa María Alotepec,
+1393,20,395,Santa María Apazco,
+1394,20,396,Santa María la Asunción,
+1395,20,397,Heroica Ciudad de Tlaxiaco,
+1396,20,398,Ayoquezco de Aldama,
+1397,20,399,Santa María Atzompa,
+1398,20,400,Santa María Camotlán,
+1399,20,401,Santa María Colotepec,
+1400,20,402,Santa María Cortijo,
+1401,20,403,Santa María Coyotepec,
+1402,20,404,Santa María Chachoápam,
+1403,20,405,Villa de Chilapa de Díaz,
+1404,20,406,Santa María Chilchotla,
+1405,20,407,Santa María Chimalapa,
+1406,20,408,Santa María del Rosario,
+1407,20,409,Santa María del Tule,
+1408,20,410,Santa María Ecatepec,
+1409,20,411,Santa María Guelacé,
+1410,20,412,Santa María Guienagati,
+1411,20,413,Santa María Huatulco,
+1412,20,414,Santa María Huazolotitlán,
+1413,20,415,Santa María Ipalapa,
+1414,20,416,Santa María Ixcatlán,
+1415,20,417,Santa María Jacatepec,
+1416,20,418,Santa María Jalapa del Marqués,
+1417,20,419,Santa María Jaltianguis,
+1418,20,420,Santa María Lachixío,
+1419,20,421,Santa María Mixtequilla,
+1420,20,422,Santa María Nativitas,
+1421,20,423,Santa María Nduayaco,
+1422,20,424,Santa María Ozolotepec,
+1423,20,425,Santa María Pápalo,
+1424,20,426,Santa María Peñoles,
+1425,20,427,Santa María Petapa,
+1426,20,428,Santa María Quiegolani,
+1427,20,429,Santa María Sola,
+1428,20,430,Santa María Tataltepec,
+1429,20,431,Santa María Tecomavaca,
+1430,20,432,Santa María Temaxcalapa,
+1431,20,433,Santa María Temaxcaltepec,
+1432,20,434,Santa María Teopoxco,
+1433,20,435,Santa María Tepantlali,
+1434,20,436,Santa María Texcatitlán,
+1435,20,437,Santa María Tlahuitoltepec,
+1436,20,438,Santa María Tlalixtac,
+1437,20,439,Santa María Tonameca,
+1438,20,440,Santa María Totolapilla,
+1439,20,441,Santa María Xadani,
+1440,20,442,Santa María Yalina,
+1441,20,443,Santa María Yavesía,
+1442,20,444,Santa María Yolotepec,
+1443,20,445,Santa María Yosoyúa,
+1444,20,446,Santa María Yucuhiti,
+1445,20,447,Santa María Zacatepec,
+1446,20,448,Santa María Zaniza,
+1447,20,449,Santa María Zoquitlán,
+1448,20,450,Santiago Amoltepec,
+1449,20,451,Santiago Apoala,
+1450,20,452,Santiago Apóstol,
+1451,20,453,Santiago Astata,
+1452,20,454,Santiago Atitlán,
+1453,20,455,Santiago Ayuquililla,
+1454,20,456,Santiago Cacaloxtepec,
+1455,20,457,Santiago Camotlán,
+1456,20,458,Santiago Comaltepec,
+1457,20,459,Santiago Chazumba,
+1458,20,460,Santiago Choápam,
+1459,20,461,Santiago del Río,
+1460,20,462,Santiago Huajolotitlán,
+1461,20,463,Santiago Huauclilla,
+1462,20,464,Santiago Ihuitlán Plumas,
+1463,20,465,Santiago Ixcuintepec,
+1464,20,466,Santiago Ixtayutla,
+1465,20,467,Santiago Jamiltepec,
+1466,20,468,Santiago Jocotepec,
+1467,20,469,Santiago Juxtlahuaca,
+1468,20,470,Santiago Lachiguiri,
+1469,20,471,Santiago Lalopa,
+1470,20,472,Santiago Laollaga,
+1471,20,473,Santiago Laxopa,
+1472,20,474,Santiago Llano Grande,
+1473,20,475,Santiago Matatlán,
+1474,20,476,Santiago Miltepec,
+1475,20,477,Santiago Minas,
+1476,20,478,Santiago Nacaltepec,
+1477,20,479,Santiago Nejapilla,
+1478,20,480,Santiago Nundiche,
+1479,20,481,Santiago Nuyoó,
+1480,20,482,Santiago Pinotepa Nacional,
+1481,20,483,Santiago Suchilquitongo,
+1482,20,484,Santiago Tamazola,
+1483,20,485,Santiago Tapextla,
+1484,20,486,Villa Tejúpam de la Unión,
+1485,20,487,Santiago Tenango,
+1486,20,488,Santiago Tepetlapa,
+1487,20,489,Santiago Tetepec,
+1488,20,490,Santiago Texcalcingo,
+1489,20,491,Santiago Textitlán,
+1490,20,492,Santiago Tilantongo,
+1491,20,493,Santiago Tillo,
+1492,20,494,Santiago Tlazoyaltepec,
+1493,20,495,Santiago Xanica,
+1494,20,496,Santiago Xiacuí,
+1495,20,497,Santiago Yaitepec,
+1496,20,498,Santiago Yaveo,
+1497,20,499,Santiago Yolomécatl,
+1498,20,500,Santiago Yosondúa,
+1499,20,501,Santiago Yucuyachi,
+1500,20,502,Santiago Zacatepec,
+1501,20,503,Santiago Zoochila,
+1502,20,504,Nuevo Zoquiápam,
+1503,20,505,Santo Domingo Ingenio,
+1504,20,506,Santo Domingo Albarradas,
+1505,20,507,Santo Domingo Armenta,
+1506,20,508,Santo Domingo Chihuitán,
+1507,20,509,Santo Domingo de Morelos,
+1508,20,510,Santo Domingo Ixcatlán,
+1509,20,511,Santo Domingo Nuxaá,
+1510,20,512,Santo Domingo Ozolotepec,
+1511,20,513,Santo Domingo Petapa,
+1512,20,514,Santo Domingo Roayaga,
+1513,20,515,Santo Domingo Tehuantepec,
+1514,20,516,Santo Domingo Teojomulco,
+1515,20,517,Santo Domingo Tepuxtepec,
+1516,20,518,Santo Domingo Tlatayápam,
+1517,20,519,Santo Domingo Tomaltepec,
+1518,20,520,Santo Domingo Tonalá,
+1519,20,521,Santo Domingo Tonaltepec,
+1520,20,522,Santo Domingo Xagacía,
+1521,20,523,Santo Domingo Yanhuitlán,
+1522,20,524,Santo Domingo Yodohino,
+1523,20,525,Santo Domingo Zanatepec,
+1524,20,526,Santos Reyes Nopala,
+1525,20,527,Santos Reyes Pápalo,
+1526,20,528,Santos Reyes Tepejillo,
+1527,20,529,Santos Reyes Yucuná,
+1528,20,530,Santo Tomás Jalieza,
+1529,20,531,Santo Tomás Mazaltepec,
+1530,20,532,Santo Tomás Ocotepec,
+1531,20,533,Santo Tomás Tamazulapan,
+1532,20,534,San Vicente Coatlán,
+1533,20,535,San Vicente Lachixío,
+1534,20,536,San Vicente Nuñú,
+1535,20,537,Silacayoápam,
+1536,20,538,Sitio de Xitlapehua,
+1537,20,539,Soledad Etla,
+1538,20,540,Villa de Tamazulápam del Progreso,
+1539,20,541,Tanetze de Zaragoza,
+1540,20,542,Taniche,
+1541,20,543,Tataltepec de Valdés,
+1542,20,544,Teococuilco de Marcos Pérez,
+1543,20,545,Teotitlán de Flores Magón,
+1544,20,546,Teotitlán del Valle,
+1545,20,547,Teotongo,
+1546,20,548,Tepelmeme Villa de Morelos,
+1547,20,549,Tezoatlán de Segura y Luna,
+1548,20,550,San Jerónimo Tlacochahuaya,
+1549,20,551,Tlacolula de Matamoros,
+1550,20,552,Tlacotepec Plumas,
+1551,20,553,Tlalixtac de Cabrera,
+1552,20,554,Totontepec Villa de Morelos,
+1553,20,555,Trinidad Zaachila,
+1554,20,556,La Trinidad Vista Hermosa,
+1555,20,557,Unión Hidalgo,
+1556,20,558,Valerio Trujano,
+1557,20,559,San Juan Bautista Valle Nacional,
+1558,20,560,Villa Díaz Ordaz,
+1559,20,561,Yaxe,
+1560,20,562,Magdalena Yodocono de Porfirio Díaz,
+1561,20,563,Yogana,
+1562,20,564,Yutanduchi de Guerrero,
+1563,20,565,Villa de Zaachila,
+1564,20,566,San Mateo Yucutindó,
+1565,20,567,Zapotitlán Lagunas,
+1566,20,568,Zapotitlán Palmas,
+1567,20,569,Santa Inés de Zaragoza,
+1568,20,570,Zimatlán de Álvarez,
+1569,21,1,Acajete,TARIFA 1
+1570,21,2,Acateno,TARIFA 1
+1571,21,3,Acatlán,TARIFA 1
+1572,21,4,Acatzingo,TARIFA 1
+1573,21,5,Acteopan,TARIFA 1A
+1574,21,6,Ahuacatlán,TARIFA 1
+1575,21,7,Ahuatlán,TARIFA 1
+1576,21,8,Ahuazotepec,TARIFA 1
+1577,21,9,Ahuehuetitla,TARIFA 1
+1578,21,10,Ajalpan,TARIFA 1
+1579,21,11,Albino Zertuche,TARIFA 1
+1580,21,12,Aljojuca,TARIFA 1
+1581,21,13,Altepexi,TARIFA 1
+1582,21,14,Amixtlán,TARIFA 1
+1583,21,15,Amozoc,TARIFA 1
+1584,21,16,Aquixtla,TARIFA 1
+1585,21,17,Atempan,TARIFA 1
+1586,21,18,Atexcal,TARIFA 1
+1587,21,19,Atlixco,TARIFA 1
+1588,21,20,Atoyatempan,TARIFA 1
+1589,21,21,Atzala,TARIFA 1
+1590,21,22,Atzitzihuacán,TARIFA 1
+1591,21,23,Atzitzintla,TARIFA 1
+1592,21,24,Axutla,TARIFA 1
+1593,21,25,Ayotoxco de Guerrero,TARIFA 1
+1594,21,26,Calpan,TARIFA 1
+1595,21,27,Caltepec,TARIFA 1
+1596,21,28,Camocuautla,TARIFA 1
+1597,21,29,Caxhuacan,TARIFA 1
+1598,21,30,Coatepec,TARIFA 1
+1599,21,31,Coatzingo,TARIFA 1
+1600,21,32,Cohetzala,TARIFA 1
+1601,21,33,Cohuecan,TARIFA 1A
+1602,21,34,Coronango,TARIFA 1
+1603,21,35,Coxcatlán,TARIFA 1
+1604,21,36,Coyomeapan,TARIFA 1
+1605,21,37,Coyotepec,TARIFA 1
+1606,21,38,Cuapiaxtla de Madero,TARIFA 1
+1607,21,39,Cuautempan,TARIFA 1
+1608,21,40,Cuautinchán,TARIFA 1
+1609,21,41,Cuautlancingo,TARIFA 1
+1610,21,42,Cuayuca de Andrade,TARIFA 1
+1611,21,43,Cuetzalan del Progreso,TARIFA 1
+1612,21,44,Cuyoaco,TARIFA 1
+1613,21,45,Chalchicomula de Sesma,TARIFA 1
+1614,21,46,Chapulco,TARIFA 1
+1615,21,47,Chiautla,TARIFA 1
+1616,21,48,Chiautzingo,TARIFA 1
+1617,21,49,Chiconcuautla,TARIFA 1
+1618,21,50,Chichiquila,TARIFA 1
+1619,21,51,Chietla,TARIFA 1
+1620,21,52,Chigmecatitlán,TARIFA 1
+1621,21,53,Chignahuapan,TARIFA 1
+1622,21,54,Chignautla,TARIFA 1
+1623,21,55,Chila,TARIFA 1
+1624,21,56,Chila de la Sal,TARIFA 1
+1625,21,57,Honey,TARIFA 1
+1626,21,58,Chilchotla,TARIFA 1
+1627,21,59,Chinantla,TARIFA 1
+1628,21,60,Domingo Arenas,TARIFA 1
+1629,21,61,Eloxochitlán,TARIFA 1
+1630,21,62,Epatlán,TARIFA 1
+1631,21,63,Esperanza,TARIFA 1
+1632,21,64,Francisco Z. Mena,TARIFA 1
+1633,21,65,General Felipe Ángeles,TARIFA 1
+1634,21,66,Guadalupe,TARIFA 1
+1635,21,67,Guadalupe Victoria,TARIFA 1
+1636,21,68,Hermenegildo Galeana,TARIFA 1
+1637,21,69,Huaquechula,TARIFA 1
+1638,21,70,Huatlatlauca,TARIFA 1
+1639,21,71,Huauchinango,TARIFA 1
+1640,21,72,Huehuetla,TARIFA 1
+1641,21,73,Huehuetlán el Chico,TARIFA 1
+1642,21,74,Huejotzingo,TARIFA 1
+1643,21,75,Hueyapan,TARIFA 1
+1644,21,76,Hueytamalco,TARIFA 1
+1645,21,77,Hueytlalpan,TARIFA 1
+1646,21,78,Huitzilan de Serdán,TARIFA 1
+1647,21,79,Huitziltepec,TARIFA 1
+1648,21,80,Atlequizayan,TARIFA 1
+1649,21,81,Ixcamilpa de Guerrero,TARIFA 1
+1650,21,82,Ixcaquixtla,TARIFA 1
+1651,21,83,Ixtacamaxtitlán,TARIFA 1
+1652,21,84,Ixtepec,TARIFA 1
+1653,21,85,Izúcar de Matamoros,TARIFA 1
+1654,21,86,Jalpan,TARIFA 1
+1655,21,87,Jolalpan,TARIFA 1
+1656,21,88,Jonotla,TARIFA 1
+1657,21,89,Jopala,TARIFA 1
+1658,21,90,Juan C. Bonilla,TARIFA 1
+1659,21,91,Juan Galindo,TARIFA 1
+1660,21,92,Juan N. Méndez,TARIFA 1
+1661,21,93,Lafragua,TARIFA 1
+1662,21,94,Libres,TARIFA 1
+1663,21,95,La Magdalena Tlatlauquitepec,TARIFA 1
+1664,21,96,Mazapiltepec de Juárez,TARIFA 1
+1665,21,97,Mixtla,TARIFA 1
+1666,21,98,Molcaxac,TARIFA 1
+1667,21,99,Cañada Morelos,TARIFA 1
+1668,21,100,Naupan,TARIFA 1
+1669,21,101,Nauzontla,TARIFA 1
+1670,21,102,Nealtican,TARIFA 1
+1671,21,103,Nicolás Bravo,TARIFA 1
+1672,21,104,Nopalucan,TARIFA 1
+1673,21,105,Ocotepec,TARIFA 1
+1674,21,106,Ocoyucan,TARIFA 1
+1675,21,107,Olintla,TARIFA 1
+1676,21,108,Oriental,TARIFA 1
+1677,21,109,Pahuatlán,TARIFA 1
+1678,21,110,Palmar de Bravo,TARIFA 1
+1679,21,111,Pantepec,TARIFA 1
+1680,21,112,Petlalcingo,TARIFA 1
+1681,21,113,Piaxtla,TARIFA 1
+1682,21,114,Puebla,TARIFA 1
+1683,21,115,Quecholac,TARIFA 1
+1684,21,116,Quimixtlán,TARIFA 1
+1685,21,117,Rafael Lara Grajales,TARIFA 1
+1686,21,118,Los Reyes de Juárez,TARIFA 1
+1687,21,119,San Andrés Cholula,TARIFA 1
+1688,21,120,San Antonio Cañada,TARIFA 1
+1689,21,121,San Diego la Mesa Tochimiltzingo,TARIFA 1
+1690,21,122,San Felipe Teotlalcingo,TARIFA 1
+1691,21,123,San Felipe Tepatlán,TARIFA 1
+1692,21,124,San Gabriel Chilac,TARIFA 1
+1693,21,125,San Gregorio Atzompa,TARIFA 1
+1694,21,126,San Jerónimo Tecuanipan,TARIFA 1
+1695,21,127,San Jerónimo Xayacatlán,TARIFA 1
+1696,21,128,San José Chiapa,TARIFA 1
+1697,21,129,San José Miahuatlán,TARIFA 1
+1698,21,130,San Juan Atenco,TARIFA 1
+1699,21,131,San Juan Atzompa,TARIFA 1
+1700,21,132,San Martín Texmelucan,TARIFA 1
+1701,21,133,San Martín Totoltepec,TARIFA 1
+1702,21,134,San Matías Tlalancaleca,TARIFA 1
+1703,21,135,San Miguel Ixitlán,TARIFA 1
+1704,21,136,San Miguel Xoxtla,TARIFA 1
+1705,21,137,San Nicolás Buenos Aires,TARIFA 1
+1706,21,138,San Nicolás de los Ranchos,TARIFA 1
+1707,21,139,San Pablo Anicano,TARIFA 1
+1708,21,140,San Pedro Cholula,TARIFA 1
+1709,21,141,San Pedro Yeloixtlahuaca,TARIFA 1
+1710,21,142,San Salvador el Seco,TARIFA 1
+1711,21,143,San Salvador el Verde,TARIFA 1
+1712,21,144,San Salvador Huixcolotla,TARIFA 1
+1713,21,145,San Sebastián Tlacotepec,TARIFA 1
+1714,21,146,Santa Catarina Tlaltempan,TARIFA 1
+1715,21,147,Santa Inés Ahuatempan,TARIFA 1
+1716,21,148,Santa Isabel Cholula,TARIFA 1
+1717,21,149,Santiago Miahuatlán,TARIFA 1
+1718,21,150,Huehuetlán el Grande,TARIFA 1
+1719,21,151,Santo Tomás Hueyotlipan,TARIFA 1
+1720,21,152,Soltepec,TARIFA 1
+1721,21,153,Tecali de Herrera,TARIFA 1
+1722,21,154,Tecamachalco,TARIFA 1
+1723,21,155,Tecomatlán,TARIFA 1
+1724,21,156,Tehuacán,TARIFA 1
+1725,21,157,Tehuitzingo,TARIFA 1
+1726,21,158,Tenampulco,TARIFA 1
+1727,21,159,Teopantlán,TARIFA 1
+1728,21,160,Teotlalco,TARIFA 1
+1729,21,161,Tepanco de López,TARIFA 1
+1730,21,162,Tepango de Rodríguez,TARIFA 1
+1731,21,163,Tepatlaxco de Hidalgo,TARIFA 1
+1732,21,164,Tepeaca,TARIFA 1
+1733,21,165,Tepemaxalco,TARIFA 1A
+1734,21,166,Tepeojuma,TARIFA 1
+1735,21,167,Tepetzintla,TARIFA 1
+1736,21,168,Tepexco,TARIFA 1
+1737,21,169,Tepexi de Rodríguez,TARIFA 1
+1738,21,170,Tepeyahualco,TARIFA 1
+1739,21,171,Tepeyahualco de Cuauhtémoc,TARIFA 1
+1740,21,172,Tetela de Ocampo,TARIFA 1
+1741,21,173,Teteles de Avila Castillo,TARIFA 1
+1742,21,174,Teziutlán,TARIFA 1
+1743,21,175,Tianguismanalco,TARIFA 1
+1744,21,176,Tilapa,TARIFA 1
+1745,21,177,Tlacotepec de Benito Juárez,TARIFA 1
+1746,21,178,Tlacuilotepec,TARIFA 1
+1747,21,179,Tlachichuca,TARIFA 1
+1748,21,180,Tlahuapan,TARIFA 1
+1749,21,181,Tlaltenango,TARIFA 1
+1750,21,182,Tlanepantla,TARIFA 1
+1751,21,183,Tlaola,TARIFA 1
+1752,21,184,Tlapacoya,TARIFA 1
+1753,21,185,Tlapanalá,TARIFA 1
+1754,21,186,Tlatlauquitepec,TARIFA 1
+1755,21,187,Tlaxco,TARIFA 1
+1756,21,188,Tochimilco,TARIFA 1
+1757,21,189,Tochtepec,TARIFA 1
+1758,21,190,Totoltepec de Guerrero,TARIFA 1
+1759,21,191,Tulcingo,TARIFA 1
+1760,21,192,Tuzamapan de Galeana,TARIFA 1
+1761,21,193,Tzicatlacoyan,TARIFA 1
+1762,21,194,Venustiano Carranza,TARIFA 1
+1763,21,195,Vicente Guerrero,TARIFA 1
+1764,21,196,Xayacatlán de Bravo,TARIFA 1
+1765,21,197,Xicotepec,TARIFA 1
+1766,21,198,Xicotlán,TARIFA 1
+1767,21,199,Xiutetelco,TARIFA 1
+1768,21,200,Xochiapulco,TARIFA 1
+1769,21,201,Xochiltepec,TARIFA 1
+1770,21,202,Xochitlán de Vicente Suárez,TARIFA 1
+1771,21,203,Xochitlán Todos Santos,TARIFA 1
+1772,21,204,Yaonáhuac,TARIFA 1
+1773,21,205,Yehualtepec,TARIFA 1
+1774,21,206,Zacapala,TARIFA 1
+1775,21,207,Zacapoaxtla,TARIFA 1
+1776,21,208,Zacatlán,TARIFA 1
+1777,21,209,Zapotitlán,TARIFA 1
+1778,21,210,Zapotitlán de Méndez,TARIFA 1
+1779,21,211,Zaragoza,TARIFA 1
+1780,21,212,Zautla,TARIFA 1
+1781,21,213,Zihuateutla,TARIFA 1
+1782,21,214,Zinacatepec,TARIFA 1
+1783,21,215,Zongozotla,TARIFA 1
+1784,21,216,Zoquiapan,TARIFA 1
+1785,21,217,Zoquitlán,TARIFA 1
+1786,22,1,Amealco de Bonfil,TARIFA 1
+1787,22,2,Pinal de Amoles,TARIFA 1
+1788,22,3,Arroyo Seco,TARIFA 1
+1789,22,4,Cadereyta de Montes,TARIFA 1
+1790,22,5,Colón,TARIFA 1
+1791,22,6,Corregidora,TARIFA 1
+1792,22,7,Ezequiel Montes,TARIFA 1
+1793,22,8,Huimilpan,TARIFA 1
+1794,22,9,Jalpan de Serra,TARIFA 1A
+1795,22,10,Landa de Matamoros,TARIFA 1A
+1796,22,11,El Marqués,TARIFA 1
+1797,22,12,Pedro Escobedo,TARIFA 1
+1798,22,13,Peñamiller,TARIFA 1
+1799,22,14,Querétaro,TARIFA 1
+1800,22,15,San Joaquín,TARIFA 1
+1801,22,16,San Juan del Río,TARIFA 1
+1802,22,17,Tequisquiapan,TARIFA 1
+1803,22,18,Tolimán,TARIFA 1
+1804,23,1,Cozumel,TARIFA 1B
+1805,23,2,Felipe Carrillo Puerto,TARIFA 1D
+1806,23,3,Isla Mujeres,TARIFA 1C
+1807,23,4,Othón P. Blanco,TARIFA 1B
+1808,23,5,Benito Juárez,TARIFA 1C
+1809,23,6,José María Morelos,TARIFA 1B
+1810,23,7,Lázaro Cárdenas,TARIFA 1A
+1811,23,8,Solidaridad,TARIFA 1B
+1812,23,9,Tulum,TARIFA 1A
+1813,23,10,Bacalar,TARIFA 1A
+1814,24,1,Ahualulco,TARIFA 1
+1815,24,2,Alaquines,TARIFA 1
+1816,24,3,Aquismón,TARIFA 1B
+1817,24,4,Armadillo de los Infante,TARIFA 1
+1818,24,5,Cárdenas,TARIFA 1
+1819,24,6,Catorce,TARIFA 1
+1820,24,7,Cedral,TARIFA 1
+1821,24,8,Cerritos,TARIFA 1A
+1822,24,9,Cerro de San Pedro,TARIFA 1
+1823,24,10,Ciudad del Maíz,TARIFA 1
+1824,24,11,Ciudad Fernández,TARIFA 1A
+1825,24,12,Tancanhuitz,TARIFA 1B
+1826,24,13,Ciudad Valles,TARIFA 1D
+1827,24,14,Coxcatlán,TARIFA 1B
+1828,24,15,Charcas,TARIFA 1
+1829,24,16,Ebano,TARIFA 1D
+1830,24,17,Guadalcázar,TARIFA 1
+1831,24,18,Huehuetlán,TARIFA 1B
+1832,24,19,Lagunillas,TARIFA 1A
+1833,24,20,Matehuala,TARIFA 1A
+1834,24,21,Mexquitic de Carmona,TARIFA 1
+1835,24,22,Moctezuma,TARIFA 1
+1836,24,23,Rayón,TARIFA 1A
+1837,24,24,Rioverde,TARIFA 1A
+1838,24,25,Salinas,TARIFA 1
+1839,24,26,San Antonio,TARIFA 1B
+1840,24,27,San Ciro de Acosta,TARIFA 1B
+1841,24,28,San Luis Potosí,TARIFA 1
+1842,24,29,San Martín Chalchicuautla,TARIFA 1B
+1843,24,30,San Nicolás Tolentino,TARIFA 1
+1844,24,31,Santa Catarina,TARIFA 1B
+1845,24,32,Santa María del Río,TARIFA 1
+1846,24,33,Santo Domingo,TARIFA 1
+1847,24,34,San Vicente Tancuayalab,TARIFA 1D
+1848,24,35,Soledad de Graciano Sánchez,TARIFA 1
+1849,24,36,Tamasopo,TARIFA 1B
+1850,24,37,Tamazunchale,TARIFA 1B
+1851,24,38,Tampacán,TARIFA 1B
+1852,24,39,Tampamolón Corona,TARIFA 1D
+1853,24,40,Tamuín,TARIFA 1D
+1854,24,41,Tanlajás,TARIFA 1B
+1855,24,42,Tanquián de Escobedo,TARIFA 1C
+1856,24,43,Tierra Nueva,TARIFA 1
+1857,24,44,Vanegas,TARIFA 1
+1858,24,45,Venado,TARIFA 1
+1859,24,46,Villa de Arriaga,TARIFA 1
+1860,24,47,Villa de Guadalupe,TARIFA 1
+1861,24,48,Villa de la Paz,TARIFA 1A
+1862,24,49,Villa de Ramos,TARIFA 1
+1863,24,50,Villa de Reyes,TARIFA 1
+1864,24,51,Villa Hidalgo,TARIFA 1
+1865,24,52,Villa Juárez,TARIFA 1
+1866,24,53,Axtla de Terrazas,TARIFA 1C
+1867,24,54,Xilitla,TARIFA 1B
+1868,24,55,Zaragoza,TARIFA 1
+1869,24,56,Villa de Arista,TARIFA 1
+1870,24,57,Matlapa,TARIFA 1B
+1871,24,58,El Naranjo,TARIFA 1B
+1872,25,1,Ahome,TARIFA 1F
+1873,25,2,Angostura,TARIFA 1E
+1874,25,3,Badiraguato,TARIFA 1D
+1875,25,4,Concordia,TARIFA 1D
+1876,25,5,Cosalá,TARIFA 1D
+1877,25,6,Culiacán,TARIFA 1F
+1878,25,7,Choix,TARIFA 1E
+1879,25,8,Elota,TARIFA 1D
+1880,25,9,Escuinapa,TARIFA 1D
+1881,25,10,El Fuerte,TARIFA 1E
+1882,25,11,Guasave,TARIFA 1F
+1883,25,12,Mazatlán,TARIFA 1D
+1884,25,13,Mocorito,TARIFA 1E
+1885,25,14,Rosario,TARIFA 1D
+1886,25,15,Salvador Alvarado,TARIFA 1F
+1887,25,16,San Ignacio,TARIFA 1D
+1888,25,17,Sinaloa,TARIFA 1E
+1889,25,18,Navolato,TARIFA 1D
+1890,26,1,Aconchi,TARIFA 1D
+1891,26,2,Agua Prieta,TARIFA 1B
+1892,26,3,Alamos,TARIFA 1E
+1893,26,4,Altar,TARIFA 1E
+1894,26,5,Arivechi,TARIFA 1D
+1895,26,6,Arizpe,TARIFA 1C
+1896,26,7,Atil,TARIFA 1E
+1897,26,8,Bacadéhuachi,TARIFA 1C
+1898,26,9,Bacanora,TARIFA 1F
+1899,26,10,Bacerac,TARIFA 1B
+1900,26,11,Bacoachi,TARIFA 1A
+1901,26,12,Bácum,TARIFA 1E
+1902,26,13,Banámichi,TARIFA 1D
+1903,26,14,Baviácora,TARIFA 1D
+1904,26,15,Bavispe,TARIFA 1B
+1905,26,16,Benjamín Hill,TARIFA 1C
+1906,26,17,Caborca,TARIFA 1E
+1907,26,18,Cajeme,TARIFA 1F
+1908,26,19,Cananea,TARIFA 1A
+1909,26,20,Carbó,TARIFA 1E
+1910,26,21,La Colorada,TARIFA 1E
+1911,26,22,Cucurpe,TARIFA 1C
+1912,26,23,Cumpas,TARIFA 1B
+1913,26,24,Divisaderos,TARIFA 1C
+1914,26,25,Empalme,TARIFA 1E
+1915,26,26,Etchojoa,TARIFA 1E
+1916,26,27,Fronteras,TARIFA 1B
+1917,26,28,Granados,TARIFA 1D
+1918,26,29,Guaymas,TARIFA 1E
+1919,26,30,Hermosillo,TARIFA 1F
+1920,26,31,Huachinera,TARIFA 1B
+1921,26,32,Huásabas,TARIFA 1C
+1922,26,33,Huatabampo,TARIFA 1E
+1923,26,34,Huépac,TARIFA 1D
+1924,26,35,Imuris,TARIFA 1C
+1925,26,36,Magdalena,TARIFA 1C
+1926,26,37,Mazatán,TARIFA 1E
+1927,26,38,Moctezuma,TARIFA 1C
+1928,26,39,Naco,TARIFA 1A
+1929,26,40,Nácori Chico,TARIFA 1C
+1930,26,41,Nacozari de García,TARIFA 1B
+1931,26,42,Navojoa,TARIFA 1E
+1932,26,43,Nogales,TARIFA 1A
+1933,26,44,Onavas,TARIFA 1E
+1934,26,45,Opodepe,TARIFA 1D
+1935,26,46,Oquitoa,TARIFA 1E
+1936,26,47,Pitiquito,TARIFA 1E
+1937,26,48,Puerto Peñasco,TARIFA 1E
+1938,26,49,Quiriego,TARIFA 1E
+1939,26,50,Rayón,TARIFA 1D
+1940,26,51,Rosario,TARIFA 1E
+1941,26,52,Sahuaripa,TARIFA 1F
+1942,26,53,San Felipe de Jesús,TARIFA 1D
+1943,26,54,San Javier,TARIFA 1E
+1944,26,55,San Luis Río Colorado,TARIFA 1F
+1945,26,56,San Miguel de Horcasitas,TARIFA 1E
+1946,26,57,San Pedro de la Cueva,TARIFA 1E
+1947,26,58,Santa Ana,TARIFA 1C
+1948,26,59,Santa Cruz,TARIFA 1A
+1949,26,60,Sáric,TARIFA 1E
+1950,26,61,Soyopa,TARIFA 1E
+1951,26,62,Suaqui Grande,TARIFA 1E
+1952,26,63,Tepache,TARIFA 1E
+1953,26,64,Trincheras,TARIFA 1C
+1954,26,65,Tubutama,TARIFA 1E
+1955,26,66,Ures,TARIFA 1E
+1956,26,67,Villa Hidalgo,TARIFA 1B
+1957,26,68,Villa Pesqueira,TARIFA 1E
+1958,26,69,Yécora,TARIFA 1D
+1959,26,70,General Plutarco Elías Calles,TARIFA 1E
+1960,26,71,Benito Juárez,TARIFA 1E
+1961,26,72,San Ignacio Río Muerto,TARIFA 1E
+1962,27,1,Balancán,TARIFA 1C
+1963,27,2,Cárdenas,TARIFA 1C
+1964,27,3,Centla,TARIFA 1C
+1965,27,4,Centro,TARIFA 1D
+1966,27,5,Comalcalco,TARIFA 1C
+1967,27,6,Cunduacán,TARIFA 1C
+1968,27,7,Emiliano Zapata,TARIFA 1C
+1969,27,8,Huimanguillo,TARIFA 1C
+1970,27,9,Jalapa,TARIFA 1C
+1971,27,10,Jalpa de Méndez,TARIFA 1C
+1972,27,11,Jonuta,TARIFA 1D
+1973,27,12,Macuspana,TARIFA 1D
+1974,27,13,Nacajuca,TARIFA 1C
+1975,27,14,Paraíso,TARIFA 1C
+1976,27,15,Tacotalpa,TARIFA 1C
+1977,27,16,Teapa,TARIFA 1C
+1978,27,17,Tenosique,TARIFA 1D
+1979,28,1,Abasolo,TARIFA 1C
+1980,28,2,Aldama,TARIFA 1B
+1981,28,3,Altamira,TARIFA 1C
+1982,28,4,Antiguo Morelos,TARIFA 1C
+1983,28,5,Burgos,TARIFA 1C
+1984,28,6,Bustamante,TARIFA 1A
+1985,28,7,Camargo,TARIFA 1D
+1986,28,8,Casas,TARIFA 1C
+1987,28,9,Ciudad Madero,TARIFA 1C
+1988,28,10,Cruillas,TARIFA 1B
+1989,28,11,Gómez Farías,TARIFA 1C
+1990,28,12,González,TARIFA 1C
+1991,28,13,Güémez,TARIFA 1C
+1992,28,14,Guerrero,TARIFA 1D
+1993,28,15,Gustavo Díaz Ordaz,TARIFA 1E
+1994,28,16,Hidalgo,TARIFA 1C
+1995,28,17,Jaumave,TARIFA 1A
+1996,28,18,Jiménez,TARIFA 1C
+1997,28,19,Llera,TARIFA 1B
+1998,28,20,Mainero,TARIFA 1B
+1999,28,21,El Mante,TARIFA 1B
+2000,28,22,Matamoros,TARIFA 1D
+2001,28,23,Méndez,TARIFA 1C
+2002,28,24,Mier,TARIFA 1E
+2003,28,25,Miguel Alemán,TARIFA 1E
+2004,28,26,Miquihuana,TARIFA 1A
+2005,28,27,Nuevo Laredo,TARIFA 1E
+2006,28,28,Nuevo Morelos,TARIFA 1C
+2007,28,29,Ocampo,TARIFA 1B
+2008,28,30,Padilla,TARIFA 1D
+2009,28,31,Palmillas,TARIFA 1
+2010,28,32,Reynosa,TARIFA 1E
+2011,28,33,Río Bravo,TARIFA 1E
+2012,28,34,San Carlos,TARIFA 1B
+2013,28,35,San Fernando,TARIFA 1C
+2014,28,36,San Nicolás,TARIFA 1B
+2015,28,37,Soto la Marina,TARIFA 1C
+2016,28,38,Tampico,TARIFA 1C
+2017,28,39,Tula,TARIFA 1
+2018,28,40,Valle Hermoso,TARIFA 1C
+2019,28,41,Victoria,TARIFA 1C
+2020,28,42,Villagrán,TARIFA 1B
+2021,28,43,Xicoténcatl,TARIFA 1D
+2022,29,1,Amaxac de Guerrero,TARIFA 1
+2023,29,2,Apetatitlán de Antonio Carvajal,TARIFA 1
+2024,29,3,Atlangatepec,TARIFA 1
+2025,29,4,Atltzayanca,TARIFA 1
+2026,29,5,Apizaco,TARIFA 1
+2027,29,6,Calpulalpan,TARIFA 1
+2028,29,7,El Carmen Tequexquitla,TARIFA 1
+2029,29,8,Cuapiaxtla,TARIFA 1
+2030,29,9,Cuaxomulco,TARIFA 1
+2031,29,10,Chiautempan,TARIFA 1
+2032,29,11,Muñoz de Domingo Arenas,TARIFA 1
+2033,29,12,Españita,TARIFA 1
+2034,29,13,Huamantla,TARIFA 1
+2035,29,14,Hueyotlipan,TARIFA 1
+2036,29,15,Ixtacuixtla de Mariano Matamoros,TARIFA 1
+2037,29,16,Ixtenco,TARIFA 1
+2038,29,17,Mazatecochco de José María Morelos,TARIFA 1
+2039,29,18,Contla de Juan Cuamatzi,TARIFA 1
+2040,29,19,Tepetitla de Lardizábal,TARIFA 1
+2041,29,20,Sanctórum de Lázaro Cárdenas,TARIFA 1
+2042,29,21,Nanacamilpa de Mariano Arista,TARIFA 1
+2043,29,22,Acuamanala de Miguel Hidalgo,TARIFA 1
+2044,29,23,Natívitas,TARIFA 1
+2045,29,24,Panotla,TARIFA 1
+2046,29,25,San Pablo del Monte,TARIFA 1
+2047,29,26,Santa Cruz Tlaxcala,TARIFA 1
+2048,29,27,Tenancingo,TARIFA 1
+2049,29,28,Teolocholco,TARIFA 1
+2050,29,29,Tepeyanco,TARIFA 1
+2051,29,30,Terrenate,TARIFA 1
+2052,29,31,Tetla de la Solidaridad,TARIFA 1
+2053,29,32,Tetlatlahuca,TARIFA 1
+2054,29,33,Tlaxcala,TARIFA 1
+2055,29,34,Tlaxco,TARIFA 1
+2056,29,35,Tocatlán,TARIFA 1
+2057,29,36,Totolac,TARIFA 1
+2058,29,37,Ziltlaltépec de Trinidad Sánchez Santos,TARIFA 1
+2059,29,38,Tzompantepec,TARIFA 1
+2060,29,39,Xaloztoc,TARIFA 1
+2061,29,40,Xaltocan,TARIFA 1
+2062,29,41,Papalotla de Xicohténcatl,TARIFA 1
+2063,29,42,Xicohtzinco,TARIFA 1
+2064,29,43,Yauhquemehcan,TARIFA 1
+2065,29,44,Zacatelco,TARIFA 1
+2066,29,45,Benito Juárez,TARIFA 1
+2067,29,46,Emiliano Zapata,TARIFA 1
+2068,29,47,Lázaro Cárdenas,TARIFA 1
+2069,29,48,La Magdalena Tlaltelulco,TARIFA 1
+2070,29,49,San Damián Texóloc,TARIFA 1
+2071,29,50,San Francisco Tetlanohcan,TARIFA 1
+2072,29,51,San Jerónimo Zacualpan,TARIFA 1
+2073,29,52,San José Teacalco,TARIFA 1
+2074,29,53,San Juan Huactzinco,TARIFA 1
+2075,29,54,San Lorenzo Axocomanitla,TARIFA 1
+2076,29,55,San Lucas Tecopilco,TARIFA 1
+2077,29,56,Santa Ana Nopalucan,TARIFA 1
+2078,29,57,Santa Apolonia Teacalco,TARIFA 1
+2079,29,58,Santa Catarina Ayometla,TARIFA 1
+2080,29,59,Santa Cruz Quilehtla,TARIFA 1
+2081,29,60,Santa Isabel Xiloxoxtla,TARIFA 1
+2082,30,1,Acajete,TARIFA 1
+2083,30,2,Acatlán,TARIFA 1
+2084,30,3,Acayucan,TARIFA 1B
+2085,30,4,Actopan,TARIFA 1B
+2086,30,5,Acula,TARIFA 1B
+2087,30,6,Acultzingo,TARIFA 1
+2088,30,7,Camarón de Tejeda,TARIFA 1A
+2089,30,8,Alpatláhuac,TARIFA 1
+2090,30,9,Alto Lucero de Gutiérrez Barrios,TARIFA 1
+2091,30,10,Altotonga,TARIFA 1
+2092,30,11,Alvarado,TARIFA 1C
+2093,30,12,Amatitlán,TARIFA 1B
+2094,30,13,Naranjos Amatlán,TARIFA 1B
+2095,30,14,Amatlán de los Reyes,TARIFA 1A
+2096,30,15,Angel R. Cabada,TARIFA 1A
+2097,30,16,La Antigua,TARIFA 1B
+2098,30,17,Apazapan,TARIFA 1A
+2099,30,18,Aquila,TARIFA 1
+2100,30,19,Astacinga,TARIFA 1
+2101,30,20,Atlahuilco,TARIFA 1A
+2102,30,21,Atoyac,TARIFA 1A
+2103,30,22,Atzacan,TARIFA 1
+2104,30,23,Atzalan,TARIFA 1A
+2105,30,24,Tlaltetela,TARIFA 1A
+2106,30,25,Ayahualulco,TARIFA 1
+2107,30,26,Banderilla,TARIFA 1
+2108,30,27,Benito Juárez,TARIFA 1A
+2109,30,28,Boca del Río,TARIFA 1C
+2110,30,29,Calcahualco,TARIFA 1
+2111,30,30,Camerino Z. Mendoza,TARIFA 1
+2112,30,31,Carrillo Puerto,TARIFA 1B
+2113,30,32,Catemaco,TARIFA 1B
+2114,30,33,Cazones de Herrera,TARIFA 1B
+2115,30,34,Cerro Azul,TARIFA 1B
+2116,30,35,Citlaltépetl,TARIFA 1B
+2117,30,36,Coacoatzintla,TARIFA 1
+2118,30,37,Coahuitlán,TARIFA 1A
+2119,30,38,Coatepec,TARIFA 1
+2120,30,39,Coatzacoalcos,TARIFA 1C
+2121,30,40,Coatzintla,TARIFA 1
+2122,30,41,Coetzala,TARIFA 1A
+2123,30,42,Colipa,TARIFA 1A
+2124,30,43,Comapa,TARIFA 1
+2125,30,44,Córdoba,TARIFA 1
+2126,30,45,Cosamaloapan de Carpio,TARIFA 1B
+2127,30,46,Cosautlán de Carvajal,TARIFA 1B
+2128,30,47,Coscomatepec,TARIFA 1
+2129,30,48,Cosoleacaque,TARIFA 1C
+2130,30,49,Cotaxtla,TARIFA 1A
+2131,30,50,Coxquihui,TARIFA 1B
+2132,30,51,Coyutla,TARIFA 1B
+2133,30,52,Cuichapa,TARIFA 1
+2134,30,53,Cuitláhuac,TARIFA 1A
+2135,30,54,Chacaltianguis,TARIFA 1B
+2136,30,55,Chalma,TARIFA 1B
+2137,30,56,Chiconamel,TARIFA 1B
+2138,30,57,Chiconquiaco,TARIFA 1A
+2139,30,58,Chicontepec,TARIFA 1B
+2140,30,59,Chinameca,TARIFA 1C
+2141,30,60,Chinampa de Gorostiza,TARIFA 1B
+2142,30,61,Las Choapas,TARIFA 1A
+2143,30,62,Chocamán,TARIFA 1
+2144,30,63,Chontla,TARIFA 1B
+2145,30,64,Chumatlán,TARIFA 1A
+2146,30,65,Emiliano Zapata,TARIFA 1B
+2147,30,66,Espinal,TARIFA 1B
+2148,30,67,Filomeno Mata,TARIFA 1A
+2149,30,68,Fortín,TARIFA 1
+2150,30,69,Gutiérrez Zamora,TARIFA 1B
+2151,30,70,Hidalgotitlán,TARIFA 1B
+2152,30,71,Huatusco,TARIFA 1
+2153,30,72,Huayacocotla,TARIFA 1
+2154,30,73,Hueyapan de Ocampo,TARIFA 1A
+2155,30,74,Huiloapan de Cuauhtémoc,TARIFA 1
+2156,30,75,Ignacio de la Llave,TARIFA 1B
+2157,30,76,Ilamatlán,TARIFA 1
+2158,30,77,Isla,TARIFA 1B
+2159,30,78,Ixcatepec,TARIFA 1A
+2160,30,79,Ixhuacán de los Reyes,TARIFA 1
+2161,30,80,Ixhuatlán del Café,TARIFA 1
+2162,30,81,Ixhuatlancillo,TARIFA 1
+2163,30,82,Ixhuatlán del Sureste,TARIFA 1C
+2164,30,83,Ixhuatlán de Madero,TARIFA 1A
+2165,30,84,Ixmatlahuacan,TARIFA 1B
+2166,30,85,Ixtaczoquitlán,TARIFA 1
+2167,30,86,Jalacingo,TARIFA 1
+2168,30,87,Xalapa,TARIFA 1
+2169,30,88,Jalcomulco,TARIFA 1A
+2170,30,89,Jáltipan,TARIFA 1C
+2171,30,90,Jamapa,TARIFA 1B
+2172,30,91,Jesús Carranza,TARIFA 1B
+2173,30,92,Xico,TARIFA 1
+2174,30,93,Jilotepec,TARIFA 1
+2175,30,94,Juan Rodríguez Clara,TARIFA 1B
+2176,30,95,Juchique de Ferrer,TARIFA 1
+2177,30,96,Landero y Coss,TARIFA 1
+2178,30,97,Lerdo de Tejada,TARIFA 1B
+2179,30,98,Magdalena,TARIFA 1
+2180,30,99,Maltrata,TARIFA 1B
+2181,30,100,Manlio Fabio Altamirano,TARIFA 1A
+2182,30,101,Mariano Escobedo,TARIFA 1
+2183,30,102,Martínez de la Torre,TARIFA 1B
+2184,30,103,Mecatlán,TARIFA 1A
+2185,30,104,Mecayapan,TARIFA 1B
+2186,30,105,Medellín,TARIFA 1B
+2187,30,106,Miahuatlán,TARIFA 1
+2188,30,107,Las Minas,TARIFA 1
+2189,30,108,Minatitlán,TARIFA 1C
+2190,30,109,Misantla,TARIFA 1
+2191,30,110,Mixtla de Altamirano,TARIFA 1
+2192,30,111,Moloacán,TARIFA 1B
+2193,30,112,Naolinco,TARIFA 1
+2194,30,113,Naranjal,TARIFA 1
+2195,30,114,Nautla,TARIFA 1A
+2196,30,115,Nogales,TARIFA 1
+2197,30,116,Oluta,TARIFA 1B
+2198,30,117,Omealca,TARIFA 1B
+2199,30,118,Orizaba,TARIFA 1
+2200,30,119,Otatitlán,TARIFA 1B
+2201,30,120,Oteapan,TARIFA 1C
+2202,30,121,Ozuluama de Mascareñas,TARIFA 1B
+2203,30,122,Pajapan,TARIFA 1B
+2204,30,123,Pánuco,TARIFA 1D
+2205,30,124,Papantla,TARIFA 1A
+2206,30,125,Paso del Macho,TARIFA 1A
+2207,30,126,Paso de Ovejas,TARIFA 1A
+2208,30,127,La Perla,TARIFA 1
+2209,30,128,Perote,TARIFA 1
+2210,30,129,Platón Sánchez,TARIFA 1C
+2211,30,130,Playa Vicente,TARIFA 1B
+2212,30,131,Poza Rica de Hidalgo,TARIFA 1B
+2213,30,132,Las Vigas de Ramírez,TARIFA 1C
+2214,30,133,Pueblo Viejo,TARIFA 1C
+2215,30,134,Puente Nacional,TARIFA 1B
+2216,30,135,Rafael Delgado,TARIFA 1
+2217,30,136,Rafael Lucio,TARIFA 1
+2218,30,137,Los Reyes,TARIFA 1
+2219,30,138,Río Blanco,TARIFA 1
+2220,30,139,Saltabarranca,TARIFA 1A
+2221,30,140,San Andrés Tenejapan,TARIFA 1
+2222,30,141,San Andrés Tuxtla,TARIFA 1B
+2223,30,142,San Juan Evangelista,TARIFA 1B
+2224,30,143,Santiago Tuxtla,TARIFA 1B
+2225,30,144,Sayula de Alemán,TARIFA 1B
+2226,30,145,Soconusco,TARIFA 1B
+2227,30,146,Sochiapa,TARIFA 1
+2228,30,147,Soledad Atzompa,TARIFA 1
+2229,30,148,Soledad de Doblado,TARIFA 1B
+2230,30,149,Soteapan,TARIFA 1A
+2231,30,150,Tamalín,TARIFA 1B
+2232,30,151,Tamiahua,TARIFA 1B
+2233,30,152,Tampico Alto,TARIFA 1B
+2234,30,153,Tancoco,TARIFA 1B
+2235,30,154,Tantima,TARIFA 1B
+2236,30,155,Tantoyuca,TARIFA 1B
+2237,30,156,Tatatila,TARIFA 1
+2238,30,157,Castillo de Teayo,TARIFA 1A
+2239,30,158,Tecolutla,TARIFA 1A
+2240,30,159,Tehuipango,TARIFA 1
+2241,30,160,Álamo Temapache,TARIFA 1B
+2242,30,161,Tempoal,TARIFA 1B
+2243,30,162,Tenampa,TARIFA 1
+2244,30,163,Tenochtitlán,TARIFA 1
+2245,30,164,Teocelo,TARIFA 1
+2246,30,165,Tepatlaxco,TARIFA 1A
+2247,30,166,Tepetlán,TARIFA 1
+2248,30,167,Tepetzintla,TARIFA 1A
+2249,30,168,Tequila,TARIFA 1
+2250,30,169,José Azueta,TARIFA 1A
+2251,30,170,Texcatepec,TARIFA 1A
+2252,30,171,Texhuacán,TARIFA 1
+2253,30,172,Texistepec,TARIFA 1B
+2254,30,173,Tezonapa,TARIFA 1B
+2255,30,174,Tierra Blanca,TARIFA 1B
+2256,30,175,Tihuatlán,TARIFA 1A
+2257,30,176,Tlacojalpan,TARIFA 1B
+2258,30,177,Tlacolulan,TARIFA 1
+2259,30,178,Tlacotalpan,TARIFA 1B
+2260,30,179,Tlacotepec de Mejía,TARIFA 1
+2261,30,180,Tlachichilco,TARIFA 1A
+2262,30,181,Tlalixcoyan,TARIFA 1A
+2263,30,182,Tlalnelhuayocan,TARIFA 1
+2264,30,183,Tlapacoyan,TARIFA 1A
+2265,30,184,Tlaquilpa,TARIFA 1
+2266,30,185,Tlilapan,TARIFA 1
+2267,30,186,Tomatlán,TARIFA 1
+2268,30,187,Tonayán,TARIFA 1
+2269,30,188,Totutla,TARIFA 1
+2270,30,189,Tuxpan,TARIFA 1B
+2271,30,190,Tuxtilla,TARIFA 1B
+2272,30,191,Ursulo Galván,TARIFA 1B
+2273,30,192,Vega de Alatorre,TARIFA 1B
+2274,30,193,Veracruz,TARIFA 1C
+2275,30,194,Villa Aldama,TARIFA 1C
+2276,30,195,Xoxocotla,TARIFA 1
+2277,30,196,Yanga,TARIFA 1A
+2278,30,197,Yecuatla,TARIFA 1A
+2279,30,198,Zacualpan,TARIFA 1
+2280,30,199,Zaragoza,TARIFA 1C
+2281,30,200,Zentla,TARIFA 1
+2282,30,201,Zongolica,TARIFA 1A
+2283,30,202,Zontecomatlán de López y Fuentes,TARIFA 1A
+2284,30,203,Zozocolco de Hidalgo,TARIFA 1
+2285,30,204,Agua Dulce,TARIFA 1B
+2286,30,205,El Higo,TARIFA 1B
+2287,30,206,Nanchital de Lázaro Cárdenas del Río,TARIFA 1C
+2288,30,207,Tres Valles,TARIFA 1
+2289,30,208,Carlos A. Carrillo,TARIFA 1B
+2290,30,209,Tatahuicapan de Juárez,TARIFA 1B
+2291,30,210,Uxpanapa,TARIFA 1B
+2292,30,211,San Rafael,TARIFA 1B
+2293,30,212,Santiago Sochiapan,TARIFA 1B
+2294,31,1,Abalá,TARIFA 1B
+2295,31,2,Acanceh,TARIFA 1B
+2296,31,3,Akil,TARIFA 1B
+2297,31,4,Baca,TARIFA 1B
+2298,31,5,Bokobá,TARIFA 1B
+2299,31,6,Buctzotz,TARIFA 1B
+2300,31,7,Cacalchén,TARIFA 1B
+2301,31,8,Calotmul,TARIFA 1B
+2302,31,9,Cansahcab,TARIFA 1B
+2303,31,10,Cantamayec,TARIFA 1B
+2304,31,11,Celestún,TARIFA 1B
+2305,31,12,Cenotillo,TARIFA 1A
+2306,31,13,Conkal,TARIFA 1B
+2307,31,14,Cuncunul,TARIFA 1B
+2308,31,15,Cuzamá,TARIFA 1B
+2309,31,16,Chacsinkín,TARIFA 1C
+2310,31,17,Chankom,TARIFA 1B
+2311,31,18,Chapab,TARIFA 1B
+2312,31,19,Chemax,TARIFA 1B
+2313,31,20,Chicxulub Pueblo,TARIFA 1B
+2314,31,21,Chichimilá,TARIFA 1B
+2315,31,22,Chikindzonot,TARIFA 1B
+2316,31,23,Chocholá,TARIFA 1B
+2317,31,24,Chumayel,TARIFA 1B
+2318,31,25,Dzán,TARIFA 1B
+2319,31,26,Dzemul,TARIFA 1B
+2320,31,27,Dzidzantún,TARIFA 1B
+2321,31,28,Dzilam de Bravo,TARIFA 1B
+2322,31,29,Dzilam González,TARIFA 1B
+2323,31,30,Dzitás,TARIFA 1B
+2324,31,31,Dzoncauich,TARIFA 1B
+2325,31,32,Espita,TARIFA 1B
+2326,31,33,Halachó,TARIFA 1B
+2327,31,34,Hocabá,TARIFA 1B
+2328,31,35,Hoctún,TARIFA 1B
+2329,31,36,Homún,TARIFA 1B
+2330,31,37,Huhí,TARIFA 1B
+2331,31,38,Hunucmá,TARIFA 1A
+2332,31,39,Ixil,TARIFA 1B
+2333,31,40,Izamal,TARIFA 1B
+2334,31,41,Kanasín,TARIFA 1B
+2335,31,42,Kantunil,TARIFA 1B
+2336,31,43,Kaua,TARIFA 1B
+2337,31,44,Kinchil,TARIFA 1B
+2338,31,45,Kopomá,TARIFA 1C
+2339,31,46,Mama,TARIFA 1B
+2340,31,47,Maní,TARIFA 1B
+2341,31,48,Maxcanú,TARIFA 1B
+2342,31,49,Mayapán,TARIFA 1A
+2343,31,50,Mérida,TARIFA 1B
+2344,31,51,Mocochá,TARIFA 1B
+2345,31,52,Motul,TARIFA 1B
+2346,31,53,Muna,TARIFA 1B
+2347,31,54,Muxupip,TARIFA 1B
+2348,31,55,Opichén,TARIFA 1C
+2349,31,56,Oxkutzcab,TARIFA 1B
+2350,31,57,Panabá,TARIFA 1B
+2351,31,58,Peto,TARIFA 1B
+2352,31,59,Progreso,TARIFA 1B
+2353,31,60,Quintana Roo,TARIFA 1C
+2354,31,61,Río Lagartos,TARIFA 1A
+2355,31,62,Sacalum,TARIFA 1B
+2356,31,63,Samahil,TARIFA 1B
+2357,31,64,Sanahcat,TARIFA 1B
+2358,31,65,San Felipe,TARIFA 1B
+2359,31,66,Santa Elena,TARIFA 1B
+2360,31,67,Seyé,TARIFA 1B
+2361,31,68,Sinanché,TARIFA 1B
+2362,31,69,Sotuta,TARIFA 1C
+2363,31,70,Sucilá,TARIFA 1B
+2364,31,71,Sudzal,TARIFA 1B
+2365,31,72,Suma,TARIFA 1B
+2366,31,73,Tahdziú,TARIFA 1C
+2367,31,74,Tahmek,TARIFA 1B
+2368,31,75,Teabo,TARIFA 1B
+2369,31,76,Tecoh,TARIFA 1B
+2370,31,77,Tekal de Venegas,TARIFA 1B
+2371,31,78,Tekantó,TARIFA 1B
+2372,31,79,Tekax,TARIFA 1B
+2373,31,80,Tekit,TARIFA 1B
+2374,31,81,Tekom,TARIFA 1B
+2375,31,82,Telchac Pueblo,TARIFA 1B
+2376,31,83,Telchac Puerto,TARIFA 1B
+2377,31,84,Temax,TARIFA 1B
+2378,31,85,Temozón,TARIFA 1B
+2379,31,86,Tepakán,TARIFA 1B
+2380,31,87,Tetiz,TARIFA 1B
+2381,31,88,Teya,TARIFA 1B
+2382,31,89,Ticul,TARIFA 1B
+2383,31,90,Timucuy,TARIFA 1B
+2384,31,91,Tinum,TARIFA 1A
+2385,31,92,Tixcacalcupul,TARIFA 1B
+2386,31,93,Tixkokob,TARIFA 1B
+2387,31,94,Tixmehuac,TARIFA 1B
+2388,31,95,Tixpéhual,TARIFA 1B
+2389,31,96,Tizimín,TARIFA 1B
+2390,31,97,Tunkás,TARIFA 1C
+2391,31,98,Tzucacab,TARIFA 1A
+2392,31,99,Uayma,TARIFA 1B
+2393,31,100,Ucú,TARIFA 1C
+2394,31,101,Umán,TARIFA 1B
+2395,31,102,Valladolid,TARIFA 1B
+2396,31,103,Xocchel,TARIFA 1B
+2397,31,104,Yaxcabá,TARIFA 1A
+2398,31,105,Yaxkukul,TARIFA 1B
+2399,31,106,Yobaín,TARIFA 1B
+2400,32,1,Apozol,TARIFA 1
+2401,32,2,Apulco,TARIFA 1
+2402,32,3,Atolinga,TARIFA 1
+2403,32,4,Benito Juárez,TARIFA 1
+2404,32,5,Calera,TARIFA 1
+2405,32,6,Cañitas de Felipe Pescador,TARIFA 1
+2406,32,7,Concepción del Oro,TARIFA 1
+2407,32,8,Cuauhtémoc,TARIFA 1
+2408,32,9,Chalchihuites,TARIFA 1
+2409,32,10,Fresnillo,TARIFA 1
+2410,32,11,Trinidad García de la Cadena,TARIFA 1
+2411,32,12,Genaro Codina,TARIFA 1
+2412,32,13,General Enrique Estrada,TARIFA 1
+2413,32,14,General Francisco R. Murguía,TARIFA 1
+2414,32,15,El Plateado de Joaquín Amaro,TARIFA 1
+2415,32,16,General Pánfilo Natera,TARIFA 1
+2416,32,17,Guadalupe,TARIFA 1
+2417,32,18,Huanusco,TARIFA 1
+2418,32,19,Jalpa,TARIFA 1
+2419,32,20,Jerez,TARIFA 1
+2420,32,21,Jiménez del Teul,TARIFA 1
+2421,32,22,Juan Aldama,TARIFA 1
+2422,32,23,Juchipila,TARIFA 1
+2423,32,24,Loreto,TARIFA 1
+2424,32,25,Luis Moya,TARIFA 1
+2425,32,26,Mazapil,TARIFA 1
+2426,32,27,Melchor Ocampo,TARIFA 1
+2427,32,28,Mezquital del Oro,TARIFA 1
+2428,32,29,Miguel Auza,TARIFA 1
+2429,32,30,Momax,TARIFA 1
+2430,32,31,Monte Escobedo,TARIFA 1
+2431,32,32,Morelos,TARIFA 1
+2432,32,33,Moyahua de Estrada,TARIFA 1
+2433,32,34,Nochistlán de Mejía,TARIFA 1
+2434,32,35,Noria de Ángeles,TARIFA 1
+2435,32,36,Ojocaliente,TARIFA 1
+2436,32,37,Pánuco,TARIFA 1
+2437,32,38,Pinos,TARIFA 1
+2438,32,39,Río Grande,TARIFA 1
+2439,32,40,Sain Alto,TARIFA 1
+2440,32,41,El Salvador,TARIFA 1
+2441,32,42,Sombrerete,TARIFA 1
+2442,32,43,Susticacán,TARIFA 1
+2443,32,44,Tabasco,TARIFA 1
+2444,32,45,Tepechitlán,TARIFA 1
+2445,32,46,Tepetongo,TARIFA 1
+2446,32,47,Teúl de González Ortega,TARIFA 1
+2447,32,48,Tlaltenango de Sánchez Román,TARIFA 1
+2448,32,49,Valparaíso,TARIFA 1
+2449,32,50,Vetagrande,TARIFA 1
+2450,32,51,Villa de Cos,TARIFA 1
+2451,32,52,Villa García,TARIFA 1
+2452,32,53,Villa González Ortega,TARIFA 1
+2453,32,54,Villa Hidalgo,TARIFA 1
+2454,32,55,Villanueva,TARIFA 1
+2455,32,56,Zacatecas,TARIFA 1
+2456,32,57,Trancoso,TARIFA 1
+2457,32,58,Santa María de la Paz,TARIFA 1

@@ -12,7 +12,7 @@ class Profile(models.Model):
     phone = models.IntegerField(null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     zip_code = models.IntegerField(null=True, blank=True)
-    avatar = models.ImageField(upload_to='media/', blank=True)
+    avatar = models.ImageField(upload_to='media/', null=True, blank=True)
 
     def __str__(self):
         return str(self.user.username)
@@ -102,10 +102,9 @@ class Municipality(models.Model):
     )
 
     state = models.ForeignKey(State, related_name='states', null=False, blank=False)
-    # rate = models.CharField(max_length=20, choices=CHOICES_RATE)
-    # rate = models.ForeignKey(Rate__name_rate, null=True, blank=False)
     key_mun = models.IntegerField(null=False, blank=False)
     name_mun = models.CharField(max_length=120, blank=False, null=False)
+    rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )
 
     class Meta:
         # unique_together = ('state',)
@@ -113,7 +112,7 @@ class Municipality(models.Model):
         ordering = ('name_mun',)
 
     def __str__(self):
-        return str(self.name_mun)
+        return '%s %s' % (self.id, self.name_mun)
 
 class Receipt(models.Model):
     payday_limit = models.DateField(auto_now=False)

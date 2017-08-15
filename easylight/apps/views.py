@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, RateNameSerializer
+from apps.serializers import UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer
 from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
 from rest_framework.decorators import detail_route, api_view
 from rest_framework.response import Response
@@ -102,30 +102,27 @@ class RateList(viewsets.ModelViewSet):
     permission_classes = (AllowAny,)
     pagination_class = ListRatePagination
 
-class RateListUnique(viewsets.ModelViewSet):
-    """
-    API Lista de tarifas con nombres unicos
-    """
-    queryset = Rate.objects.order_by('name_rate').distinct('name_rate')
-    serializer_class = RateNameSerializer
-    permission_classes = (AllowAny,)
+    def get_queryset(self):
+        names_rates = self.request.GET.get('name_rate')
+        if names_rates:
+            self.queryset = self.queryset.filter(name_rate = names_rates)
 
-    # pagination_class = ListRatePagination
+        return self.queryset
 
-# def open_file(request):
-#     book = xlrd.open_workbook("doc/Calculadora.xlsx")
-#
-#     worksheet = book.sheet_by_index(6)
-#
-#     states = []
-#     rows = []
-#     for col in range(1, worksheet.ncols):
-#         states.append(worksheet.cell_value(0, col))
-#
-#         for row in range(0, worksheet.nrows):
-#             if worksheet.cell_value(row, col) != '':
-#                 rows.append(worksheet.cell_value(row, col))
-#
-#     print (rows)
-#
-#     return HttpResponse(worksheet)
+
+# Tarifas por Municipio
+
+class Mun_RateList(viewsets.ModelViewSet):
+    """
+    API Lista de tarifas por Municipio
+    """
+    queryset = Municipality.objects.all()
+    serializer_class = Mun_RateSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def get_queryset(self):
+        municipality = self.request.GET.get('mun_id')
+        if municipality:
+            self.queryset = self.queryset.filter(id = municipality)
+
+        return self.queryset

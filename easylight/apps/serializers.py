@@ -52,9 +52,7 @@ class RegistrationSerializer(RegisterSerializer):
         phone= request.POST.get('phone')
         birth_date = request.POST.get('birth_date')
         zip_code = request.POST.get('zip_code')
-        avatar = request.POST.get('avatar')
-        print(request.POST)
-        print(request.POST.get(avatar))
+        avatar = request.FILES.get('avatar')
         adapter = get_adapter()
         user = adapter.new_user(request)
         self.cleaned_data = self.get_cleaned_data()
@@ -97,13 +95,11 @@ class RateSerializer(serializers.ModelSerializer):
         model = Rate
         fields = ('__all__')
 
-class RateNameSerializer(serializers.ModelSerializer):
-
+class Mun_RateSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Rate
-        fields = ('name_rate',)
-
+        model = Municipality
+        fields = ('rate',)
 
 class ContractsSerializer(serializers.ModelSerializer):
 
