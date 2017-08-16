@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList,UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList
+from apps.views import GroupsList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -79,6 +79,9 @@ rate_list = RateList.as_view({
 mun_rate_list = Mun_RateList.as_view({
     'get': 'list',
     # 'post': 'create'
+})
+contact_list = ContactUs.as_view({
+
 })
 
 urlpatterns = format_suffix_patterns([

@@ -14,7 +14,7 @@ from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticate
 from apps.permissions import IsOwnerOrDeny
 from .pagination import ListStateSetPagination, ListMunicipalitySetPagination, ListRatePagination
 from rest_framework.authtoken.models import Token
-
+from rest_framework.views import APIView
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -126,3 +126,10 @@ class Mun_RateList(viewsets.ModelViewSet):
             self.queryset = self.queryset.filter(id = municipality)
 
         return self.queryset
+
+class ContactUs(APIView):
+
+    def post(self, request, *args, **kwargs):
+        print(request.POST)
+
+        return Response({ 'Message': 'Mensaje Enviado'})
