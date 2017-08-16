@@ -80,9 +80,10 @@ mun_rate_list = Mun_RateList.as_view({
     'get': 'list',
     # 'post': 'create'
 })
-contact_list = ContactUs.as_view({
-
-})
+# contact_list = ContactUs.as_view({
+#     'get': 'list',
+#     'post': 'create'
+# })
 
 urlpatterns = format_suffix_patterns([
     url(r'^admin/', include(admin.site.urls)),
