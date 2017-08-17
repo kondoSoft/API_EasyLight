@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'rest_auth.registration',
+    'corsheaders',
 ]
 #Sitio creado por defecto
 SITE_ID = 1
@@ -87,7 +88,17 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
+CORS_ORIGIN_WHITELIST = (
+    'easylisght.com.mx',
+    'localhost:3000',
+    '127.0.0.1:3000'
+)
+
+CORS_ALLOW_METHODS = (
+    'POST',
+)
 
 ROOT_URLCONF = 'easylight.urls'
 

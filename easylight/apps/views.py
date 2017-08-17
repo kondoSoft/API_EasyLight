@@ -128,14 +128,15 @@ class Mun_RateList(viewsets.ModelViewSet):
         return self.queryset
 
 class ContactUs(APIView):
+    permission_classes = (AllowAny,)
 
     def post(self, request, *args, **kwargs):
         name = request.POST.get('name')
         email = request.POST.get('email')
-        description = request.POST.get('description')
+        description = request.POST.get('message')
 
         send_email = EmailMessage(name,description,email,['jblancoh26@gmail.com'],)
         res = send_email.send()
-        print(email,name, description)
+        print(request)
 
         return Response({ 'Message': 'Mensaje Enviado'})
