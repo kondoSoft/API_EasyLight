@@ -15,7 +15,7 @@ from apps.permissions import IsOwnerOrDeny
 from .pagination import ListStateSetPagination, ListMunicipalitySetPagination, ListRatePagination
 from rest_framework.authtoken.models import Token
 from rest_framework.views import APIView
-
+from django.core.mail import send_mail, EmailMessage
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -130,6 +130,12 @@ class Mun_RateList(viewsets.ModelViewSet):
 class ContactUs(APIView):
 
     def post(self, request, *args, **kwargs):
-        print(request.POST)
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        description = request.POST.get('description')
+
+        send_email = EmailMessage(name,description,email,['jblancoh26@gmail.com'],)
+        res = send_email.send()
+        print(email,name, description)
 
         return Response({ 'Message': 'Mensaje Enviado'})

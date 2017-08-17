@@ -108,6 +108,7 @@ urlpatterns = format_suffix_patterns([
     url(r'^receipt/$', receipt_list, name='receipt-list'),
     url(r'^receipt/(?P<pk>[0-9]+)/$', receipt_detail, name='receipt-detail'),
     # Autenticacion API
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    url(r'^contact/$', ContactUs.as_view(), name='contact-list'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
