@@ -81,8 +81,16 @@ class ReceiptList(viewsets.ModelViewSet):
     """
     queryset = Receipt.objects.all()
     serializer_class = ReceiptSerializer
-    permission_classes = (AllowAny,)
+    permission_classes = (IsAuthenticated,)
 
+    @detail_route(methods=['patch'])
+    def partial_update(self, request, pk=None):
+        obj = Receipt.objects.get(id= pk)
+        data = request.data['current_data']
+        obj.current_data = obj.current_data + int(data)
+        obj.save()
+
+        return Response({ 'Message': 'Se ha actualizado'})
 
 class TipsAndAdvertisingList(viewsets.ModelViewSet):
     """
@@ -126,6 +134,8 @@ class Mun_RateList(viewsets.ModelViewSet):
             self.queryset = self.queryset.filter(id = municipality)
 
         return self.queryset
+
+
 
 class ContactUs(APIView):
     permission_classes = (AllowAny,)
