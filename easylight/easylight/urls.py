@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs
+from apps.views import GroupsList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -110,5 +110,6 @@ urlpatterns = format_suffix_patterns([
     # Autenticacion API
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^contact/$', ContactUs.as_view(), name='contact-list'),
+    url(r'^subscribe/$', Subscribe.as_view(), name='subscribe-list'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))

@@ -91,9 +91,11 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
 ]
 CORS_ORIGIN_WHITELIST = (
-    'easylisght.com.mx',
+    'easylight.com.mx',
     'localhost:3000',
-    '127.0.0.1:3000'
+    '127.0.0.1:3000',
+    '138.68.49.119:8080',
+    '138.68.49.119',
 )
 
 CORS_ALLOW_METHODS = (
@@ -178,7 +180,7 @@ STATIC_URL = '/static/'
 
 
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'jblancoh26@gmail.com'
-EMAIL_HOST_PASSWORD = 'Starwars26'
+EMAIL_HOST_USER = 'admin@easylight.com.mx'
+EMAIL_HOST_PASSWORD = 'Easylight2017'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True

@@ -133,10 +133,22 @@ class ContactUs(APIView):
     def post(self, request, *args, **kwargs):
         name = request.POST.get('name')
         email = request.POST.get('email')
-        description = request.POST.get('message')
-
-        send_email = EmailMessage(name,description,email,['jblancoh26@gmail.com'],)
+        description = request.POST.get('message') + ' Mensaje enviado por: ' + email
+        send_email = EmailMessage(name,description,email,['contactos@easylight.com.mx'],)
         res = send_email.send()
         print(request)
 
         return Response({ 'Message': 'Mensaje Enviado'})
+
+class Subscribe(APIView):
+    permission_classes = (AllowAny,)
+
+    def post(self, request, *args, **kwargs):
+        name = 'Este es un mail de suscriptores'
+        email = request.POST.get('email')
+        description = email + ' solicitó una suscripción '
+        # description = request.POST.get('message') + ' Mensaje enviado por: ' + email
+        send_email = EmailMessage(name,description,email,['contactos@easylight.com.mx'],)
+        res = send_email.send()
+
+        return Response({ 'Message': 'Suscripción Enviado'})
