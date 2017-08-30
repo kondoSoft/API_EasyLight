@@ -101,10 +101,6 @@ class Mun_RateSerializer(serializers.ModelSerializer):
         model = Municipality
         fields = ('rate',)
 
-class ContractsSerializer(serializers.ModelSerializer):
-
-    class Meta:
-        model = Contract
 # Datos de Recibos de Luz
 class ReceiptSerializer(serializers.ModelSerializer):
     payday_limit = serializers.DateField(format="%d-%B-%Y", required=True, read_only=False)
@@ -130,7 +126,7 @@ class ContractSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Contract
-        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate', 'period_summer', 'type_payment', 'receipt', 'image','owner')
+        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate','initialDateRange', 'finalDateRange', 'type_payment', 'receipt', 'image','owner')
 
 # TipsAndAdvertising
 

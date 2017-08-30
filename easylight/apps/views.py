@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer
+from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer
 from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
 from rest_framework.decorators import detail_route, api_view
 from rest_framework.response import Response
@@ -132,6 +132,24 @@ class Mun_RateList(viewsets.ModelViewSet):
         municipality = self.request.GET.get('mun_id')
         if municipality:
             self.queryset = self.queryset.filter(id = municipality)
+
+        return self.queryset
+
+# Tarifas por Periodo
+class Rate_PeriodList(viewsets.ModelViewSet):
+
+
+    queryset = Rate.objects.all()
+    serializer_class = RateSerializer
+    permission_classes = (IsAuthenticated,)
+
+    def get_queryset(self):
+        # period = self.request.GET.get('period')
+        # if period:
+        #     self.queryset = self.queryset.filter(period_name= period)
+        rate = self.request.GET.get('rate')
+        if rate:
+            self.queryset = self.queryset.filter(name_rate= rate)
 
         return self.queryset
 
