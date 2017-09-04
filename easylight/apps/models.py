@@ -9,7 +9,7 @@ from rest_framework.authtoken.models import Token
 
 class Profile(models.Model):
     user = models.OneToOneField(User, primary_key = True, on_delete=models.CASCADE)
-    phone = models.IntegerField(null=True, blank=True)
+    phone = models.CharField(max_length=15, null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     zip_code = models.IntegerField(null=True, blank=True)
     avatar = models.ImageField(upload_to='media/', null=True, blank=True)

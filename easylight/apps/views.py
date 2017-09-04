@@ -83,14 +83,14 @@ class ReceiptList(viewsets.ModelViewSet):
     serializer_class = ReceiptSerializer
     permission_classes = (IsAuthenticated,)
 
-    @detail_route(methods=['patch'])
-    def partial_update(self, request, pk=None):
-        obj = Receipt.objects.get(id= pk)
-        data = request.data['current_data']
-        obj.current_data = obj.current_data + int(data)
-        obj.save()
-
-        return Response({ 'Message': 'Se ha actualizado'})
+    # @detail_route(methods=['patch'])
+    # def partial_update(self, request, pk=None):
+    #     obj = Receipt.objects.get(id= pk)
+    #     data = request.data['current_data']
+    #     obj.current_data = obj.current_data + int(data)
+    #     obj.save()
+    #
+    #     return Response({ 'Message': 'Se ha actualizado'})
 
 class TipsAndAdvertisingList(viewsets.ModelViewSet):
     """
