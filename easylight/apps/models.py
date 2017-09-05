@@ -119,7 +119,7 @@ class Receipt(models.Model):
     amount_payable = models.IntegerField(null=False)
     current_reading = models.IntegerField(null=False)
     previous_reading = models.IntegerField(null=False)
-    current_data = models.IntegerField(null=True, blank=True, default=0)
+    update_date = models.DateField(blank=True, null=True, auto_now=True)
     contract = models.ForeignKey('Contract', related_name='contract', on_delete=models.CASCADE)
 
     class Meta:

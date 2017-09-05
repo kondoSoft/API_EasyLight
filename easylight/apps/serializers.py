@@ -107,7 +107,7 @@ class ReceiptSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Receipt
-        fields = ('id', 'contract', 'payday_limit', 'amount_payable', 'current_reading', 'previous_reading', 'current_data')
+        fields = ('id', 'contract', 'payday_limit', 'amount_payable', 'current_reading', 'previous_reading', 'update_data')
 
 
 # Datos de Contratos
@@ -120,7 +120,7 @@ class ContractSerializer(serializers.ModelSerializer):
         listReceipt = []
         receipts = Receipt.objects.all().filter(contract=obj.pk)
         for receipt in receipts:
-            bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading,'previous_reading': receipt.previous_reading, 'current_data': receipt.current_data}
+            bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading,'previous_reading': receipt.previous_reading, 'update_data': receipt.update_data}
             listReceipt.append(bill)
         return listReceipt
 
