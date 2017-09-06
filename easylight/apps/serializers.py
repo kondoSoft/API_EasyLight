@@ -134,4 +134,4 @@ class TipsAndAdvertisingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TipsAndAdvertising
-        fields = ('name_tip_advertising', 'type_data',)
+        fields = ('name_tip_advertising', 'description','image')
