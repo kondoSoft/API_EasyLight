@@ -22,9 +22,9 @@ class RegistrationSerializer(RegisterSerializer):
     password1 = serializers.CharField(required=True, write_only=True)
     password2 = serializers.CharField(required=True, write_only=True)
     birth_date = serializers.CharField()
-    phone = serializers.IntegerField()
+    phone = serializers.CharField(required=False)
     zip_code = serializers.IntegerField()
-    avatar = serializers.ImageField()
+    avatar = serializers.ImageField(required=False)
 
     def validate_password1(self, password):
         return get_adapter().clean_password(password)
@@ -113,7 +113,7 @@ class ReceiptSerializer(serializers.ModelSerializer):
 # Datos de Contratos
 class ContractSerializer(serializers.ModelSerializer):
     receipt = serializers.SerializerMethodField()
-    image = serializers.ImageField()
+    image = serializers.ImageField(required=False)
     owner = serializers.ReadOnlyField(source='owner.id')
 
     def get_receipt(self, obj):
@@ -134,4 +134,4 @@ class TipsAndAdvertisingSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TipsAndAdvertising
-        fields = ('name_tip_advertising', 'description','image')
+        fields = ('name_tip_advertising', 'description','image',)
