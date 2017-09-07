@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe
+from apps.views import GroupsList, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -85,6 +85,10 @@ rate_period = Rate_PeriodList.as_view({
     'get' : 'list',
 })
 
+tip_list = TipsAndAdvertisingList.as_view({
+    'get' : 'list',
+})
+
 urlpatterns = format_suffix_patterns([
     url(r'^admin/', include(admin.site.urls)),
     # Session Login
@@ -112,5 +116,7 @@ urlpatterns = format_suffix_patterns([
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^contact/$', ContactUs.as_view(), name='contact-list'),
     url(r'^subscribe/$', Subscribe.as_view(), name='subscribe-list'),
+    #Tips
+    url(r'^tips/$', tip_list, name="tip_list"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
