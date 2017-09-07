@@ -17,6 +17,11 @@ class Profile(models.Model):
     def __str__(self):
         return str(self.user.username)
 
+    class Meta:
+        # unique_together = ('state',)
+        verbose_name = "Perfile"
+
+
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
     if created:
@@ -116,11 +121,12 @@ class Municipality(models.Model):
 
 class Receipt(models.Model):
     payday_limit = models.DateField(auto_now=False)
-    amount_payable = models.IntegerField(null=False)
-    current_reading = models.IntegerField(null=False)
+    amount_payable = models.IntegerField(null=False, default=0)
+    current_reading = models.IntegerField(null=False, default=0)
     previous_reading = models.IntegerField(null=False)
-    current_data = models.IntegerField(null=True, blank=True, default=0)
+    update_date = models.DateField(blank=True, null=True, auto_now=True)
     contract = models.ForeignKey('Contract', related_name='contract', on_delete=models.CASCADE)
+    period = models.CharField(blank=True, null=True, max_length=10)
 
     class Meta:
         verbose_name = "Recibo"
@@ -166,7 +172,7 @@ class Contract(models.Model):
     )
 
     name_contract = models.CharField(max_length=20, blank=False)
-    number_contract = models.IntegerField(blank=False)
+    number_contract = models.CharField(max_length=15, blank=False)
     state = models.ForeignKey(State, null=False, blank=False)
     municipality = models.ForeignKey(Municipality, null=False)
     rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )

@@ -104,10 +104,11 @@ class Mun_RateSerializer(serializers.ModelSerializer):
 # Datos de Recibos de Luz
 class ReceiptSerializer(serializers.ModelSerializer):
     payday_limit = serializers.DateField(format="%d-%B-%Y", required=True, read_only=False)
+    update_date = serializers.DateField(format="%d-%b-%Y", required=False, read_only=False)
 
     class Meta:
         model = Receipt
-        fields = ('id', 'contract', 'payday_limit', 'amount_payable', 'current_reading', 'previous_reading', 'current_data')
+        fields = ('id', 'contract', 'payday_limit', 'amount_payable', 'current_reading', 'previous_reading', 'update_date', 'period')
 
 
 # Datos de Contratos
@@ -120,7 +121,7 @@ class ContractSerializer(serializers.ModelSerializer):
         listReceipt = []
         receipts = Receipt.objects.all().filter(contract=obj.pk)
         for receipt in receipts:
-            bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading,'previous_reading': receipt.previous_reading, 'current_data': receipt.current_data}
+            bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading,'previous_reading': receipt.previous_reading, 'update_date': receipt.update_date, 'period': receipt.period}
             listReceipt.append(bill)
         return listReceipt
 

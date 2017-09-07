@@ -36,6 +36,28 @@ class MunicipalityAdmin(ImportExportModelAdmin):
         return obj.state
     get_state.short_description = ("Estado")
 
+class ReceiptAdmin(admin.ModelAdmin):
+    list_display = ['get_payday','get_amount', 'get_period', 'get_update', ]
+    list_per_page = 25
+
+    def get_payday(self, obj):
+        return obj.payday_limit
+    get_payday.short_description = ("Fecha Limite del Recibo")
+
+    def get_amount(self, obj):
+        return obj.amount_payable
+    get_amount.short_description = ("Monto a pagar")
+
+    def get_period(self, obj):
+        return obj.period
+    get_period.short_description = ("Periodo")
+
+    def get_update(self, obj):
+        return obj.update_date
+    get_update.short_description = ("Ultima Actualizacion")
+
+
+
 class RateResource(resources.ModelResource):
     class Meta:
         model = Rate
@@ -50,5 +72,5 @@ admin.site.register(Municipality, MunicipalityAdmin)
 admin.site.register(Rate, RateImportExport)
 admin.site.register(Profile)
 admin.site.register(Contract)
-admin.site.register(Receipt)
+admin.site.register(Receipt, ReceiptAdmin)
 admin.site.register(TipsAndAdvertising)
