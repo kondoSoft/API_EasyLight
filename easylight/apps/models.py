@@ -9,7 +9,7 @@ from rest_framework.authtoken.models import Token
 
 class Profile(models.Model):
     user = models.OneToOneField(User, primary_key = True, on_delete=models.CASCADE)
-    phone = models.CharField(max_length=15, null=True, blank=True)
+    phone = models.CharField(max_length=13, null=True, blank=True)
     birth_date = models.DateField(null=True, blank=True)
     zip_code = models.IntegerField(null=True, blank=True)
     avatar = models.ImageField(upload_to='media/', null=True, blank=True)
@@ -174,7 +174,7 @@ class Contract(models.Model):
     finalDateRange = models.DateField(null=True, blank=True)
     # period_summer = models.CharField(max_length=20, choices=CHOICES_PERIOD, null=True, blank=True)
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
-    image = models.ImageField(upload_to='media/', blank=True)
+    image = models.ImageField(upload_to='media/', blank=True, null=True)
     owner = models.ForeignKey('auth.User', related_name='contracts', on_delete=models.CASCADE)
     # receipt = models.ManyToManyField(Receipt, null=True, blank=True)
 

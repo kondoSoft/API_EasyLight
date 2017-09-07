@@ -132,7 +132,6 @@ class Mun_RateList(viewsets.ModelViewSet):
         municipality = self.request.GET.get('mun_id')
         if municipality:
             self.queryset = self.queryset.filter(id = municipality)
-
         return self.queryset
 
 # Tarifas por Periodo

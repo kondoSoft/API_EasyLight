@@ -117,6 +117,6 @@ urlpatterns = format_suffix_patterns([
     url(r'^contact/$', ContactUs.as_view(), name='contact-list'),
     url(r'^subscribe/$', Subscribe.as_view(), name='subscribe-list'),
     #Tips
-    url(r'^tips/$', tip_list, name="tip_list"),
+    url(r'^tips/$', tip_list, name="tip-list"),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
