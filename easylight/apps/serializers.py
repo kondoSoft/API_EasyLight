@@ -21,9 +21,9 @@ class RegistrationSerializer(RegisterSerializer):
     last_name = serializers.CharField(required=True)
     password1 = serializers.CharField(required=True, write_only=True)
     password2 = serializers.CharField(required=True, write_only=True)
-    birth_date = serializers.CharField()
+    birth_date = serializers.CharField(required=False)
     phone = serializers.CharField(required=False)
-    zip_code = serializers.IntegerField()
+    zip_code = serializers.IntegerField(required=False)
     avatar = serializers.ImageField(required=False)
 
     def validate_password1(self, password):
