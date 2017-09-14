@@ -15,6 +15,13 @@ class UserSerializer(serializers.ModelSerializer):
         model = User
         fields = ('url', 'username', 'email', 'groups', 'contracts')
 
+class ProfileSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Profile
+        fields = ('__all__')
+
+
 class RegistrationSerializer(RegisterSerializer):
     email = serializers.EmailField(required=allauth_settings.EMAIL_REQUIRED)
     first_name = serializers.CharField(required=True)
@@ -47,6 +54,9 @@ class RegistrationSerializer(RegisterSerializer):
             'zip_code': self.validated_data.get('zip_code', ''),
             'avatar': self.validated_data.get('avatar', ''),
         }
+    # def put(self, request):
+    #     avatar = request.FILES.get('avatar')
+    #
 
     def save(self, request):
         phone= request.POST.get('phone')

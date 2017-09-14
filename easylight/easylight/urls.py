@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList
+from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -88,12 +88,15 @@ rate_period = Rate_PeriodList.as_view({
 tip_list = TipsAndAdvertisingList.as_view({
     'get' : 'list',
 })
-
+profile_list = ProfileViewSet.as_view({
+    'get' : 'list',
+})
 urlpatterns = format_suffix_patterns([
     url(r'^admin/', include(admin.site.urls)),
     # Session Login
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^user/profile/$', profile_list, name='profile-list'),
     url(r'^groups/$', group_list, name='group-list'),
     url(r'^group/(?P<pk>[0-9]+)/$', group_detail, name='group-detail'),
     # Estados
