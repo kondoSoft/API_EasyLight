@@ -16,6 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ('url', 'username', 'email', 'groups', 'contracts')
 
 class ProfileSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
 
     class Meta:
         model = Profile
@@ -54,10 +55,6 @@ class RegistrationSerializer(RegisterSerializer):
             'zip_code': self.validated_data.get('zip_code', ''),
             'avatar': self.validated_data.get('avatar', ''),
         }
-    # def put(self, request):
-    #     avatar = request.FILES.get('avatar')
-    #
-
     def save(self, request):
         phone= request.POST.get('phone')
         birth_date = request.POST.get('birth_date')

@@ -35,6 +35,8 @@ class ProfileViewSet(viewsets.ModelViewSet):
 
         return self.queryset
 
+
+
 class GroupsList(viewsets.ModelViewSet):
     """
     API endpoint that allows groups to be viewed or edited.
@@ -93,7 +95,7 @@ class ReceiptList(viewsets.ModelViewSet):
     serializer_class = ReceiptSerializer
     permission_classes = (IsAuthenticated,)
 
-    # @detail_route(methods=['patch'])
+    # ©detail_route(methods=['patch'])
     # def partial_update(self, request, pk=None):
     #     obj = Receipt.objects.get(id= pk)
     #     data = request.data['current_data']

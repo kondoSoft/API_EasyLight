@@ -91,12 +91,16 @@ tip_list = TipsAndAdvertisingList.as_view({
 profile_list = ProfileViewSet.as_view({
     'get' : 'list',
 })
+profile_detail = ProfileViewSet.as_view({
+    'put': 'update',
+})
 urlpatterns = format_suffix_patterns([
     url(r'^admin/', include(admin.site.urls)),
     # Session Login
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^user/profile/$', profile_list, name='profile-list'),
+    url(r'^user/profile/(?P<pk>[0-9]+)/$', profile_detail, name='profile-detail'),
     url(r'^groups/$', group_list, name='group-list'),
     url(r'^group/(?P<pk>[0-9]+)/$', group_detail, name='group-detail'),
     # Estados
