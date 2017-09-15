@@ -14,7 +14,7 @@ class Profile(models.Model):
     zip_code = models.IntegerField(null=True, blank=True)
     avatar = models.ImageField(upload_to='media/', null=True, blank=True)
     premium = models.BooleanField(default=False)
-    
+
     def __str__(self):
         return str(self.user.username)
 
