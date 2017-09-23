@@ -170,10 +170,11 @@ class ContactUs(APIView):
     permission_classes = (AllowAny,)
 
     def post(self, request, *args, **kwargs):
-        name = request.POST.get('name')
+        # name = request.POST.get('name')
         email = request.POST.get('email')
+        subject = request.POST.get('subject')
         description = request.POST.get('message') + ' Mensaje enviado por: ' + email
-        send_email = EmailMessage(name,description,email,['contactos@easylight.com.mx'],)
+        send_email = EmailMessage(subject,description,email,['contactos@easylight.com.mx'],)
         res = send_email.send()
         print(request)
 

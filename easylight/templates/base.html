@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+	<meta charset="UTF-8">
+	<title>EasyLigth</title>
+</head>
+<body class="mainBody">
+	<main class="mainContainer" style="background-color: #0dba66">	
+	  {% block content %} {% endblock %}
+	</main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var Height = window.innerHeight;
+
+		$('.mainBody').css({height: Height})
+		$('.mainContainer').css({height: Height})
+	})
+</script>
+</html>

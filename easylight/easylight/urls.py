@@ -95,10 +95,13 @@ profile_detail = ProfileViewSet.as_view({
     'put': 'update',
 })
 urlpatterns = format_suffix_patterns([
+    url(r'^', include('django.contrib.auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     # Session Login
+    
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^rest-auth/confirm-email/',include('allauth.account.urls')),
     url(r'^user/profile/$', profile_list, name='profile-list'),
     url(r'^user/profile/(?P<pk>[0-9]+)/$', profile_detail, name='profile-detail'),
     url(r'^groups/$', group_list, name='group-list'),
