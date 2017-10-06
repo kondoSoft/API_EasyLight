@@ -3,8 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<title>EasyLigth</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 </head>
-<body class="mainBody">
+<body id="containerBody" class="mainBody">
 	<main class="mainContainer" style="background-color: #0dba66">	
 	  {% block content %} {% endblock %}
 	</main>
@@ -13,9 +14,8 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		var Height = window.innerHeight;
-
-		$('.mainBody').css({height: Height})
-		$('.mainContainer').css({height: Height})
+		$('#containerBody').css({height: Height})
+		$('.email-confirm').css({height: Height})
 	})
 </script>
 </html>
