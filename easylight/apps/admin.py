@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import State, Profile, Municipality, TipsAndAdvertising, Receipt, Contract, Rate
+from .models import State, Profile, Municipality, TipsAndAdvertising, Receipt, Contract, Rate, Records
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 from rest_framework.authtoken.admin import TokenAdmin
@@ -57,7 +57,6 @@ class ReceiptAdmin(admin.ModelAdmin):
     get_update.short_description = ("Ultima Actualizacion")
 
 
-
 class RateResource(resources.ModelResource):
     class Meta:
         model = Rate
@@ -66,11 +65,16 @@ class RateImportExport(ImportExportModelAdmin):
     resource_class = RateResource
     list_display = ('name_rate', 'period_name', 'consumption_name', 'kilowatt', 'cost')
 
+class RecordsAdmin(admin.ModelAdmin):
+    list_display = ('date',)
+    pass
+
 
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
 admin.site.register(Rate, RateImportExport)
 admin.site.register(Profile)
 admin.site.register(Contract)
+admin.site.register(Records, RecordsAdmin)
 admin.site.register(Receipt, ReceiptAdmin)
 admin.site.register(TipsAndAdvertising)

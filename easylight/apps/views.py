@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer
-from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
+from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer
+from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records
 from rest_framework.decorators import detail_route, api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -192,3 +192,10 @@ class Subscribe(APIView):
         res = send_email.send()
 
         return Response({ 'Message': 'Suscripción Enviado'})
+
+class RecordsList(viewsets.ModelViewSet):
+
+    queryset = Records.objects.all()
+    serializer_class = RecordsSerializer
+    permission_classes = (AllowAny,)
+    
