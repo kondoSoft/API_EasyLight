@@ -131,13 +131,14 @@ class ContractSerializer(serializers.ModelSerializer):
         for receipt in receipts:
             bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading, 'current_reading_updated': receipt.current_reading_updated, 'previous_reading': receipt.previous_reading, 'update_date': receipt.update_date, 'period': receipt.period, 'status': receipt.status}
             listReceipt.append(bill)
+            listReceipt.reverse()
         return listReceipt
 
     def get_records(self, obj):
         listRecords = []
         records = Records.objects.all().filter(contracts=obj.pk)
         for record in records:
-            objRecord = {'Date': record.date, 
+            objRecord = {'Date': record.date,
                 'Day': record.day,
                 'Daily_Reading': record.daily_reading,
                 'Hours_Elapsed': record.hours_elapsed,
