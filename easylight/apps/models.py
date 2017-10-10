@@ -124,10 +124,12 @@ class Receipt(models.Model):
     payday_limit = models.DateField(auto_now=False)
     amount_payable = models.IntegerField(null=False, default=0)
     current_reading = models.IntegerField(null=False, default=0)
+    current_reading_updated = models.IntegerField(null=False, default=0)
     previous_reading = models.IntegerField(null=False)
     update_date = models.DateField(blank=True, null=True, auto_now=True)
     contract = models.ForeignKey('Contract', related_name='contract', on_delete=models.CASCADE)
     period = models.CharField(blank=True, null=True, max_length=10)
+    status = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Recibo"
@@ -183,7 +185,7 @@ class Contract(models.Model):
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
     image = models.ImageField(upload_to='media/', blank=True, null=True)
     owner = models.ForeignKey('auth.User', related_name='contracts', on_delete=models.CASCADE)
-    # receipt = models.ManyToManyField(Receipt, null=True, blank=True)
+    
 
     class Meta:
         verbose_name = "Contrato"
@@ -191,6 +193,29 @@ class Contract(models.Model):
 
     def __str__(self):
         return str(self.number_contract)
+
+class Records(models.Model):
+
+    date = models.DateField()
+    day = models.CharField(max_length=10)
+    daily_reading = models.IntegerField(null=False, default=0)
+    hours_elapsed = models.CharField(max_length=10)
+    hours_totals = models.CharField(max_length=10)
+    days_elapsed = models.CharField(max_length=10)
+    days_totals = models.CharField(max_length=10)
+    daily_consumption = models.IntegerField(null=False, default=0)
+    cumulative_consumption = models.CharField(max_length=10)
+    actual_consumption = models.CharField(max_length=10)
+    average_global = models.CharField(max_length=10)
+    rest_day = models.CharField(max_length=10, blank=True, null=True)
+    projection = models.CharField(max_length=25)
+    contracts = models.ManyToManyField(Contract, blank=True)
+
+    class Meta:
+        verbose_name = "Record"
+
+    def __str__(self):
+        return '%s %s %s' %(self.date, self.day, self.projection)
 
 class TipsAndAdvertising(models.Model):
 
@@ -210,5 +235,11 @@ class TipsAndAdvertising(models.Model):
     class Meta:
         verbose_name = "Tip"
 
-    def _str_(self):
+    def __str__(self):
         return '%s %s %s' %(self.name_tip_advertising, self.type_data, self.description)
+
+
+
+
+
+
