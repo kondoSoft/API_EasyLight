@@ -1,2 +1,5 @@
 *.DS_Store
 /__pycache__
+apps/migrations/__pycache__
+apps/__pycache__
+/media

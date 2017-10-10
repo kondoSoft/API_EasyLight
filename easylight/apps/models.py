@@ -185,7 +185,7 @@ class Contract(models.Model):
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
     image = models.ImageField(upload_to='media/', blank=True, null=True)
     owner = models.ForeignKey('auth.User', related_name='contracts', on_delete=models.CASCADE)
-    
+
 
     class Meta:
         verbose_name = "Contrato"
@@ -209,7 +209,7 @@ class Records(models.Model):
     average_global = models.CharField(max_length=10)
     rest_day = models.CharField(max_length=10, blank=True, null=True)
     projection = models.CharField(max_length=25)
-    contracts = models.ManyToManyField(Contract, blank=True)
+    contracts = models.ForeignKey(Contract, blank=True)
 
     class Meta:
         verbose_name = "Record"
@@ -237,9 +237,3 @@ class TipsAndAdvertising(models.Model):
 
     def __str__(self):
         return '%s %s %s' %(self.name_tip_advertising, self.type_data, self.description)
-
-
-
-
-
-
