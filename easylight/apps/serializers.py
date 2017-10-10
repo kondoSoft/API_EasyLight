@@ -4,7 +4,7 @@ from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
-from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate
+from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate, Records
 import json
 from rest_auth.registration.serializers import RegisterSerializer
 
@@ -14,6 +14,14 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ('url', 'username', 'email', 'groups', 'contracts')
+
+class ProfileSerializer(serializers.ModelSerializer):
+    user = serializers.PrimaryKeyRelatedField(read_only=True)
+
+    class Meta:
+        model = Profile
+        fields = ('__all__')
+
 
 class RegistrationSerializer(RegisterSerializer):
     email = serializers.EmailField(required=allauth_settings.EMAIL_REQUIRED)
@@ -47,7 +55,6 @@ class RegistrationSerializer(RegisterSerializer):
             'zip_code': self.validated_data.get('zip_code', ''),
             'avatar': self.validated_data.get('avatar', ''),
         }
-
     def save(self, request):
         phone= request.POST.get('phone')
         birth_date = request.POST.get('birth_date')
@@ -108,12 +115,13 @@ class ReceiptSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Receipt
-        fields = ('id', 'contract', 'payday_limit', 'amount_payable', 'current_reading', 'previous_reading', 'update_date', 'period')
+        fields = ('id', 'contract', 'payday_limit', 'amount_payable', 'current_reading', 'current_reading_updated', 'previous_reading', 'update_date', 'period', 'status')
 
 
 # Datos de Contratos
 class ContractSerializer(serializers.ModelSerializer):
     receipt = serializers.SerializerMethodField()
+    records = serializers.SerializerMethodField()
     image = serializers.ImageField(required=False)
     owner = serializers.ReadOnlyField(source='owner.id')
 
@@ -121,13 +129,33 @@ class ContractSerializer(serializers.ModelSerializer):
         listReceipt = []
         receipts = Receipt.objects.all().filter(contract=obj.pk)
         for receipt in receipts:
-            bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading,'previous_reading': receipt.previous_reading, 'update_date': receipt.update_date, 'period': receipt.period}
+            bill = {'id': receipt.id, 'payday_limit': receipt.payday_limit, 'amount_payable': receipt.amount_payable,'current_reading': receipt.current_reading, 'current_reading_updated': receipt.current_reading_updated, 'previous_reading': receipt.previous_reading, 'update_date': receipt.update_date, 'period': receipt.period, 'status': receipt.status}
             listReceipt.append(bill)
         return listReceipt
 
+    def get_records(self, obj):
+        listRecords = []
+        records = Records.objects.all().filter(contracts=obj.pk)
+        for record in records:
+            objRecord = {'Date': record.date, 
+                'Day': record.day,
+                'Daily_Reading': record.daily_reading,
+                'Hours_Elapsed': record.hours_elapsed,
+                'Hours_Totals': record.hours_totals,
+                'Days_elapsed': record.days_elapsed,
+                'Days_Totals': record.days_totals,
+                'Daily_Consumption': record.daily_consumption,
+                'Cumulative_consumption': record.cumulative_consumption,
+                'Actual_Consumption': record.actual_consumption,
+                'Average_global': record.average_global,
+                'Rest_Day': record.rest_day,
+                'Projection': record.projection}
+            listRecords.append(objRecord)
+        return listRecords
+
     class Meta:
         model = Contract
-        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate','initialDateRange', 'finalDateRange', 'type_payment', 'receipt', 'image','owner')
+        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate','initialDateRange', 'finalDateRange', 'type_payment', 'receipt', 'image','owner', 'records')
 
 # TipsAndAdvertising
 
@@ -136,3 +164,9 @@ class TipsAndAdvertisingSerializer(serializers.ModelSerializer):
     class Meta:
         model = TipsAndAdvertising
         fields = ('name_tip_advertising', 'description','image',)
+
+class RecordsSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Records
+        fields=('__all__')

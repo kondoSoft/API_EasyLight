@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList
+from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList, RecordsList
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -88,12 +88,34 @@ rate_period = Rate_PeriodList.as_view({
 tip_list = TipsAndAdvertisingList.as_view({
     'get' : 'list',
 })
+profile_list = ProfileViewSet.as_view({
+    'get' : 'list',
+})
+profile_detail = ProfileViewSet.as_view({
+    'put': 'update',
+})
+
+records_list = RecordsList.as_view({
+    'get' : 'list',
+    'post': 'create'
+    })
+records_detail = RecordsList.as_view({
+    'get': 'retrieve',
+    'put': 'update',
+    'patch': 'partial_update',
+    'delete': 'destroy'
+    })
 
 urlpatterns = format_suffix_patterns([
+    url(r'^', include('django.contrib.auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     # Session Login
+    
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
+    url(r'^rest-auth/confirm-email/',include('allauth.account.urls')),
+    url(r'^user/profile/$', profile_list, name='profile-list'),
+    url(r'^user/profile/(?P<pk>[0-9]+)/$', profile_detail, name='profile-detail'),
     url(r'^groups/$', group_list, name='group-list'),
     url(r'^group/(?P<pk>[0-9]+)/$', group_detail, name='group-detail'),
     # Estados
@@ -118,5 +140,8 @@ urlpatterns = format_suffix_patterns([
     url(r'^subscribe/$', Subscribe.as_view(), name='subscribe-list'),
     #Tips
     url(r'^tips/$', tip_list, name="tip-list"),
+    #Records
+    url(r'^records/$', records_list, name='records-list'),
+    url(r'^records/(?P<pk>[0-9]+)/$', records_detail, name='records-list'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))

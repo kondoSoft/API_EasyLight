@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer
-from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate
+from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer
+from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records
 from rest_framework.decorators import detail_route, api_view
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -23,6 +23,18 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all().order_by('-date_joined')
     serializer_class = UserSerializer
+
+class ProfileViewSet(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+    def get_queryset(self):
+        user = self.request.GET.get('user_id')
+        if user:
+            self.queryset = self.queryset.filter(user_id = user)
+
+        return self.queryset
+
 
 
 class GroupsList(viewsets.ModelViewSet):
@@ -83,7 +95,7 @@ class ReceiptList(viewsets.ModelViewSet):
     serializer_class = ReceiptSerializer
     permission_classes = (IsAuthenticated,)
 
-    # @detail_route(methods=['patch'])
+    # ©detail_route(methods=['patch'])
     # def partial_update(self, request, pk=None):
     #     obj = Receipt.objects.get(id= pk)
     #     data = request.data['current_data']
@@ -158,10 +170,11 @@ class ContactUs(APIView):
     permission_classes = (AllowAny,)
 
     def post(self, request, *args, **kwargs):
-        name = request.POST.get('name')
+        # name = request.POST.get('name')
         email = request.POST.get('email')
+        subject = request.POST.get('subject')
         description = request.POST.get('message') + ' Mensaje enviado por: ' + email
-        send_email = EmailMessage(name,description,email,['contactos@easylight.com.mx'],)
+        send_email = EmailMessage(subject,description,email,['contactos@easylight.com.mx'],)
         res = send_email.send()
         print(request)
 
@@ -179,3 +192,10 @@ class Subscribe(APIView):
         res = send_email.send()
 
         return Response({ 'Message': 'Suscripción Enviado'})
+
+class RecordsList(viewsets.ModelViewSet):
+
+    queryset = Records.objects.all()
+    serializer_class = RecordsSerializer
+    permission_classes = (AllowAny,)
+    
