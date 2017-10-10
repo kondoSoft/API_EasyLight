@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load i18n %}
+{% load account %}
+
+{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+
+
+{% block content %}
+<div class="col-lg-12 align-items-center justify-content-center email-confirm">
+    <div class="col-lg-12" style="padding: 10px; text-align: center;">
+        <!-- <img src="http://via.placeholder.com/150x150" alt=""> -->
+        <img src="{% static 'logo.png' %}" alt="">
+    </div>
+    <div class="col-lg-12" style="background-color: lightgrey; padding: 15px; height: 430px; text-align: center;">
+        <h1>Confirmación de correo electrónico</h1>
+
+        {% if confirmation %}
+
+        {% user_display confirmation.email_address.user as user_display %}
+
+        <p>{% blocktrans with confirmation.email_address.email as email %}Verifique su correo <a href="mailto:{{ email }}">{{ email }}</a> para poder utilizar la app EasyLigth.{% endblocktrans %}</p>
+
+        <form  method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+            {% csrf_token %}
+            <button style="width: 30%" type="submit" class="btn btn-success">{% trans 'Confirm' %}</button>
+
+        </form>
+        <br>
+        <h6>Muchas Gracias! {{ email }} por verificar tu cuenta ahora puedes dirigirte a la app y disfrutar de los beneficios que EasyLigth tiene para ti.</h6>
+
+        {% else %}
+
+        {% url 'account_email' as email_url %}
+
+        <p>{% blocktrans %}Este correo de confirmación pudo haber expirado o es invalido <a href="{{ email_url }}">reenvie un nuevo correo de activación</a>.{% endblocktrans %}</p>
+
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

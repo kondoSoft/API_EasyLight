@@ -58,6 +58,7 @@ ACCOUNT_USERNAME_REQUIRED = False
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_SUBJECT_PREFIX = "Confirmacion de Email"
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = "http://easylight.com.mx/"
 
 REST_AUTH_REGISTER_SERIALIZERS = {
     'REGISTER_SERIALIZER': 'apps.serializers.RegistrationSerializer'
@@ -181,6 +182,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT= os.path.join(BASE_DIR,'/static/')
+# STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
 
 EMAIL_HOST = 'smtp.gmail.com'
