@@ -142,6 +142,6 @@ urlpatterns = format_suffix_patterns([
     url(r'^tips/$', tip_list, name="tip-list"),
     #Records
     url(r'^records/$', records_list, name='records-list'),
-    url(r'^records/(?P<pk>[0-9]+)/$', records_detail, name='records-list'),
+    url(r'^records/(?P<pk>[0-9]+)/$', records_detail, name='records-detail'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT))
