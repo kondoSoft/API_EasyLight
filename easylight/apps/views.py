@@ -202,7 +202,7 @@ class RecordsList(viewsets.ModelViewSet):
     def get_queryset(self):
         contract_id = self.request.GET.get('contract_id')
         if contract_id:
-            self.queryset = self.queryset.filter(id= contract_id)
+            self.queryset = self.queryset.filter(contracts= contract_id)
 
         return self.queryset
     
