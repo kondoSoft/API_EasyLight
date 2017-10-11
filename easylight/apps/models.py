@@ -203,7 +203,7 @@ class Records(models.Model):
     hours_totals = models.CharField(max_length=10)
     days_elapsed = models.CharField(max_length=10)
     days_totals = models.CharField(max_length=10)
-    daily_consumption = models.IntegerField(null=False, default=0)
+    daily_consumption = models.CharField(max_length=10)
     cumulative_consumption = models.CharField(max_length=10)
     actual_consumption = models.CharField(max_length=10)
     average_global = models.CharField(max_length=10)
