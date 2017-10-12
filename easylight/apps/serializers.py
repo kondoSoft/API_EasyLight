@@ -147,7 +147,7 @@ class ContractSerializer(serializers.ModelSerializer):
                 'Days_Totals': record.days_totals,
                 'Daily_Consumption': record.daily_consumption,
                 'Cumulative_consumption': record.cumulative_consumption,
-                'Actual_Consumption': record.actual_consumption,
+                'Projected_payment': record.projected_payment,
                 'Average_global': record.average_global,
                 'Rest_Day': record.rest_day,
                 'Projection': record.projection}
