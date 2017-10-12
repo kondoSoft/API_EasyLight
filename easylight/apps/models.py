@@ -205,10 +205,10 @@ class Records(models.Model):
     days_totals = models.CharField(max_length=10)
     daily_consumption = models.CharField(max_length=10)
     cumulative_consumption = models.CharField(max_length=10)
-    actual_consumption = models.CharField(max_length=10)
     average_global = models.CharField(max_length=10)
     rest_day = models.CharField(max_length=10, blank=True, null=True)
     projection = models.CharField(max_length=25)
+    projected_payment = models.CharField(max_length=30)
     contracts = models.ForeignKey(Contract, blank=True)
 
     class Meta:
