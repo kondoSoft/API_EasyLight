@@ -138,7 +138,10 @@ class ContractSerializer(serializers.ModelSerializer):
         listRecords = []
         records = Records.objects.all().filter(contracts=obj.pk)
         for record in records:
-            objRecord = {'Date': record.date,
+            print('RECORD', record.datetime)
+            objRecord = {
+                'Date': record.date,
+                'Datetime': record.datetime,
                 'Day': record.day,
                 'Daily_Reading': record.daily_reading,
                 'Hours_Elapsed': record.hours_elapsed,
@@ -167,7 +170,8 @@ class TipsAndAdvertisingSerializer(serializers.ModelSerializer):
         fields = ('name_tip_advertising', 'description','image',)
 
 class RecordsSerializer(serializers.ModelSerializer):
+    date = serializers.DateField(read_only=False)
 
     class Meta:
         model = Records
-        fields=('__all__')
+        fields=('datetime', 'day', 'date', 'daily_reading', 'hours_elapsed','hours_totals', 'days_elapsed', 'days_totals', 'daily_consumption','cumulative_consumption', 'projected_payment', 'projection', 'average_global', 'rest_day', 'contracts')

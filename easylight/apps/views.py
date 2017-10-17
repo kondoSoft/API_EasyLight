@@ -214,15 +214,18 @@ class RecordsList(viewsets.ModelViewSet):
             self.queryset = [self.queryset.filter(contracts= contract_id, date= date).last()]
         return self.queryset
 
-    def diferencia(self, fecha, initialDate):
-        formato_fecha = "%Y-%m-%d"
-        fecha_inicial = datetime.strptime(fecha, formato_fecha)
-        fecha_actual = datetime.strptime(initialDate, formato_fecha)
-        resultado = relativedelta(fecha_actual, fecha_inicial)
+    def diferencia(self, initialDate, finalDate):
+        print(initialDate, 'final')
+        print(finalDate, 'initial')
+        formato_fecha = "%Y-%m-%d %H:%M:%S"
+        fecha_inicial = datetime.strptime(initialDate, formato_fecha)
+        fecha_actual = datetime.strptime(finalDate, formato_fecha)
+        diferenciaDias = fecha_inicial - fecha_actual
+
         
         # print(resultado.days, 'dias',resultado.hours, 'horas', resultado.minutes, 'minutos')
 
-        return resultado
+        return diferenciaDias
 
     def update(self, request, pk=None):
         record = self.get_queryset()
@@ -231,16 +234,21 @@ class RecordsList(viewsets.ModelViewSet):
         daily_reading = request.data['daily_reading']
         rest_day = request.data['rest_day']
         listRecords = Records.objects.all()
-        initialDate = time.strptime(date, '%Y-%m-%d')
-        
+        formato_fecha = "%Y-%m-%d %H:%M:%S"
+        initialDate = time.strptime(date, formato_fecha)
         for recordItem in listRecords:
-            dateItem = datetime.strftime(recordItem.date, '%Y-%m-%d')
-            dateItem = time.strptime(dateItem, '%Y-%m-%d')
+            dateItem = datetime.strftime(recordItem.date, formato_fecha)
+            dateItem = time.strptime(dateItem, formato_fecha)
+
             if(dateItem > initialDate):
-                diffDate = self.diferencia(date, datetime.strftime(recordItem.date, '%Y-%m-%d'))
-                recordItem.hours_totals = diffDate.hours + (diffDate.days*24)
-                recordItem.days_totals = diffDate.days
-                recordItem.save()
+                diffDate = self.diferencia(datetime.strftime(recordItem.date, formato_fecha), date)
+                recordItem.hours_totals = (diffDate.days * 24) + (diffDate.seconds/ 3600)
+                recordItem.days_totals = recordItem.hours_totals / 24 
+
+                print(recordItem)
+                
+                # recordItem.date = date
+                # recordItem.save()
 
         # hours_elapsed = request.data['hours_elapsed']
         # hours_totals= request.data['hours_totals']
@@ -254,7 +262,6 @@ class RecordsList(viewsets.ModelViewSet):
         # projected_payment= request.data['projected_payment']
         # contracts= request.data['contracts']
         itemRecord = record[0]
-        itemRecord.daily_reading = 0
         itemRecord.hours_elapsed = 0
         itemRecord.hours_totals = 0
         itemRecord.days_elapsed = 0
