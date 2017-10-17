@@ -97,7 +97,8 @@ profile_detail = ProfileViewSet.as_view({
 
 records_list = RecordsList.as_view({
     'get' : 'list',
-    'post': 'create'
+    'post': 'create',
+    'put' : 'update'
     })
 records_detail = RecordsList.as_view({
     'get': 'retrieve',

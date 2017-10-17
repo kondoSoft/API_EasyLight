@@ -197,6 +197,7 @@ class Contract(models.Model):
 class Records(models.Model):
 
     date = models.DateField()
+    datetime = models.DateTimeField()
     day = models.CharField(max_length=10)
     daily_reading = models.IntegerField(null=False, default=0)
     hours_elapsed = models.CharField(max_length=10)

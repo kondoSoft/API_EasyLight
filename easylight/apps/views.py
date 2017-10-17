@@ -16,6 +16,12 @@ from .pagination import ListStateSetPagination, ListMunicipalitySetPagination, L
 from rest_framework.authtoken.models import Token
 from rest_framework.views import APIView
 from django.core.mail import send_mail, EmailMessage
+from dateutil.easter import *
+from dateutil.relativedelta import *
+from dateutil.rrule import *
+from dateutil.parser import *
+from datetime import *
+import time
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -201,8 +207,77 @@ class RecordsList(viewsets.ModelViewSet):
 
     def get_queryset(self):
         contract_id = self.request.GET.get('contract_id')
+        date = self.request.GET.get('date')
         if contract_id:
             self.queryset = self.queryset.filter(contracts= contract_id)
-
+        if date:
+            self.queryset = [self.queryset.filter(contracts= contract_id, date= date).last()]
         return self.queryset
+
+    def diferencia(self, initialDate, finalDate):
+        print(initialDate, 'final')
+        print(finalDate, 'initial')
+        formato_fecha = "%Y-%m-%d %H:%M:%S"
+        fecha_inicial = datetime.strptime(initialDate, formato_fecha)
+        fecha_actual = datetime.strptime(finalDate, formato_fecha)
+        diferenciaDias = fecha_inicial - fecha_actual
+
+        
+        # print(resultado.days, 'dias',resultado.hours, 'horas', resultado.minutes, 'minutos')
+
+        return diferenciaDias
+
+    def update(self, request, pk=None):
+        record = self.get_queryset()
+        date = request.data['date']
+        day = request.data['day']
+        daily_reading = request.data['daily_reading']
+        rest_day = request.data['rest_day']
+        listRecords = Records.objects.all()
+        formato_fecha = "%Y-%m-%d %H:%M:%S"
+        initialDate = time.strptime(date, formato_fecha)
+        for recordItem in listRecords:
+            dateItem = datetime.strftime(recordItem.date, formato_fecha)
+            dateItem = time.strptime(dateItem, formato_fecha)
+
+            if(dateItem > initialDate):
+                diffDate = self.diferencia(datetime.strftime(recordItem.date, formato_fecha), date)
+                recordItem.hours_totals = (diffDate.days * 24) + (diffDate.seconds/ 3600)
+                recordItem.days_totals = recordItem.hours_totals / 24 
+
+                print(recordItem)
+                
+                # recordItem.date = date
+                # recordItem.save()
+
+        # hours_elapsed = request.data['hours_elapsed']
+        # hours_totals= request.data['hours_totals']
+        # days_elapsed= request.data['days_elapsed']
+        # days_totals= request.data['days_totals']
+        # daily_consumption= request.data['daily_consumption']
+        # cumulative_consumption= request.data['cumulative_consumption']
+        # average_global= request.data['average_global']
+        # rest_day= request.data['rest_day']
+        # projection= request.data['projection']
+        # projected_payment= request.data['projected_payment']
+        # contracts= request.data['contracts']
+        itemRecord = record[0]
+        itemRecord.hours_elapsed = 0
+        itemRecord.hours_totals = 0
+        itemRecord.days_elapsed = 0
+        itemRecord.days_totals = 0
+        itemRecord.daily_consumption = 0
+        itemRecord.cumulative_consumption = 0
+        itemRecord.average_global = 0
+        itemRecord.rest_day = rest_day
+        itemRecord.projection = 0
+        itemRecord.projected_payment = 0
+        # itemRecord.contracts = contracts
+        itemRecord.day = day
+        itemRecord.daily_reading = daily_reading
+
+        itemRecord.save()
+
+        return Response({ 'Message': 'Record Actualizado'})
+
     
