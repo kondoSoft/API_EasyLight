@@ -214,9 +214,10 @@ class Records(models.Model):
 
     class Meta:
         verbose_name = "Record"
+        ordering = ('-id',)
 
     def __str__(self):
-        return '%s %s %s' %(self.date, self.day, self.projection)
+        return '%s %s %s %s' %(self.date, self.day, self.daily_reading, self.projected_payment)
 
 class TipsAndAdvertising(models.Model):
 
@@ -235,6 +236,7 @@ class TipsAndAdvertising(models.Model):
 
     class Meta:
         verbose_name = "Tip"
+        ordering = ('id',)
 
     def __str__(self):
         return '%s %s %s' %(self.name_tip_advertising, self.type_data, self.description)

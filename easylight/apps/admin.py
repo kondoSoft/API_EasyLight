@@ -63,11 +63,36 @@ class RateResource(resources.ModelResource):
 
 class RateImportExport(ImportExportModelAdmin):
     resource_class = RateResource
-    list_display = ('name_rate', 'period_name', 'consumption_name', 'kilowatt', 'cost')
+    list_display = ('get_name_rate', 'period_name', 'consumption_name', 'kilowatt', 'cost')
+
+    def get_name_rate(self, obj):
+        return obj.name_rate
+    get_name_rate.short_description = ("Tarifa")
 
 class RecordsAdmin(admin.ModelAdmin):
-    list_display = ('date',)
-    pass
+    list_display = ['get_date', 'get_daily_reading','get_projection', 'get_projected_payment', 'get_contracts']
+    list_per_page = 25
+
+    def get_date(self, obj):
+        return obj.date
+    get_date.short_description = ("Fecha")
+
+    def get_daily_reading(self, obj):
+        return obj.daily_reading
+    get_daily_reading.short_description = ("Lectura del Día")
+
+    def get_contracts(self, obj):
+        return obj.contracts
+    get_contracts.short_description = ("Contrato")
+
+    def get_projection(self, obj):
+        return obj.projection
+    get_projection.short_description = ("Proyección")
+
+    def get_projected_payment(self, obj):
+        return obj.projected_payment
+    get_projected_payment.short_description = ("Pago Proyectado")
+
 
 
 admin.site.register(State, StateAdmin)
