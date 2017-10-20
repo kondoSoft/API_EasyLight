@@ -212,7 +212,8 @@ class RecordsList(viewsets.ModelViewSet):
         if contract_id:
             self.queryset = self.queryset.filter(contracts= contract_id)
         if date:
-            self.queryset = self.queryset.filter(date= date)
+            date = datetime.strptime(date, "%Y-%m-%d")
+            self.queryset = self.queryset.filter(date__gt= date)
         if kwh:
             self.queryset = [self.queryset.filter(daily_reading__gte= kwh).last()]
         return self.queryset
@@ -232,7 +233,7 @@ class RecordsList(viewsets.ModelViewSet):
         daily_reading = request.data['daily_reading']
         rest_day = request.data['rest_day']
         projected_payment = request.data['projected_payment']
-        
+        print(record)
         self.update_next_records(record[0])
         
         itemRecord = record[0]
@@ -287,16 +288,4 @@ class RecordsList(viewsets.ModelViewSet):
             recordItem.projection = round(projection, 3)
             recordItem.save()
             
-
-        # hours_elapsed = request.data['hours_elapsed']
-        # hours_totals= request.data['hours_totals']
-        # days_elapsed= request.data['days_elapsed']
-        # days_totals= request.data['days_totals']
-        # daily_consumption= request.data['daily_consumption']
-        # cumulative_consumption= request.data['cumulative_consumption']
-        # average_global= request.data['average_global']
-        # rest_day= request.data['rest_day']
-        # projection= request.data['projection']
-        # projected_payment= request.data['projected_payment']
-        # contracts= request.data['contracts']
     
