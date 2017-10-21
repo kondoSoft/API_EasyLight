@@ -214,7 +214,7 @@ class Records(models.Model):
 
     class Meta:
         verbose_name = "Record"
-        ordering = ('-id',)
+        ordering = ('-date', '-daily_reading',)
 
     def __str__(self):
         return '%s %s %s %s' %(self.date, self.day, self.daily_reading, self.projected_payment)

@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
 from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer
 from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records
-from rest_framework.decorators import detail_route, api_view
+from rest_framework.decorators import detail_route, api_view, list_route
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import viewsets, renderers
@@ -22,6 +22,8 @@ from dateutil.rrule import *
 from dateutil.parser import *
 from datetime import *
 import time
+from django.core import serializers
+import json
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -209,6 +211,7 @@ class RecordsList(viewsets.ModelViewSet):
         contract_id = self.request.GET.get('contract_id')
         date = self.request.GET.get('date')
         kwh = self.request.GET.get('kwh')
+        recordsMonths = self.request.GET.get('recordsMonths')
         if contract_id:
             self.queryset = self.queryset.filter(contracts= contract_id)
         if date:
@@ -216,7 +219,35 @@ class RecordsList(viewsets.ModelViewSet):
             self.queryset = self.queryset.filter(date__gt= date)
         if kwh:
             self.queryset = [self.queryset.filter(daily_reading__gte= kwh).last()]
+        if recordsMonths:
+            self.queryset = self.queryset.all()
+            self.getMonthData(self.queryset)
+
         return self.queryset
+
+    # def list(self, request):
+    #     record = self.get_queryset()
+    #     print(record)
+    #     return self.getMonthData(self.queryset)
+
+    @list_route()
+    def getMonthData(self, request):
+        print(request)
+        # current_date = datetime.now()
+        # get_date = current_date.day
+        # get_month = current_date.month-6
+        # get_year = current_date.year
+        # get_date_sixMonths = datetime(get_year,get_month,get_date)
+        # self.queryset = self.queryset.filter(date__gte= get_date_sixMonths)
+        # # print('records', records)
+        # arrayMeses = []
+        # for i in range(1, 12):
+        #     meses =[x for x in records if x.date.month == i]
+        #     if len(meses) > 0:
+        #         arrayMeses.append(meses[len(meses)-1])
+
+        # jsonList = serializers.serialize('json', list(arrayMeses))
+        # return Response({ 'Results': jsonList})
 
     def diferencia(self, initialDate, finalDate):
         formato_fecha = "%Y-%m-%d %H:%M:%S"
@@ -233,9 +264,9 @@ class RecordsList(viewsets.ModelViewSet):
         daily_reading = request.data['daily_reading']
         rest_day = request.data['rest_day']
         projected_payment = request.data['projected_payment']
-        print(record)
         self.update_next_records(record[0])
-        
+        self.getCostProjected(request.data['ratePeriod'])
+
         itemRecord = record[0]
         itemRecord.hours_elapsed = 0
         itemRecord.hours_totals = 0
@@ -246,6 +277,7 @@ class RecordsList(viewsets.ModelViewSet):
         itemRecord.average_global = 0
         itemRecord.rest_day = rest_day
         itemRecord.projection = 0
+        itemRecord.date = date
         itemRecord.projected_payment = projected_payment
         itemRecord.daily_reading = daily_reading
         itemRecord.save()
@@ -286,6 +318,7 @@ class RecordsList(viewsets.ModelViewSet):
             multProjection = float(recordItem.rest_day) * average_global
             projection = multProjection + recordItem.cumulative_consumption
             recordItem.projection = round(projection, 3)
-            recordItem.save()
+            # recordItem.save()
             
-    
+    def getCostProjected(self, ratePeriod):
+        print('ratePeriod', ratePeriod)
