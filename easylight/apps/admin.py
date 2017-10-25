@@ -70,7 +70,7 @@ class RateImportExport(ImportExportModelAdmin):
     get_name_rate.short_description = ("Tarifa")
 
 class RecordsAdmin(admin.ModelAdmin):
-    list_display = ['get_date', 'get_daily_reading','get_projection', 'get_projected_payment', 'get_contracts']
+    list_display = ['get_date', 'get_daily_reading','get_projection', 'get_projected_payment', 'get_amount_payable', 'get_contracts', 'get_status']
     list_per_page = 25
 
     def get_date(self, obj):
@@ -93,7 +93,14 @@ class RecordsAdmin(admin.ModelAdmin):
         return obj.projected_payment
     get_projected_payment.short_description = ("Pago Proyectado")
 
+    def get_amount_payable(self, obj):
+        return obj.amount_payable
+    get_amount_payable.short_description = ("Cantidad Pagada")
 
+    def get_status(self, obj):
+        return obj.status
+    get_status.short_description = ("Estado")
+    
 
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)

@@ -211,7 +211,6 @@ class RecordsList(viewsets.ModelViewSet):
         contract_id = self.request.GET.get('contract_id')
         date = self.request.GET.get('date')
         kwh = self.request.GET.get('kwh')
-        recordsMonths = self.request.GET.get('recordsMonths')
         if contract_id:
             self.queryset = self.queryset.filter(contracts= contract_id)
         if date:
@@ -219,35 +218,9 @@ class RecordsList(viewsets.ModelViewSet):
             self.queryset = self.queryset.filter(date__gt= date)
         if kwh:
             self.queryset = [self.queryset.filter(daily_reading__gte= kwh).last()]
-        if recordsMonths:
-            self.queryset = self.queryset.all()
-            self.getMonthData(self.queryset)
-
+        
         return self.queryset
 
-    # def list(self, request):
-    #     record = self.get_queryset()
-    #     print(record)
-    #     return self.getMonthData(self.queryset)
-
-    @list_route()
-    def getMonthData(self, request):
-        print(request)
-        # current_date = datetime.now()
-        # get_date = current_date.day
-        # get_month = current_date.month-6
-        # get_year = current_date.year
-        # get_date_sixMonths = datetime(get_year,get_month,get_date)
-        # self.queryset = self.queryset.filter(date__gte= get_date_sixMonths)
-        # # print('records', records)
-        # arrayMeses = []
-        # for i in range(1, 12):
-        #     meses =[x for x in records if x.date.month == i]
-        #     if len(meses) > 0:
-        #         arrayMeses.append(meses[len(meses)-1])
-
-        # jsonList = serializers.serialize('json', list(arrayMeses))
-        # return Response({ 'Results': jsonList})
 
     def diferencia(self, initialDate, finalDate):
         formato_fecha = "%Y-%m-%d %H:%M:%S"
@@ -257,32 +230,67 @@ class RecordsList(viewsets.ModelViewSet):
 
         return diferenciaDias
 
+
+
     def update(self, request, pk=None):
         record = self.get_queryset()
-        # listRecords = Records.objects.all()
+
         date = request.data['date']
+        datetime = request.data['datetime']
         daily_reading = request.data['daily_reading']
         rest_day = request.data['rest_day']
         projected_payment = request.data['projected_payment']
-        self.update_next_records(record[0])
-        self.getCostProjected(request.data['ratePeriod'])
+        status = request.data['status']
+        contract_id = request.data['contracts']
+        amount_payable = request.data['amount_payable']
+        if status :
+            status = True
+        else:
+            status = False
 
-        itemRecord = record[0]
-        itemRecord.hours_elapsed = 0
-        itemRecord.hours_totals = 0
-        itemRecord.days_elapsed = 0
-        itemRecord.days_totals = 0
-        itemRecord.daily_consumption = 0
-        itemRecord.cumulative_consumption = 0
-        itemRecord.average_global = 0
-        itemRecord.rest_day = rest_day
-        itemRecord.projection = 0
-        itemRecord.date = date
-        itemRecord.projected_payment = projected_payment
-        itemRecord.daily_reading = daily_reading
-        itemRecord.save()
+        if record[0] != None:
+            self.update_next_records(record[0])
+            self.getCostProjected(request.data['ratePeriod'])
 
-        return Response({ 'Message': 'Record Actualizado'})
+            itemRecord = record[0]
+            itemRecord.hours_elapsed = 0
+            itemRecord.hours_totals = 0
+            itemRecord.days_elapsed = 0
+            itemRecord.days_totals = 0
+            itemRecord.daily_consumption = 0
+            itemRecord.cumulative_consumption = 0
+            itemRecord.average_global = 0
+            itemRecord.rest_day = rest_day
+            itemRecord.projection = 0
+            itemRecord.date = date
+            itemRecord.projected_payment = projected_payment
+            itemRecord.amount_payable = amount_payable
+            itemRecord.daily_reading = daily_reading
+            itemRecord.status = status
+            itemRecord.save()
+            return Response({ 'Message': 'Record Actualizado'})
+        
+        else :
+            contract = Contract.objects.get(pk= contract_id)
+            newRecord = Records()
+            newRecord.hours_elapsed = 0
+            newRecord.hours_totals = 0
+            newRecord.days_elapsed = 0
+            newRecord.days_totals = 0
+            newRecord.daily_consumption = 0
+            newRecord.cumulative_consumption = 0
+            newRecord.average_global = 0
+            newRecord.rest_day = rest_day
+            newRecord.projection = 0
+            newRecord.date = date
+            newRecord.projected_payment = 0
+            newRecord.daily_reading = daily_reading
+            newRecord.status = status
+            newRecord.contracts = contract
+            newRecord.datetime = datetime
+            newRecord.amount_payable = amount_payable
+            newRecord.save()
+            return Response({'Message': 'Se agrego un nuevo Record'})     
 
     def update_next_records(self, record):
         formato_fecha = "%Y-%m-%d %H:%M:%S"
@@ -318,7 +326,7 @@ class RecordsList(viewsets.ModelViewSet):
             multProjection = float(recordItem.rest_day) * average_global
             projection = multProjection + recordItem.cumulative_consumption
             recordItem.projection = round(projection, 3)
-            # recordItem.save()
+            recordItem.save()
             
     def getCostProjected(self, ratePeriod):
         print('ratePeriod', ratePeriod)

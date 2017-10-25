@@ -174,4 +174,4 @@ class RecordsSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Records
-        fields=('datetime', 'day', 'date', 'daily_reading', 'hours_elapsed','hours_totals', 'days_elapsed', 'days_totals', 'daily_consumption','cumulative_consumption', 'projected_payment', 'projection', 'average_global', 'rest_day', 'contracts')
+        fields=('datetime', 'day', 'date', 'daily_reading', 'hours_elapsed','hours_totals', 'days_elapsed', 'days_totals', 'daily_consumption','cumulative_consumption', 'projected_payment', 'projection', 'average_global', 'rest_day', 'contracts', 'status', 'amount_payable')

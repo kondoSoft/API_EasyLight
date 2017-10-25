@@ -210,7 +210,9 @@ class Records(models.Model):
     rest_day = models.CharField(max_length=10, blank=True, null=True)
     projection = models.CharField(max_length=25)
     projected_payment = models.CharField(max_length=30)
+    amount_payable = models.CharField(max_length=50)
     contracts = models.ForeignKey(Contract, blank=True)
+    status = models.BooleanField(default=False)
 
     class Meta:
         verbose_name = "Record"
@@ -240,3 +242,16 @@ class TipsAndAdvertising(models.Model):
 
     def __str__(self):
         return '%s %s %s' %(self.name_tip_advertising, self.type_data, self.description)
+
+class History(models.Model):
+
+    period_name = models.CharField(max_length=30)
+    kilowatt = models.CharField(max_length=100, null=True, blank=False)
+    cost = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=3)
+
+    class Meta:
+        verbose_name = "Historial"
+        ordering = ('id',)
+
+    def __str__(self):
+        return '%s %s %s' %(self.period_name, self.kilowatt, self.cost)
