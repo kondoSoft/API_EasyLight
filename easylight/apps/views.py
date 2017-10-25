@@ -3,7 +3,7 @@ from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
 from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer
 from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records
-from rest_framework.decorators import detail_route, api_view
+from rest_framework.decorators import detail_route, api_view, list_route
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
 from rest_framework import viewsets, renderers
@@ -22,6 +22,8 @@ from dateutil.rrule import *
 from dateutil.parser import *
 from datetime import *
 import time
+from django.core import serializers
+import json
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -208,76 +210,123 @@ class RecordsList(viewsets.ModelViewSet):
     def get_queryset(self):
         contract_id = self.request.GET.get('contract_id')
         date = self.request.GET.get('date')
+        kwh = self.request.GET.get('kwh')
         if contract_id:
             self.queryset = self.queryset.filter(contracts= contract_id)
         if date:
-            self.queryset = [self.queryset.filter(contracts= contract_id, date= date).last()]
+            date = datetime.strptime(date, "%Y-%m-%d")
+            self.queryset = self.queryset.filter(date__gt= date)
+        if kwh:
+            self.queryset = [self.queryset.filter(daily_reading__gte= kwh).last()]
+        
         return self.queryset
 
+
     def diferencia(self, initialDate, finalDate):
-        print(initialDate, 'final')
-        print(finalDate, 'initial')
         formato_fecha = "%Y-%m-%d %H:%M:%S"
         fecha_inicial = datetime.strptime(initialDate, formato_fecha)
         fecha_actual = datetime.strptime(finalDate, formato_fecha)
-        diferenciaDias = fecha_inicial - fecha_actual
-
-        
-        # print(resultado.days, 'dias',resultado.hours, 'horas', resultado.minutes, 'minutos')
+        diferenciaDias = fecha_actual - fecha_inicial
 
         return diferenciaDias
 
+
+
     def update(self, request, pk=None):
         record = self.get_queryset()
+
         date = request.data['date']
-        day = request.data['day']
+        datetime = request.data['datetime']
         daily_reading = request.data['daily_reading']
         rest_day = request.data['rest_day']
-        listRecords = Records.objects.all()
+        projected_payment = request.data['projected_payment']
+        status = request.data['status']
+        contract_id = request.data['contracts']
+        amount_payable = request.data['amount_payable']
+        if status :
+            status = True
+        else:
+            status = False
+
+        if record[0] != None:
+            self.update_next_records(record[0])
+            self.getCostProjected(request.data['ratePeriod'])
+
+            itemRecord = record[0]
+            itemRecord.hours_elapsed = 0
+            itemRecord.hours_totals = 0
+            itemRecord.days_elapsed = 0
+            itemRecord.days_totals = 0
+            itemRecord.daily_consumption = 0
+            itemRecord.cumulative_consumption = 0
+            itemRecord.average_global = 0
+            itemRecord.rest_day = rest_day
+            itemRecord.projection = 0
+            itemRecord.date = date
+            itemRecord.projected_payment = projected_payment
+            itemRecord.amount_payable = amount_payable
+            itemRecord.daily_reading = daily_reading
+            itemRecord.status = status
+            itemRecord.save()
+            return Response({ 'Message': 'Record Actualizado'})
+        
+        else :
+            contract = Contract.objects.get(pk= contract_id)
+            newRecord = Records()
+            newRecord.hours_elapsed = 0
+            newRecord.hours_totals = 0
+            newRecord.days_elapsed = 0
+            newRecord.days_totals = 0
+            newRecord.daily_consumption = 0
+            newRecord.cumulative_consumption = 0
+            newRecord.average_global = 0
+            newRecord.rest_day = rest_day
+            newRecord.projection = 0
+            newRecord.date = date
+            newRecord.projected_payment = 0
+            newRecord.daily_reading = daily_reading
+            newRecord.status = status
+            newRecord.contracts = contract
+            newRecord.datetime = datetime
+            newRecord.amount_payable = amount_payable
+            newRecord.save()
+            return Response({'Message': 'Se agrego un nuevo Record'})     
+
+    def update_next_records(self, record):
         formato_fecha = "%Y-%m-%d %H:%M:%S"
-        initialDate = time.strptime(date, formato_fecha)
-        for recordItem in listRecords:
-            dateItem = datetime.strftime(recordItem.date, formato_fecha)
-            dateItem = time.strptime(dateItem, formato_fecha)
+        listRecords = Records.objects.filter(date__gte= record.date, daily_reading__gt= record.daily_reading ).order_by('daily_reading')
+        dateRecord = datetime.strftime(record.datetime, formato_fecha)
+        for idx,recordItem in enumerate(listRecords):
+            dateItem = datetime.strftime(recordItem.datetime, formato_fecha)
+            diffDate = self.diferencia(dateRecord, dateItem)
+            
+            hours= (diffDate.days * 24) + (diffDate.seconds/3600) 
+            # Condicion para hacer la variacion de datos dependiendo el item del array
+            if idx == 0:
+                index = 0
+                hours_elapsed = hours
+                days_elapsed = hours/24
 
-            if(dateItem > initialDate):
-                diffDate = self.diferencia(datetime.strftime(recordItem.date, formato_fecha), date)
-                recordItem.hours_totals = (diffDate.days * 24) + (diffDate.seconds/ 3600)
-                recordItem.days_totals = recordItem.hours_totals / 24 
+            else:
+                index = idx-1
+                hours_elapsed = float(recordItem.hours_totals) - float(listRecords[index].hours_totals)
+                days_elapsed = float(recordItem.days_totals) - float(listRecords[index].days_totals)
 
-                print(recordItem)
-                
-                # recordItem.date = date
-                # recordItem.save()
-
-        # hours_elapsed = request.data['hours_elapsed']
-        # hours_totals= request.data['hours_totals']
-        # days_elapsed= request.data['days_elapsed']
-        # days_totals= request.data['days_totals']
-        # daily_consumption= request.data['daily_consumption']
-        # cumulative_consumption= request.data['cumulative_consumption']
-        # average_global= request.data['average_global']
-        # rest_day= request.data['rest_day']
-        # projection= request.data['projection']
-        # projected_payment= request.data['projected_payment']
-        # contracts= request.data['contracts']
-        itemRecord = record[0]
-        itemRecord.hours_elapsed = 0
-        itemRecord.hours_totals = 0
-        itemRecord.days_elapsed = 0
-        itemRecord.days_totals = 0
-        itemRecord.daily_consumption = 0
-        itemRecord.cumulative_consumption = 0
-        itemRecord.average_global = 0
-        itemRecord.rest_day = rest_day
-        itemRecord.projection = 0
-        itemRecord.projected_payment = 0
-        # itemRecord.contracts = contracts
-        itemRecord.day = day
-        itemRecord.daily_reading = daily_reading
-
-        itemRecord.save()
-
-        return Response({ 'Message': 'Record Actualizado'})
-
-    
+            recordItem.hours_totals = round(hours, 3)
+            recordItem.hours_elapsed = round(hours_elapsed,3)
+            recordItem.days_elapsed = round(days_elapsed, 3)
+            recordItem.days_totals = round(hours / 24 , 3)
+            # Consumo acumulado es la lectura actual menos el valor de la lectura actual del record que se actualizo
+            cumulative_consumption = float(recordItem.daily_reading) - float(record.daily_reading)
+            recordItem.cumulative_consumption = round(cumulative_consumption, 3)
+            #variable para sacar el average
+            average_global = float(recordItem.cumulative_consumption) / float(recordItem.days_totals)
+            recordItem.average_global = round(average_global, 3)
+            #varible para sacar la proyeccion
+            multProjection = float(recordItem.rest_day) * average_global
+            projection = multProjection + recordItem.cumulative_consumption
+            recordItem.projection = round(projection, 3)
+            recordItem.save()
+            
+    def getCostProjected(self, ratePeriod):
+        print('ratePeriod', ratePeriod)
