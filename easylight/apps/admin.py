@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import State, Profile, Municipality, TipsAndAdvertising, Receipt, Contract, Rate, Records
+from .models import State, History, Profile, Municipality, TipsAndAdvertising, Receipt, Contract, Rate, Records
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 from rest_framework.authtoken.admin import TokenAdmin
@@ -37,7 +37,7 @@ class MunicipalityAdmin(ImportExportModelAdmin):
     get_state.short_description = ("Estado")
 
 class ReceiptAdmin(admin.ModelAdmin):
-    list_display = ['get_payday','get_amount', 'get_period', 'get_update', ]
+    list_display = ['get_payday','get_amount', 'get_period', 'get_update', 'get_contract',]
     list_per_page = 25
 
     def get_payday(self, obj):
@@ -56,6 +56,9 @@ class ReceiptAdmin(admin.ModelAdmin):
         return obj.update_date
     get_update.short_description = ("Ultima Actualizacion")
 
+    def get_contract(self, obj):
+        return obj.contract
+    get_contract.short_description = ("Contrato")
 
 class RateResource(resources.ModelResource):
     class Meta:
@@ -101,6 +104,23 @@ class RecordsAdmin(admin.ModelAdmin):
         return obj.status
     get_status.short_description = ("Estado")
     
+class HistoryAdmin(admin.ModelAdmin):
+    list_display = ['get_period', 'get_kilowatt', 'get_cost', ]
+    list_per_page = 25
+
+    def get_period(self, obj):
+        return obj.period_name
+    get_period.short_description = ("Periodo")
+
+    def get_kilowatt(self, obj):
+        return obj.kilowatt
+    get_kilowatt.short_description = ("Consumo kwh")
+
+    def get_cost(self, obj):
+        return obj.cost
+    get_cost.short_description = ("Costo")
+
+
 
 admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
@@ -109,4 +129,5 @@ admin.site.register(Profile)
 admin.site.register(Contract)
 admin.site.register(Records, RecordsAdmin)
 admin.site.register(Receipt, ReceiptAdmin)
+admin.site.register(History, HistoryAdmin)
 admin.site.register(TipsAndAdvertising)

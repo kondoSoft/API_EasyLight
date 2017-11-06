@@ -4,7 +4,7 @@ from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
-from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate, Records
+from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate, Records, History
 import json
 from rest_auth.registration.serializers import RegisterSerializer
 
@@ -175,3 +175,8 @@ class RecordsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Records
         fields=('datetime', 'day', 'date', 'daily_reading', 'hours_elapsed','hours_totals', 'days_elapsed', 'days_totals', 'daily_consumption','cumulative_consumption', 'projected_payment', 'projection', 'average_global', 'rest_day', 'contracts', 'status', 'amount_payable')
+
+class HistorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = History
+        fields = ('__all__')

@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList, RecordsList
+from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList, RecordsList, HistoryList
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -106,7 +106,10 @@ records_detail = RecordsList.as_view({
     'patch': 'partial_update',
     'delete': 'destroy'
     })
-
+history_list = HistoryList.as_view({
+    'get' : 'list',
+    'post': 'create',
+    })
 urlpatterns = format_suffix_patterns([
     url(r'^', include('django.contrib.auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
@@ -141,6 +144,8 @@ urlpatterns = format_suffix_patterns([
     url(r'^subscribe/$', Subscribe.as_view(), name='subscribe-list'),
     #Tips
     url(r'^tips/$', tip_list, name="tip-list"),
+    #History
+    url(r'^history/$', history_list, name="history-list"),
     #Records
     url(r'^records/$', records_list, name='records-list'),
     url(r'^records/(?P<pk>[0-9]+)/$', records_detail, name='records-detail'),

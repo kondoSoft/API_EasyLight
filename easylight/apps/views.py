@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer
-from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records
+from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer, HistorySerializer
+from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records, History
 from rest_framework.decorators import detail_route, api_view, list_route
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -118,6 +118,15 @@ class TipsAndAdvertisingList(viewsets.ModelViewSet):
     """
     queryset = TipsAndAdvertising.objects.all()
     serializer_class = TipsAndAdvertisingSerializer
+
+class HistoryList(viewsets.ModelViewSet):
+    """
+    API History
+    """
+    queryset = History.objects.all()
+    permission_classes = (AllowAny,)
+    serializer_class = HistorySerializer
+
 
 class RateList(viewsets.ModelViewSet):
     """
