@@ -255,3 +255,26 @@ class History(models.Model):
 
     def __str__(self):
         return '%s %s %s' %(self.period_name, self.kilowatt, self.cost)
+
+class LimitDac(models.Model):
+
+    CHOICES_RATE = (
+        (TARIFA1, 'TARIFA 1'),
+        (TARIFA1A, 'TARIFA 1A'),
+        (TARIFA1B, 'TARIFA 1B'),
+        (TARIFA1C, 'TARIFA 1C'),
+        (TARIFA1D, 'TARIFA 1D'),
+        (TARIFA1E, 'TARIFA 1E'),
+        (TARIFA1F, 'TARIFA 1F'),
+    )
+
+    name_rate = models.CharField(max_length=30, choices=CHOICES_RATE)
+    kilowatt = models.PositiveSmallIntegerField(null=True, blank=False)
+
+    class Meta:
+        verbose_name = "Limite DAC"
+        verbose_name_plural = "Limite DAC"
+        ordering = ('id',)
+
+    def __str__(self):
+        return "%s %s" %(self.name_rate, self.kilowatt)
