@@ -88,6 +88,18 @@ class State(models.Model):
     def __str__(self):
         return str(self.state)
 
+class TableRegion(models.Model):
+
+    region_name = models.CharField(max_length=40)
+
+    class Meta:
+        verbose_name = "Regiones"
+        verbose_name_plural = "Regiones"
+        ordering = ('id',)
+
+    def __str__(self):
+        return str(self.region_name)
+
 class Municipality(models.Model):
     TARIFA1 = 'TARIFA 1'
     TARIFA1A = 'TARIFA 1A'
@@ -111,6 +123,7 @@ class Municipality(models.Model):
     key_mun = models.IntegerField(null=False, blank=False)
     name_mun = models.CharField(max_length=120, blank=False, null=False)
     rate = models.CharField(max_length=30, choices=CHOICES_RATE, null=True )
+    region = models.ForeignKey('TableRegion', related_name='region_mun', on_delete=models.CASCADE)
 
     class Meta:
         # unique_together = ('state',)
@@ -256,7 +269,14 @@ class History(models.Model):
     def __str__(self):
         return '%s %s %s' %(self.period_name, self.kilowatt, self.cost)
 
-class LimitDac(models.Model):
+class LimitRateDac(models.Model):
+    TARIFA1 = 'TARIFA 1'
+    TARIFA1A = 'TARIFA 1A'
+    TARIFA1B = 'TARIFA 1B'
+    TARIFA1C = 'TARIFA 1C'
+    TARIFA1D = 'TARIFA 1D'
+    TARIFA1E = 'TARIFA 1E'
+    TARIFA1F = 'TARIFA 1F'
 
     CHOICES_RATE = (
         (TARIFA1, 'TARIFA 1'),
@@ -278,3 +298,24 @@ class LimitDac(models.Model):
 
     def __str__(self):
         return "%s %s" %(self.name_rate, self.kilowatt)
+
+
+class RateHighComsuption(models.Model):
+
+    region = models.ForeignKey('TableRegion',related_name='region_hight', on_delete=models.CASCADE)  
+    month = models.CharField(max_length=20, null=False, blank=False)
+    fixed_charge = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
+    cost_verano = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
+    cost_no_verano = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
+    unique_rate = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
+
+
+    class Meta:
+        verbose_name = "Tarifa Alto Consumo"
+        verbose_name_plural = "Tarifa Alto Consumo"
+        ordering = ('id',)
+
+    def __str__(self):
+        return str(self.region
+
+)  

@@ -4,7 +4,7 @@ from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
-from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate, Records, History
+from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate, Records, History, TableRegion, RateHighComsuption, LimitRateDac
 import json
 from rest_auth.registration.serializers import RegisterSerializer
 
@@ -93,7 +93,7 @@ class MunicipalitySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Municipality
-        fields = ('id','key_mun','name_mun','state')
+        fields = ('id','key_mun','name_mun','state', 'region')
 
 # Tabla de Tarifas
 class RateSerializer(serializers.ModelSerializer):
@@ -180,3 +180,20 @@ class HistorySerializer(serializers.ModelSerializer):
     class Meta:
         model = History
         fields = ('__all__')
+
+class RateHighComsuptionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RateHighComsuption
+        fields = ('__all__')
+
+class LimitRateDacSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LimitRateDac
+        fields = ('__all__')
+
+class TableRegionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TableRegion
+        fields = ('__all__')
+
+

@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer, HistorySerializer
-from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records, History
+from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer, HistorySerializer, RateHighComsuptionSerializer, LimitRateDacSerializer
+from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records, History, RateHighComsuption, LimitRateDac
 from rest_framework.decorators import detail_route, api_view, list_route
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -196,6 +196,18 @@ class ContactUs(APIView):
         print(request)
 
         return Response({ 'Message': 'Mensaje Enviado'})
+
+class RegionView(viewsets.ModelViewSet):
+
+    queryset = LimitRateDac.objects.all()
+    serializer_class = LimitRateDacSerializer
+    permission_classes = (IsAuthenticated,)
+
+class RateHighComsuptionView(viewsets.ModelViewSet):
+
+    queryset = RateHighComsuption.objects.all()
+    serializer_class = RateHighComsuptionSerializer
+    permission_classes = (IsAuthenticated,)
 
 class Subscribe(APIView):
     permission_classes = (AllowAny,)

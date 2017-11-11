@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList, RecordsList, HistoryList
+from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList, RecordsList, HistoryList, RegionView, RateHighComsuptionView
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -110,6 +110,15 @@ history_list = HistoryList.as_view({
     'get' : 'list',
     'post': 'create',
     })
+
+region_list = RegionView.as_view({
+    'get' : 'list',
+    })
+
+high_consumption_list = RateHighComsuptionView.as_view({
+    'get': 'list',
+    })
+
 urlpatterns = format_suffix_patterns([
     url(r'^', include('django.contrib.auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
@@ -146,6 +155,10 @@ urlpatterns = format_suffix_patterns([
     url(r'^tips/$', tip_list, name="tip-list"),
     #History
     url(r'^history/$', history_list, name="history-list"),
+
+    url(r'^region/$', region_list, name="region-list"),
+    url(r'^high_consumption/$', high_consumption_list, name="high_consumption-list"),
+
     #Records
     url(r'^records/$', records_list, name='records-list'),
     url(r'^records/(?P<pk>[0-9]+)/$', records_detail, name='records-detail'),
