@@ -198,7 +198,7 @@ class Contract(models.Model):
     image = models.ImageField(upload_to='media/', blank=True, null=True)
     high_consumption = models.BooleanField(default=False)
     owner = models.ForeignKey('auth.User', related_name='contracts', on_delete=models.CASCADE)
-    
+
     class Meta:
         verbose_name = "Contrato"
         ordering = ('id',)
@@ -303,12 +303,11 @@ class LimitRateDac(models.Model):
 
 class RateHighConsumption(models.Model):
 
-    region = models.ForeignKey('TableRegion',related_name='region_hight', on_delete=models.CASCADE)  
+    region = models.ForeignKey('TableRegion',related_name='region_hight', on_delete=models.CASCADE)
     month = models.CharField(max_length=20, null=False, blank=False)
     fixed_charge = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
     cost_verano = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
     cost_no_verano = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
-    unique_rate = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=2)
 
 
     class Meta:
@@ -319,4 +318,4 @@ class RateHighConsumption(models.Model):
     def __str__(self):
         return str(self.region
 
-)  
+)

@@ -107,7 +107,7 @@ class RecordsAdmin(admin.ModelAdmin):
     def get_status(self, obj):
         return obj.status
     get_status.short_description = ("Estado")
-    
+
 class HistoryAdmin(admin.ModelAdmin):
     list_display = ['get_period', 'get_kilowatt', 'get_cost', ]
     list_per_page = 25
@@ -139,7 +139,7 @@ class RateHighConsumptionResource(resources.ModelResource):
         model = RateHighConsumption
 
 class RateHighConsumptionAdmin(ImportExportModelAdmin):
-    list_display = [ 'get_month', 'region', 'get_fixed_charge','get_cost_verano', 'get_cost_no_verano', 'get_unique_rate']
+    list_display = [ 'get_month', 'region', 'get_fixed_charge','get_cost_verano', 'get_cost_no_verano']
     resource_class = RateHighConsumptionResource
 
     def get_month(self, obj):
@@ -157,11 +157,6 @@ class RateHighConsumptionAdmin(ImportExportModelAdmin):
     def get_cost_no_verano(self, obj):
         return obj.cost_no_verano
     get_cost_no_verano.short_description = ("Costo Fuera de Verano")
-
-    def get_unique_rate(self, obj):
-        return obj.unique_rate
-    get_unique_rate.short_description = ("Tarifa Unica")
-
 
 class LimitRateDacResource(resources.ModelResource):
     class Meta:

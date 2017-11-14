@@ -9,7 +9,7 @@ from rest_framework.reverse import reverse
 from rest_framework import viewsets, renderers
 import xlrd
 from xlrd import open_workbook, cellname
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from rest_framework.permissions import AllowAny, IsAuthenticated, IsAuthenticatedOrReadOnly
 from apps.permissions import IsOwnerOrDeny
 from .pagination import ListStateSetPagination, ListMunicipalitySetPagination, ListRatePagination
@@ -84,7 +84,26 @@ class ContractList(viewsets.ModelViewSet):
     """
     queryset = Contract.objects.all()
     serializer_class = ContractSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
+
+    def create(self, *arg,**kwargs):
+        data = self.request.data
+        contract = Contract()
+        contract.municipality_id= self.request.POST.get('municipality')
+        contract.name_contract = self.request.POST.get('name_contract')
+        contract.number_contract = self.request.POST.get('number_contract')
+        contract.state_id = self.request.POST.get('state')
+        contract.type_payment = self.request.POST.get('type_payment')
+        contract.rate = self.request.POST.get('rate')
+        contract.initialDateRange = self.request.POST.get('initialDateRange')
+        contract.finalDateRange = self.request.POST.get('finalDateRange')
+        contract.owner_id = self.request.POST.get('owner')
+
+        contract.save()
+
+        # return Response( {'results': { 'name_contract': contract.name_contract, 'number_contract': contract.number_contract}} )
+
+        return JsonResponse(data)
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
@@ -101,7 +120,7 @@ class ReceiptList(viewsets.ModelViewSet):
     """
     queryset = Receipt.objects.all()
     serializer_class = ReceiptSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     # ©detail_route(methods=['patch'])
     # def partial_update(self, request, pk=None):
@@ -155,7 +174,7 @@ class Mun_RateList(viewsets.ModelViewSet):
     """
     queryset = Municipality.objects.all()
     serializer_class = Mun_RateSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         municipality = self.request.GET.get('mun_id')
@@ -169,7 +188,7 @@ class Rate_PeriodList(viewsets.ModelViewSet):
 
     queryset = Rate.objects.all()
     serializer_class = RateSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         # period = self.request.GET.get('period')
@@ -184,7 +203,7 @@ class Rate_PeriodList(viewsets.ModelViewSet):
 
 
 class ContactUs(APIView):
-    permission_classes = (AllowAny,)
+    # permission_classes = (AllowAny,)
 
     def post(self, request, *args, **kwargs):
         # name = request.POST.get('name')
@@ -201,13 +220,13 @@ class RegionView(viewsets.ModelViewSet):
 
     queryset = LimitRateDac.objects.all()
     serializer_class = LimitRateDacSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
 class RateHighConsumptionView(viewsets.ModelViewSet):
 
     queryset = RateHighConsumption.objects.all()
     serializer_class = RateHighConsumptionSerializer
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         region_id = self.request.GET.get('region_id')
@@ -246,7 +265,7 @@ class RecordsList(viewsets.ModelViewSet):
             self.queryset = self.queryset.filter(date__gt= date)
         if kwh:
             self.queryset = [self.queryset.filter(daily_reading__gte= kwh).last()]
-        
+
         return self.queryset
 
 
@@ -297,7 +316,7 @@ class RecordsList(viewsets.ModelViewSet):
             itemRecord.status = status
             itemRecord.save()
             return Response({ 'Message': 'Record Actualizado'})
-        
+
         else :
             contract = Contract.objects.get(pk= contract_id)
             newRecord = Records()
@@ -318,7 +337,7 @@ class RecordsList(viewsets.ModelViewSet):
             newRecord.datetime = datetime
             newRecord.amount_payable = amount_payable
             newRecord.save()
-            return Response({'Message': 'Se agrego un nuevo Record'})     
+            return Response({'Message': 'Se agrego un nuevo Record'})
 
     def update_next_records(self, record):
         formato_fecha = "%Y-%m-%d %H:%M:%S"
@@ -327,8 +346,8 @@ class RecordsList(viewsets.ModelViewSet):
         for idx,recordItem in enumerate(listRecords):
             dateItem = datetime.strftime(recordItem.datetime, formato_fecha)
             diffDate = self.diferencia(dateRecord, dateItem)
-            
-            hours= (diffDate.days * 24) + (diffDate.seconds/3600) 
+
+            hours= (diffDate.days * 24) + (diffDate.seconds/3600)
             # Condicion para hacer la variacion de datos dependiendo el item del array
             if idx == 0:
                 index = 0
@@ -355,6 +374,6 @@ class RecordsList(viewsets.ModelViewSet):
             projection = multProjection + recordItem.cumulative_consumption
             recordItem.projection = round(projection, 3)
             recordItem.save()
-            
+
     def getCostProjected(self, ratePeriod):
         print('ratePeriod', ratePeriod)

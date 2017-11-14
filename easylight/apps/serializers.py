@@ -89,6 +89,7 @@ class StateSerializer(serializers.ModelSerializer):
         fields = ('id','state', 'abbreviation')
 
 class TableRegionSerializer(serializers.ModelSerializer):
+
     class Meta:
         model = TableRegion
         fields = ('id', 'region_name',)
@@ -96,7 +97,6 @@ class TableRegionSerializer(serializers.ModelSerializer):
 # Municipios
 class MunicipalitySerializer(serializers.ModelSerializer):
     state = StateSerializer(many=False, read_only=True)
-    region = TableRegionSerializer(many=False, read_only=True)
 
     class Meta:
         model = Municipality
@@ -129,9 +129,18 @@ class ReceiptSerializer(serializers.ModelSerializer):
 class ContractSerializer(serializers.ModelSerializer):
     receipt = serializers.SerializerMethodField()
     records = serializers.SerializerMethodField()
-    municipality = MunicipalitySerializer(many=False, read_only=True)
+    municipality = MunicipalitySerializer()
     image = serializers.ImageField(required=False)
     owner = serializers.ReadOnlyField(source='owner.id')
+
+    def get_municipality(self,obj):
+        listMuni = []
+        municipalities = Municipality.objects.all().filter(contract=obj.pk)
+        for municipality in municipalities:
+            item = {'id': municipality.id, 'name_mun': municipality.name_mun, 'region_id': municipality.region.id }
+            listMuni.append(item)
+            # listReceipt.reverse()
+        return listMuni
 
     def get_receipt(self, obj):
         listReceipt = []
@@ -164,6 +173,7 @@ class ContractSerializer(serializers.ModelSerializer):
             listRecords.append(objRecord)
         return listRecords
 
+
     class Meta:
         model = Contract
         fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate','initialDateRange', 'finalDateRange', 'type_payment', 'receipt', 'image','owner', 'records', 'high_consumption')
@@ -179,7 +189,7 @@ class TipsAndAdvertisingSerializer(serializers.ModelSerializer):
 class RecordsSerializer(serializers.ModelSerializer):
     date = serializers.DateField(read_only=False)
     # datetime = serializers.DateTimeField(read_only=False, many=True)
-    
+
     class Meta:
         model = Records
         fields=('datetime', 'day', 'date', 'daily_reading', 'hours_elapsed','hours_totals', 'days_elapsed', 'days_totals', 'daily_consumption','cumulative_consumption', 'projected_payment', 'projection', 'average_global', 'rest_day', 'contracts', 'status', 'amount_payable')
@@ -198,7 +208,3 @@ class LimitRateDacSerializer(serializers.ModelSerializer):
     class Meta:
         model = LimitRateDac
         fields = ('__all__')
-
-
-
-
