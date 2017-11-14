@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import State, History, Profile, Municipality, TipsAndAdvertising, Receipt, Contract, Rate, Records, RateHighComsuption, LimitRateDac, TableRegion
+from .models import State, History, Profile, Municipality, TipsAndAdvertising, Receipt, Contract, Rate, Records, RateHighConsumption, LimitRateDac, TableRegion
 from import_export.admin import ImportExportModelAdmin
 from import_export import resources
 from rest_framework.authtoken.admin import TokenAdmin
@@ -134,13 +134,13 @@ class TableRegionAdmin(ImportExportModelAdmin):
     resource_class = TableRegionResource
 
 
-class RateHighComsuptionResource(resources.ModelResource):
+class RateHighConsumptionResource(resources.ModelResource):
     class Meta:
-        model = RateHighComsuption
+        model = RateHighConsumption
 
-class RateHighComsuptionAdmin(ImportExportModelAdmin):
+class RateHighConsumptionAdmin(ImportExportModelAdmin):
     list_display = [ 'get_month', 'region', 'get_fixed_charge','get_cost_verano', 'get_cost_no_verano', 'get_unique_rate']
-    resource_class = RateHighComsuptionResource
+    resource_class = RateHighConsumptionResource
 
     def get_month(self, obj):
         return obj.month
@@ -188,6 +188,6 @@ admin.site.register(Records, RecordsAdmin)
 admin.site.register(Receipt, ReceiptAdmin)
 admin.site.register(History, HistoryAdmin)
 admin.site.register(TipsAndAdvertising)
-admin.site.register(RateHighComsuption, RateHighComsuptionAdmin)
+admin.site.register(RateHighConsumption, RateHighConsumptionAdmin)
 admin.site.register(LimitRateDac, LimitRateDacAdmin)
 admin.site.register(TableRegion, TableRegionAdmin)

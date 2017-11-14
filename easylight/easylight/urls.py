@@ -1,6 +1,6 @@
 from django.conf.urls import url, include
 from rest_framework.urlpatterns import format_suffix_patterns
-from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList, RecordsList, HistoryList, RegionView, RateHighComsuptionView
+from apps.views import GroupsList, ProfileViewSet, Rate_PeriodList, UserViewSet, StateViewSet, MunicipalityList, RateList, Mun_RateList, ContractList, ReceiptList, ContactUs, Subscribe, TipsAndAdvertisingList, RecordsList, HistoryList, RegionView, RateHighConsumptionView
 from rest_framework import renderers
 from django.conf.urls.static import static
 from apps import views
@@ -115,7 +115,7 @@ region_list = RegionView.as_view({
     'get' : 'list',
     })
 
-high_consumption_list = RateHighComsuptionView.as_view({
+high_consumption_list = RateHighConsumptionView.as_view({
     'get': 'list',
     })
 

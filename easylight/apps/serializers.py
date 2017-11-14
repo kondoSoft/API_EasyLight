@@ -4,7 +4,7 @@ from allauth.account.adapter import get_adapter
 from allauth.account.utils import setup_user_email
 from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
-from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate, Records, History, TableRegion, RateHighComsuption, LimitRateDac
+from apps.models import Profile, State, Municipality,TipsAndAdvertising, Contract, Receipt, Rate, Records, History, TableRegion, RateHighConsumption, LimitRateDac
 import json
 from rest_auth.registration.serializers import RegisterSerializer
 
@@ -87,9 +87,16 @@ class StateSerializer(serializers.ModelSerializer):
     class Meta:
         model = State
         fields = ('id','state', 'abbreviation')
+
+class TableRegionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TableRegion
+        fields = ('id', 'region_name',)
+
 # Municipios
 class MunicipalitySerializer(serializers.ModelSerializer):
     state = StateSerializer(many=False, read_only=True)
+    region = TableRegionSerializer(many=False, read_only=True)
 
     class Meta:
         model = Municipality
@@ -122,6 +129,7 @@ class ReceiptSerializer(serializers.ModelSerializer):
 class ContractSerializer(serializers.ModelSerializer):
     receipt = serializers.SerializerMethodField()
     records = serializers.SerializerMethodField()
+    municipality = MunicipalitySerializer(many=False, read_only=True)
     image = serializers.ImageField(required=False)
     owner = serializers.ReadOnlyField(source='owner.id')
 
@@ -158,7 +166,7 @@ class ContractSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Contract
-        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate','initialDateRange', 'finalDateRange', 'type_payment', 'receipt', 'image','owner', 'records')
+        fields = ('id','name_contract', 'number_contract', 'state', 'municipality', 'rate','initialDateRange', 'finalDateRange', 'type_payment', 'receipt', 'image','owner', 'records', 'high_consumption')
 
 # TipsAndAdvertising
 
@@ -181,9 +189,9 @@ class HistorySerializer(serializers.ModelSerializer):
         model = History
         fields = ('__all__')
 
-class RateHighComsuptionSerializer(serializers.ModelSerializer):
+class RateHighConsumptionSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RateHighComsuption
+        model = RateHighConsumption
         fields = ('__all__')
 
 class LimitRateDacSerializer(serializers.ModelSerializer):
@@ -191,9 +199,6 @@ class LimitRateDacSerializer(serializers.ModelSerializer):
         model = LimitRateDac
         fields = ('__all__')
 
-class TableRegionSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = TableRegion
-        fields = ('__all__')
+
 
 

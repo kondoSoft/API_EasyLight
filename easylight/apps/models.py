@@ -196,8 +196,9 @@ class Contract(models.Model):
     finalDateRange = models.DateField(null=True, blank=True)
     type_payment = models.CharField(max_length=20, choices=CHOICES_PAYMENT)
     image = models.ImageField(upload_to='media/', blank=True, null=True)
+    high_consumption = models.BooleanField(default=False)
     owner = models.ForeignKey('auth.User', related_name='contracts', on_delete=models.CASCADE)
-
+    
     class Meta:
         verbose_name = "Contrato"
         ordering = ('id',)
@@ -300,7 +301,7 @@ class LimitRateDac(models.Model):
         return "%s %s" %(self.name_rate, self.kilowatt)
 
 
-class RateHighComsuption(models.Model):
+class RateHighConsumption(models.Model):
 
     region = models.ForeignKey('TableRegion',related_name='region_hight', on_delete=models.CASCADE)  
     month = models.CharField(max_length=20, null=False, blank=False)

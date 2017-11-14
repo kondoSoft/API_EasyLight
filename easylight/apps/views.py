@@ -1,8 +1,8 @@
 from django.contrib.auth.models import User, Group
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.generics import ListCreateAPIView
-from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer, HistorySerializer, RateHighComsuptionSerializer, LimitRateDacSerializer
-from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records, History, RateHighComsuption, LimitRateDac
+from apps.serializers import RateSerializer, UserSerializer, GroupSerializer, ContractSerializer, TipsAndAdvertisingSerializer, ReceiptSerializer, StateSerializer, MunicipalitySerializer, RateSerializer, Mun_RateSerializer, ProfileSerializer, RecordsSerializer, HistorySerializer, RateHighConsumptionSerializer, LimitRateDacSerializer
+from apps.models import Profile, State, Municipality, Contract, Receipt, TipsAndAdvertising, Rate, Records, History, RateHighConsumption, LimitRateDac
 from rest_framework.decorators import detail_route, api_view, list_route
 from rest_framework.response import Response
 from rest_framework.reverse import reverse
@@ -203,11 +203,18 @@ class RegionView(viewsets.ModelViewSet):
     serializer_class = LimitRateDacSerializer
     permission_classes = (IsAuthenticated,)
 
-class RateHighComsuptionView(viewsets.ModelViewSet):
+class RateHighConsumptionView(viewsets.ModelViewSet):
 
-    queryset = RateHighComsuption.objects.all()
-    serializer_class = RateHighComsuptionSerializer
+    queryset = RateHighConsumption.objects.all()
+    serializer_class = RateHighConsumptionSerializer
     permission_classes = (IsAuthenticated,)
+
+    def get_queryset(self):
+        region_id = self.request.GET.get('region_id')
+        if region_id:
+            self.queryset = self.queryset.filter(region = region_id)
+
+        return self.queryset
 
 class Subscribe(APIView):
     permission_classes = (AllowAny,)
