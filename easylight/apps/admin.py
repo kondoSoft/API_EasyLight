@@ -76,6 +76,11 @@ class RateImportExport(ImportExportModelAdmin):
         return obj.name_rate
     get_name_rate.short_description = ("Tarifa")
 
+class ContractAdmin(admin.ModelAdmin):
+    list_display = ['name_contract', 'number_contract', 'state', 'municipality', 'rate', 'initialDateRange', 'finalDateRange','type_payment', 'image', 'high_consumption', 'owner']
+
+
+
 class RecordsAdmin(admin.ModelAdmin):
     list_display = ['get_date', 'get_daily_reading','get_projection', 'get_projected_payment', 'get_amount_payable', 'get_contracts', 'get_status']
     list_per_page = 25
@@ -178,7 +183,7 @@ admin.site.register(State, StateAdmin)
 admin.site.register(Municipality, MunicipalityAdmin)
 admin.site.register(Rate, RateImportExport)
 admin.site.register(Profile)
-admin.site.register(Contract)
+admin.site.register(Contract, ContractAdmin)
 admin.site.register(Records, RecordsAdmin)
 admin.site.register(Receipt, ReceiptAdmin)
 admin.site.register(History, HistoryAdmin)

@@ -87,8 +87,16 @@ class ContractList(viewsets.ModelViewSet):
     # permission_classes = (IsAuthenticated,)
 
     def create(self, *arg,**kwargs):
-        data = self.request.data
+        # data = self.request.data
         contract = Contract()
+
+        high_consumption = self.request.POST.get('high_consumption')
+        print(high_consumption)
+        if high_consumption == 'true' :
+            high_consumption = True
+        else:
+            high_consumption = False
+
         contract.municipality_id= self.request.POST.get('municipality')
         contract.name_contract = self.request.POST.get('name_contract')
         contract.number_contract = self.request.POST.get('number_contract')
@@ -97,13 +105,15 @@ class ContractList(viewsets.ModelViewSet):
         contract.rate = self.request.POST.get('rate')
         contract.initialDateRange = self.request.POST.get('initialDateRange')
         contract.finalDateRange = self.request.POST.get('finalDateRange')
+        contract.high_consumption = high_consumption
         contract.owner_id = self.request.POST.get('owner')
 
         contract.save()
-
+        receipts = Receipt.objects.filter(contract= contract.id)
+        print(receipts)
         # return Response( {'results': { 'name_contract': contract.name_contract, 'number_contract': contract.number_contract}} )
-
-        return JsonResponse(data)
+        # return Response(data)
+        return Response({ "id": contract.id, "number_contract": contract.number_contract, "receipt": receipts})
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
