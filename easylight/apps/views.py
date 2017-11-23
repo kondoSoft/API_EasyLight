@@ -91,7 +91,6 @@ class ContractList(viewsets.ModelViewSet):
         contract = Contract()
 
         high_consumption = self.request.POST.get('high_consumption')
-        print(high_consumption)
         if high_consumption == 'true' :
             high_consumption = True
         else:
@@ -107,7 +106,10 @@ class ContractList(viewsets.ModelViewSet):
         contract.finalDateRange = self.request.POST.get('finalDateRange')
         contract.high_consumption = high_consumption
         contract.owner_id = self.request.POST.get('owner')
-
+        print(self.request.FILES)
+        if(len(self.request.FILES) > 0):
+            image = self.request.FILES['image']
+            contract.image = image
         contract.save()
         receipts = Receipt.objects.filter(contract= contract.id)
         print(receipts)
@@ -123,6 +125,22 @@ class ContractList(viewsets.ModelViewSet):
         self.queryset = self.queryset.filter(owner = id_owner)
 
         return self.queryset
+
+    def update(self, request, pk=None):
+        contract_id = request.data['contract_id']
+        contracts = Contract.objects.get(pk= contract_id)
+        rate = request.data['rate']
+
+        print(request.FILES)
+        if(len(request.FILES) > 0):
+            image = request.FILES['image']
+            contracts.image = image
+        contracts.rate = rate
+        contracts.save()
+        print(contract_id)
+        print(rate)
+
+        return Response({'Message': 'Se actualizo el contrato'})
 
 class ReceiptList(viewsets.ModelViewSet):
     """
@@ -156,6 +174,12 @@ class HistoryList(viewsets.ModelViewSet):
     permission_classes = (AllowAny,)
     serializer_class = HistorySerializer
 
+    def get_queryset(self):
+        contract_id = self.request.GET.get('contract_id')
+        if contract_id:
+            self.queryset = self.queryset.filter(contract = contract_id)
+
+        return self.queryset
 
 class RateList(viewsets.ModelViewSet):
     """
@@ -320,7 +344,7 @@ class RecordsList(viewsets.ModelViewSet):
             itemRecord.rest_day = rest_day
             itemRecord.projection = 0
             itemRecord.date = date
-            itemRecord.projected_payment = projected_payment
+            itemRecord.projected_payment = 0
             itemRecord.amount_payable = amount_payable
             itemRecord.daily_reading = daily_reading
             itemRecord.status = status
@@ -350,13 +374,14 @@ class RecordsList(viewsets.ModelViewSet):
             return Response({'Message': 'Se agrego un nuevo Record'})
 
     def update_next_records(self, record):
+        print('record',record)
         formato_fecha = "%Y-%m-%d %H:%M:%S"
         listRecords = Records.objects.filter(date__gte= record.date, daily_reading__gt= record.daily_reading ).order_by('daily_reading')
+        print('listRecords',listRecords)
         dateRecord = datetime.strftime(record.datetime, formato_fecha)
         for idx,recordItem in enumerate(listRecords):
             dateItem = datetime.strftime(recordItem.datetime, formato_fecha)
             diffDate = self.diferencia(dateRecord, dateItem)
-
             hours= (diffDate.days * 24) + (diffDate.seconds/3600)
             # Condicion para hacer la variacion de datos dependiendo el item del array
             if idx == 0:
@@ -373,17 +398,25 @@ class RecordsList(viewsets.ModelViewSet):
             recordItem.hours_elapsed = round(hours_elapsed,3)
             recordItem.days_elapsed = round(days_elapsed, 3)
             recordItem.days_totals = round(hours / 24 , 3)
+
             # Consumo acumulado es la lectura actual menos el valor de la lectura actual del record que se actualizo
             cumulative_consumption = float(recordItem.daily_reading) - float(record.daily_reading)
             recordItem.cumulative_consumption = round(cumulative_consumption, 3)
+
             #variable para sacar el average
-            average_global = float(recordItem.cumulative_consumption) / float(recordItem.days_totals)
+            if (recordItem.days_totals > 0):
+                average_global = float(recordItem.cumulative_consumption) / float(recordItem.days_totals)
+            else:
+                average_global = float(recordItem.cumulative_consumption)
+
             recordItem.average_global = round(average_global, 3)
             #varible para sacar la proyeccion
             multProjection = float(recordItem.rest_day) * average_global
             projection = multProjection + recordItem.cumulative_consumption
             recordItem.projection = round(projection, 3)
+            recordItem.projected_payment = 0
+
             recordItem.save()
 
     def getCostProjected(self, ratePeriod):
-        print('ratePeriod', ratePeriod)
+        return 0

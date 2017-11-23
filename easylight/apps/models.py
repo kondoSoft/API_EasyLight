@@ -259,7 +259,7 @@ class History(models.Model):
 
     period_name = models.CharField(max_length=30)
     kilowatt = models.CharField(max_length=100, null=True, blank=False)
-    cost = models.DecimalField(null=True, blank=False, validators=[MinValueValidator(0.001)], max_digits=5, decimal_places=3)
+    cost = models.IntegerField(null=False, default=0)
     contract = models.ForeignKey('Contract', related_name='contract_history', on_delete=models.CASCADE)
 
     class Meta:

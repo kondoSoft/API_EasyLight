@@ -195,6 +195,8 @@ class RecordsSerializer(serializers.ModelSerializer):
         fields=('datetime', 'day', 'date', 'daily_reading', 'hours_elapsed','hours_totals', 'days_elapsed', 'days_totals', 'daily_consumption','cumulative_consumption', 'projected_payment', 'projection', 'average_global', 'rest_day', 'contracts', 'status', 'amount_payable')
 
 class HistorySerializer(serializers.ModelSerializer):
+
+
     class Meta:
         model = History
         fields = ('__all__')
