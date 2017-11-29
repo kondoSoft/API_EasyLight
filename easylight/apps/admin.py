@@ -82,12 +82,16 @@ class ContractAdmin(admin.ModelAdmin):
 
 
 class RecordsAdmin(admin.ModelAdmin):
-    list_display = ['get_date', 'get_daily_reading','get_projection', 'get_projected_payment', 'get_amount_payable', 'get_contracts', 'get_status']
+    list_display = ['get_date','get_datetime', 'get_daily_reading','get_projection', 'get_projected_payment', 'get_amount_payable', 'get_contracts', 'get_status']
     list_per_page = 25
 
     def get_date(self, obj):
         return obj.date
     get_date.short_description = ("Fecha")
+
+    def get_datetime(self,obj):
+        return obj.datetime
+    get_datetime.short_description = ("Fecha Actualizado")
 
     def get_daily_reading(self, obj):
         return obj.daily_reading

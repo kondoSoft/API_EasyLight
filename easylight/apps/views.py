@@ -106,13 +106,12 @@ class ContractList(viewsets.ModelViewSet):
         contract.finalDateRange = self.request.POST.get('finalDateRange')
         contract.high_consumption = high_consumption
         contract.owner_id = self.request.POST.get('owner')
-        print(self.request.FILES)
+
         if(len(self.request.FILES) > 0):
             image = self.request.FILES['image']
             contract.image = image
         contract.save()
         receipts = Receipt.objects.filter(contract= contract.id)
-        print(receipts)
         # return Response( {'results': { 'name_contract': contract.name_contract, 'number_contract': contract.number_contract}} )
         # return Response(data)
         return Response({ "id": contract.id, "number_contract": contract.number_contract, "receipt": receipts})
@@ -122,8 +121,13 @@ class ContractList(viewsets.ModelViewSet):
 
     def get_queryset(self):
         id_owner = self.request.user
-        self.queryset = self.queryset.filter(owner = id_owner)
+        profile = Profile.objects.filter(pk= id_owner)
+        if(profile[0].premium):
+            self.queryset = self.queryset.filter(owner = id_owner)
+        else:
+            self.queryset = self.queryset.all()[:1]
 
+        print(profile[0].premium)
         return self.queryset
 
     def update(self, request, pk=None):
@@ -131,14 +135,12 @@ class ContractList(viewsets.ModelViewSet):
         contracts = Contract.objects.get(pk= contract_id)
         rate = request.data['rate']
 
-        print(request.FILES)
         if(len(request.FILES) > 0):
             image = request.FILES['image']
             contracts.image = image
         contracts.rate = rate
         contracts.save()
-        print(contract_id)
-        print(rate)
+
 
         return Response({'Message': 'Se actualizo el contrato'})
 
@@ -235,7 +237,6 @@ class Rate_PeriodList(viewsets.ModelViewSet):
         return self.queryset
 
 
-
 class ContactUs(APIView):
     # permission_classes = (AllowAny,)
 
@@ -246,7 +247,6 @@ class ContactUs(APIView):
         description = request.POST.get('message') + ' Mensaje enviado por: ' + email
         send_email = EmailMessage(subject,description,email,['contactos@easylight.com.mx'],)
         res = send_email.send()
-        print(request)
 
         return Response({ 'Message': 'Mensaje Enviado'})
 
@@ -324,24 +324,26 @@ class RecordsList(viewsets.ModelViewSet):
         status = request.data['status']
         contract_id = request.data['contracts']
         amount_payable = request.data['amount_payable']
+        total_days = request.data['total_days']
+        dac = request.data['dac']
+        high_consumption = request.data['jsonFuncHigh']
         if status :
             status = True
         else:
             status = False
 
         if record[0] != None:
-            self.update_next_records(record[0])
-            self.getCostProjected(request.data['ratePeriod'])
-
+            self.update_next_records(record[0], request.data['ratePeriod'], date, total_days, dac, high_consumption)
             itemRecord = record[0]
             itemRecord.hours_elapsed = 0
             itemRecord.hours_totals = 0
+            itemRecord.datetime = date +'T12:00Z'
             itemRecord.days_elapsed = 0
             itemRecord.days_totals = 0
             itemRecord.daily_consumption = 0
             itemRecord.cumulative_consumption = 0
             itemRecord.average_global = 0
-            itemRecord.rest_day = rest_day
+            itemRecord.rest_day = total_days
             itemRecord.projection = 0
             itemRecord.date = date
             itemRecord.projected_payment = 0
@@ -373,15 +375,17 @@ class RecordsList(viewsets.ModelViewSet):
             newRecord.save()
             return Response({'Message': 'Se agrego un nuevo Record'})
 
-    def update_next_records(self, record):
-        print('record',record)
+    def update_next_records(self, record, ratePeriod, date, total_days, dac, high_consumption):
         formato_fecha = "%Y-%m-%d %H:%M:%S"
         listRecords = Records.objects.filter(date__gte= record.date, daily_reading__gt= record.daily_reading ).order_by('daily_reading')
-        print('listRecords',listRecords)
         dateRecord = datetime.strftime(record.datetime, formato_fecha)
         for idx,recordItem in enumerate(listRecords):
             dateItem = datetime.strftime(recordItem.datetime, formato_fecha)
+            if(listRecords[0]):
+                dateRecord = date +' 12:00:00'
+
             diffDate = self.diferencia(dateRecord, dateItem)
+
             hours= (diffDate.days * 24) + (diffDate.seconds/3600)
             # Condicion para hacer la variacion de datos dependiendo el item del array
             if idx == 0:
@@ -399,6 +403,8 @@ class RecordsList(viewsets.ModelViewSet):
             recordItem.days_elapsed = round(days_elapsed, 3)
             recordItem.days_totals = round(hours / 24 , 3)
 
+            recordItem.rest_day = total_days - recordItem.days_totals
+
             # Consumo acumulado es la lectura actual menos el valor de la lectura actual del record que se actualizo
             cumulative_consumption = float(recordItem.daily_reading) - float(record.daily_reading)
             recordItem.cumulative_consumption = round(cumulative_consumption, 3)
@@ -414,9 +420,51 @@ class RecordsList(viewsets.ModelViewSet):
             multProjection = float(recordItem.rest_day) * average_global
             projection = multProjection + recordItem.cumulative_consumption
             recordItem.projection = round(projection, 3)
-            recordItem.projected_payment = 0
+            if(dac):
+                recordItem.projected_payment = self.getHighConsumption(high_consumption, recordItem.projection)
+            else:
+                recordItem.projected_payment = self.getCostProjected(ratePeriod, recordItem.projection)
+
+            # recordItem.projected_payment = self.getCostProjected(ratePeriod, recordItem.projection)
 
             recordItem.save()
 
-    def getCostProjected(self, ratePeriod):
-        return 0
+    def getIVA (self, total):
+          if(total):
+              iva = 1.16
+              return total * iva
+
+    def getHighConsumption(self, high_consumption, projection):
+        if(high_consumption['typeSummer'] == 'verano'):
+            costProjectDac = (high_consumption['typePayment'] * float(high_consumption['arrHighConsumption'][0]['fixedCharge'])) + (float(high_consumption['arrHighConsumption'][0]['kwhVerano']) * projection)
+        elif(high_consumption['typeSummer'] == 'mixtoVerano'):
+            costProjectDac =(high_consumption['typePayment'] * float(high_consumption['arrHighConsumption'][0]['fixedCharge'])) + (float(high_consumption['arrHighConsumption'][0]['kwhVerano']) * projection)
+        elif(high_consumption['typeSummer'] == 'mixtoNoVerano'):
+            costProjectDac =(high_consumption['typePayment'] * float(high_consumption['arrHighConsumption'][0]['fixedCharge'])) + (float(high_consumption['arrHighConsumption'][0]['kwhNoVerano']) * projection)
+        else:
+            costProjectDac = (high_consumption['typePayment'] * float(high_consumption['arrHighConsumption'][0]['fixedCharge'])) + (float(high_consumption['arrHighConsumption'][0]['kwhNoVerano']) * projection)
+
+        costProjectDac = self.getIVA(costProjectDac)
+
+        return costProjectDac
+
+    def getCostProjected(self, ratePeriod, projection):
+
+        consumoTotal = 0
+        if (ratePeriod):
+            ratePeriod.reverse()
+            ratePeriod = list(filter(lambda x: float(x['cost'])> 0, ratePeriod))
+        while (projection >= 0 and len(ratePeriod) > 0):
+            range = ratePeriod.pop()
+            valueKilowatt = range['kilowatt']
+            if(projection > valueKilowatt):
+                consumo = projection - valueKilowatt
+                projection -= valueKilowatt
+                consumo = valueKilowatt * float(range['cost'])
+                consumoTotal += consumo
+            if (len(ratePeriod) == 0 and projection > 0):
+                consumo = projection * float(range['cost'])
+                consumoTotal += consumo
+
+        consumoTotal = self.getIVA(consumoTotal)
+        return consumoTotal
