@@ -123,7 +123,7 @@ urlpatterns = format_suffix_patterns([
     url(r'^', include('django.contrib.auth.urls')),
     url(r'^admin/', include(admin.site.urls)),
     # Session Login
-    
+
     url(r'^rest-auth/', include('rest_auth.urls')),
     url(r'^rest-auth/registration/', include('rest_auth.registration.urls')),
     url(r'^rest-auth/confirm-email/',include('allauth.account.urls')),
@@ -156,7 +156,7 @@ urlpatterns = format_suffix_patterns([
     #History
     url(r'^history/$', history_list, name="history-list"),
 
-    url(r'^region/$', region_list, name="region-list"),
+    url(r'^limitByRegion/$', region_list, name="region-list"),
     url(r'^high_consumption/$', high_consumption_list, name="high_consumption-list"),
 
     #Records

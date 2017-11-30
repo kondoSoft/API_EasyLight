@@ -125,7 +125,7 @@ class ContractList(viewsets.ModelViewSet):
         if(profile[0].premium):
             self.queryset = self.queryset.filter(owner = id_owner)
         else:
-            self.queryset = self.queryset.all()[:1]
+            self.queryset = self.queryset.filter(owner = id_owner)[:1]
 
         print(profile[0].premium)
         return self.queryset
