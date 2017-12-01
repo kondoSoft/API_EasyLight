@@ -93,6 +93,7 @@ profile_list = ProfileViewSet.as_view({
 })
 profile_detail = ProfileViewSet.as_view({
     'put': 'update',
+    'get' : 'retrieve',
 })
 
 records_list = RecordsList.as_view({
