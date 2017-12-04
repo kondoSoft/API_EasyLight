@@ -114,7 +114,7 @@ class ContractList(viewsets.ModelViewSet):
         receipts = Receipt.objects.filter(contract= contract.id)
         # return Response( {'results': { 'name_contract': contract.name_contract, 'number_contract': contract.number_contract}} )
         # return Response(data)
-        return Response({ "id": contract.id, "number_contract": contract.number_contract, "receipt": receipts})
+        return Response({ "id": contract.id, "number_contract": contract.number_contract, "receipt": receipts, "amount_payable": contract.amount_payable, "type_payment": contract.type_payment, "rate": contract.rate})
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
