@@ -122,23 +122,36 @@ class ContractList(viewsets.ModelViewSet):
     def get_queryset(self):
         id_owner = self.request.user
         profile = Profile.objects.filter(pk= id_owner)
-        if(profile[0].premium):
-            self.queryset = self.queryset.filter(owner = id_owner)
-        else:
-            self.queryset = self.queryset.filter(owner = id_owner)[:1]
+        query = self.queryset.filter(owner = id_owner)
 
-        print(profile[0].premium)
+        self.queryset = query
+
         return self.queryset
 
     def update(self, request, pk=None):
         contract_id = request.data['contract_id']
         contracts = Contract.objects.get(pk= contract_id)
         rate = request.data['rate']
-
+        high_consumption = request.data['high_consumption']
         if(len(request.FILES) > 0):
             image = request.FILES['image']
             contracts.image = image
+
+            
         contracts.rate = rate
+
+        if( high_consumption == 'true'):
+            print('true')
+            high_consumption == True
+            contracts.high_consumption = high_consumption
+        elif(high_consumption == 'false'):
+            print('false')
+            high_consumption == False
+            contracts.high_consumption = high_consumption
+        elif(high_consumption == 'undefined'):
+            contracts.high_consumption = contracts.high_consumption
+
+
         contracts.save()
 
 
@@ -327,6 +340,12 @@ class RecordsList(viewsets.ModelViewSet):
         total_days = request.data['total_days']
         dac = request.data['dac']
         high_consumption = request.data['jsonFuncHigh']
+        print('high_consumption', high_consumption)
+        if high_consumption:
+            high_consumption = request.data['jsonFuncHigh']
+        else:
+            high_consumption = ''
+
         if status :
             status = True
         else:
