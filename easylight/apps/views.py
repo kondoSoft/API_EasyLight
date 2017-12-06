@@ -137,20 +137,17 @@ class ContractList(viewsets.ModelViewSet):
             image = request.FILES['image']
             contracts.image = image
 
-            
+
         contracts.rate = rate
 
-        if( high_consumption == 'true'):
+        if( high_consumption ):
             print('true')
             high_consumption == True
             contracts.high_consumption = high_consumption
-        elif(high_consumption == 'false'):
+        else:
             print('false')
             high_consumption == False
             contracts.high_consumption = high_consumption
-        elif(high_consumption == 'undefined'):
-            contracts.high_consumption = contracts.high_consumption
-
 
         contracts.save()
 
@@ -340,7 +337,6 @@ class RecordsList(viewsets.ModelViewSet):
         total_days = request.data['total_days']
         dac = request.data['dac']
         high_consumption = request.data['jsonFuncHigh']
-        print('high_consumption', high_consumption)
         if high_consumption:
             high_consumption = request.data['jsonFuncHigh']
         else:
