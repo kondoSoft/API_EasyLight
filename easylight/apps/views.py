@@ -132,7 +132,20 @@ class ContractList(viewsets.ModelViewSet):
         contract_id = request.data['contract_id']
         contracts = Contract.objects.get(pk= contract_id)
         rate = request.data['rate']
-        high_consumption = request.data['high_consumption']
+        print(request.data)
+        try:
+            high_consumption = request.data['high_consumption']
+            if( high_consumption ):
+                print('true')
+                high_consumption == True
+                contracts.high_consumption = high_consumption
+            else:
+                print('false')
+                high_consumption == False
+                contracts.high_consumption = high_consumption
+        except:
+            pass
+
         if(len(request.FILES) > 0):
             image = request.FILES['image']
             contracts.image = image
@@ -140,14 +153,7 @@ class ContractList(viewsets.ModelViewSet):
 
         contracts.rate = rate
 
-        if( high_consumption ):
-            print('true')
-            high_consumption == True
-            contracts.high_consumption = high_consumption
-        else:
-            print('false')
-            high_consumption == False
-            contracts.high_consumption = high_consumption
+
 
         contracts.save()
 
